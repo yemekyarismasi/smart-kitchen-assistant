@@ -70,60 +70,201 @@ export default function Home() {
 
         <div className="mt-6 p-6 rounded-2xl bg-emerald-950/20 border border-emerald-800/40 text-center">
           <p className="text-emerald-300 text-lg font-semibold">
-            We provide your R&D team with the <strong className="text-white">architectural blueprints, acoustic processing patterns, and edge deployment methodology</strong> to avoid every one of these failure modes — from day one.
+            We provide your R&D team with the <strong className="text-white">architectural blueprints, acoustic processing patterns, and edge deployment methodology</strong> to avoid every one of these failure modes — and unlike Big Tech, our architecture guarantees <strong className="text-white">Privacy by Design</strong>: no voice, no image, no user data ever leaves the device.
           </p>
         </div>
       </section>
 
-      {/* B2B MANUFACTURER VALUE MAP */}
-      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+      {/* SECTION A: PROVEN ENGINEERING SOLUTIONS */}
+      <section className="w-full max-w-7xl mx-auto mb-12 px-4">
         <div className="text-center mb-12">
-          <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting & Integration Roadmap</span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Three Capabilities We Guide You to Build</h2>
+          <span className="inline-flex items-center gap-2 text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
+            Verified & Open Source
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">What We Have Actually Built</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            These are not off-the-shelf features — they are <strong className="text-white">complex engineering challenges</strong> that require deep domain expertise. We provide the methodology, reference architecture, and hands-on consulting so your team implements them correctly the first time.
+            Every capability below is <strong className="text-white">live in our open-source codebase</strong>. Inspect it, fork it, test it offline — right now. This is our engineering credibility.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 group-hover:bg-cyan-500/20 transition-colors">
-              <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Acoustic Anomaly Detection</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">We consult your team on how to repurpose the appliance microphone to <strong className="text-white">monitor the machine itself</strong>. Bearing wear, fan imbalance, and motor stress patterns — detectable weeks before failure, with no additional hardware cost.</p>
-            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
-              <p className="text-cyan-400 font-mono text-xs">→ Predictive maintenance architecture</p>
-              <p className="text-cyan-400 font-mono text-xs">→ Can reduce warranty claims by up to 30%</p>
-              <p className="text-cyan-400 font-mono text-xs">→ Service notification protocol design</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* 1 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-cyan-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Acoustic Ignore Shield</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Prevents the system from hearing its own voice output via <code className="text-cyan-400 bg-cyan-950 px-1 rounded">isSpeakingRef</code> lock. Solves the echo loop problem in high-reflectivity kitchens without any hardware interrupt.</p>
+              </div>
             </div>
           </div>
 
-          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-emerald-500 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
-              <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"></path></svg>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Direct Hardware Control</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">We provide the integration roadmap for bridging the AI voice layer directly to your appliance firmware — so a user saying <em>"scale to 2 people and preheat"</em> can translate to a real <code className="text-emerald-400 bg-emerald-950 px-1 rounded text-sm">SET_TEMP=180°C</code> firmware call, with no cloud hop.</p>
-            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
-              <p className="text-emerald-400 font-mono text-xs">→ Firmware bridge design for Linux, RTOS, bare-metal</p>
-              <p className="text-emerald-400 font-mono text-xs">→ Lightweight integration layer (~2MB footprint)</p>
-              <p className="text-emerald-400 font-mono text-xs">→ Adaptable for Oven, Fridge, and Hood MCUs</p>
+          {/* 2 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-cyan-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Kitchen Noise Segmentation</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Isolates human speech from mixer noise, running water, and extractor fans. The recognition pipeline is tuned specifically for kitchen acoustic profiles — not generic rooms.</p>
+              </div>
             </div>
           </div>
 
-          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-purple-500 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
-              <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Zero Infrastructure Cost</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">Our architecture runs entirely on the appliance NPU. We guide your team to eliminate the GPU server from the equation entirely. <strong className="text-white">Ship AI-powered appliances at any scale with zero ongoing cloud cost.</strong></p>
-            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
-              <p className="text-purple-400 font-mono text-xs">→ $0 cloud cost per unit shipped</p>
-              <p className="text-purple-400 font-mono text-xs">→ Fully offline — GDPR compliant by design</p>
-              <p className="text-purple-400 font-mono text-xs">→ No internet connection required to operate</p>
+          {/* 3 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Hardware Session Persistence</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Bypasses native browser Garbage Collection via immutable <code className="text-emerald-400 bg-emerald-950 px-1 rounded">utteranceRef</code> boundaries. Session state survives prolonged listening gaps without reconnection.</p>
+              </div>
             </div>
           </div>
+
+          {/* 4 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Zero-Cost Edge Inference</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Every AI operation runs on the client device — no GPU server, no API calls, no per-request billing. The marginal cost of serving 1M users is identical to serving 1: zero.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 5 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-purple-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Vision-to-Recipe Pipeline</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">A multimodal image analysis pipeline that scans food visuals and generates a fully structured recipe — ingredients, steps, nutrition — with zero hallucination via Visual Ground Truth.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 6 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-purple-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636a9 9 0 010 12.728M15.536 8.464a5 5 0 010 7.072M6.343 6.343a9 9 0 000 12.728M9.172 9.172a5 5 0 000 7.072"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Offline-First Architecture</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">The system is designed from the ground up to operate without any internet connection. Disconnect your Wi-Fi and all features remain fully functional. Zero cloud dependency in the critical path.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 7 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-cyan-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Privacy by Architecture</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">No voice recording, no image upload, no behavioral data leaves the device — ever. GDPR, CCPA, and KVKK compliance is guaranteed by design, not by policy. This is structurally auditable.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 8 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Multi-language Ready</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Built on Web Speech API which natively supports 70+ languages. No additional localization engineering required to deploy voice guidance in Turkish, English, German, Japanese, or Arabic.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 9 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Real-time Voice Navigation</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Hands-free step navigation via natural language commands: <em>"Next", "Back", "Repeat", "Stop"</em>. Designed for users with flour-covered hands — no touch input required at any point.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION B: EXTENSIBLE BY DESIGN */}
+      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+        <div className="text-center mb-12">
+          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Where This Architecture Can Take You</h2>
+          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+            These are <strong className="text-white">natural extensions</strong> of the same proven patterns above — not features we have built, but engineering paths we can guide your team through. Each one uses the same architectural foundation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Kitchen Noise Segmentation</div>
+            <h3 className="text-lg font-bold text-white mb-2">Machine Acoustic Anomaly Detection</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">The same microphone isolation logic that filters out mixer noise can be redirected to monitor motor, fan, and bearing signatures — detecting failure patterns weeks before breakdown, with no extra hardware.</p>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Real-time Voice Navigation</div>
+            <h3 className="text-lg font-bold text-white mb-2">Direct Firmware Control Bridge</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">The voice command pipeline that navigates recipe steps can be extended to emit firmware signals. "Preheat the oven" becomes a real <code className="text-amber-400 bg-amber-950 px-1 rounded text-xs">SET_TEMP=180°C</code> call to your appliance MCU.</p>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Vision-to-Recipe Pipeline</div>
+            <h3 className="text-lg font-bold text-white mb-2">Smart Inventory Vision</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">The same vision pipeline that identifies plated food from an image can be applied to a fridge camera feed — detecting available ingredients and triggering intelligent substitution suggestions when items are missing.</p>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Offline-First Architecture</div>
+            <h3 className="text-lg font-bold text-white mb-2">Hybrid Edge-Cloud Mode</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">When internet is available, complex tasks (personalized recipe generation, nutritional analysis) can optionally route to cloud. When offline, the edge layer handles everything. No degraded experience either way.</p>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Privacy by Architecture</div>
+            <h3 className="text-lg font-bold text-white mb-2">On-Device User Profile Learning</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">Because all data stays on-device, user preferences (dietary restrictions, favorite cuisines, portion habits) can be learned and stored locally — creating personalization without any privacy trade-off.</p>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
+            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Machine Acoustic Anomaly</div>
+            <h3 className="text-lg font-bold text-white mb-2">Predictive Maintenance System</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">Acoustic anomaly patterns, once detected, can trigger automated service notifications — alerting your authorized technicians before a customer experiences a breakdown. Reduces warranty costs and increases brand trust.</p>
+          </div>
+
+        </div>
+
+        <div className="mt-8 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 text-center">
+          <p className="text-zinc-400 text-base">
+            Each extension above is a <strong className="text-white">consulting and co-development engagement</strong> — not a pre-built product. We bring the proven architectural foundation; your engineering team builds the integration.
+            <a href="mailto:info@yemekyarismasi.com" className="text-cyan-400 hover:text-cyan-300 ml-2 underline underline-offset-4 transition-colors">Start a conversation →</a>
+          </p>
         </div>
       </section>
 
