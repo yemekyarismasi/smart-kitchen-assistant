@@ -4,10 +4,6 @@ import { useState } from "react";
 import KitchenMode from "@/components/KitchenMode";
 
 export default function DemoSection() {
-  const [image, setImage] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [recipe, setRecipe] = useState(null);
-  const [showKitchenMode, setShowKitchenMode] = useState(false);
   const SCENARIOS = [
     {
       id: "eggs",
@@ -71,6 +67,10 @@ export default function DemoSection() {
     }
   ];
 
+  const [recipe, setRecipe] = useState(SCENARIOS[0].recipe);
+  const [image, setImage] = useState(SCENARIOS[0].image);
+  const [showKitchenMode, setShowKitchenMode] = useState(false);
+
   const handleScenarioClick = (scenario) => {
     setImage(scenario.image);
     setRecipe(scenario.recipe);
@@ -82,7 +82,7 @@ export default function DemoSection() {
 
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative z-10 px-6">
         
-        {/* Left: Vision AI Image Uploader & Recipe Card */}
+        {/* Left: Scenario Selection (Always Visible) */}
         <div className="space-y-6 text-center lg:text-left">
           <div className="inline-block px-4 py-1.5 rounded-full border border-cyan-900/50 bg-cyan-950/20 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-2 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
             Step 1: Test Vision AI
@@ -95,92 +95,84 @@ export default function DemoSection() {
             Experience the <strong>Yemek AI Vision Technology</strong>. Upload any food image and watch the AI extract a complete recipe instantly.
           </p>
 
-          {/* Scenario Selection */}
-          {!recipe && !loading && (
-            <div className="flex flex-col gap-4">
-              <p className="text-zinc-500 font-mono text-sm mb-2">Select a scenario to run Vision AI simulation:</p>
-              {SCENARIOS.map((s) => (
+          <div className="flex flex-col gap-4">
+            <p className="text-zinc-500 font-mono text-sm mb-2">Select a scenario to run Vision AI simulation:</p>
+            {SCENARIOS.map((s) => {
+              const isSelected = recipe?.title === s.recipe.title;
+              return (
                 <div 
                   key={s.id}
                   onClick={() => handleScenarioClick(s)}
-                  className="w-full flex items-center gap-6 p-4 rounded-2xl border border-zinc-800 hover:border-cyan-500 hover:bg-cyan-950/20 cursor-pointer transition-all group"
+                  className={`w-full flex items-center gap-6 p-4 rounded-2xl border cursor-pointer transition-all group ${isSelected ? 'border-cyan-500 bg-cyan-950/30' : 'border-zinc-800 hover:border-cyan-500 hover:bg-cyan-950/20'}`}
                 >
-                  <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 relative">
                     <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    {isSelected && (
+                      <div className="absolute inset-0 bg-cyan-500/20 flex items-center justify-center">
+                        <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1 text-left">
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{s.name}</h3>
-                    <p className="text-sm text-zinc-500 font-mono mt-1">Run Extraction Simulation →</p>
+                    <h3 className={`text-xl font-bold transition-colors ${isSelected ? 'text-cyan-400' : 'text-white group-hover:text-cyan-400'}`}>{s.name}</h3>
+                    <p className="text-sm text-zinc-500 font-mono mt-1">{isSelected ? 'Currently Selected' : 'Run Extraction Simulation →'}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+              );
+            })}
+          </div>
+        </div>
 
-          {/* Extracted Recipe Card */}
-          {recipe && !loading && (
-            <div className="bg-zinc-900/40 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-sm text-left">
-              <div className="h-48 bg-black relative border-b border-zinc-800">
-                {image && <img src={image} alt="Food" className="w-full h-full object-cover opacity-40" />}
+        {/* Right: Extracted Recipe Details & Launch Button */}
+        <div className="glass-panel border border-zinc-800 rounded-[2.5rem] shadow-[0_0_50px_rgba(34,211,238,0.1)] relative overflow-hidden h-full flex flex-col mt-12 lg:mt-0">
+          <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 background-animate z-20"></div>
+          
+          {recipe ? (
+            <div className="flex flex-col h-full relative z-10">
+              {/* Image Header */}
+              <div className="h-56 bg-black relative border-b border-zinc-800 shrink-0">
+                {image && <img src={image} alt="Food" className="w-full h-full object-cover opacity-60" />}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                
+                <div className="absolute top-6 right-6 flex items-center gap-2 bg-zinc-900/80 px-3 py-1.5 rounded-full border border-zinc-700 backdrop-blur-md">
+                  <span className="text-xs font-mono text-cyan-400">Step 2: Edge Voice AI</span>
+                </div>
+
                 <div className="absolute bottom-4 left-6 flex gap-2">
                   <span className="bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{recipe.difficulty}</span>
                   <span className="bg-white text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{recipe.prepTime}</span>
                 </div>
-                <button 
-                  onClick={() => {setRecipe(null); setImage(null);}}
-                  className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-white hover:text-black transition-colors backdrop-blur-md"
-                >
-                  ✕
-                </button>
               </div>
-              <div className="p-8">
-                <h3 className="text-3xl font-bold text-white mb-2">{recipe.title}</h3>
-                <p className="text-zinc-400 mb-6 font-light">{recipe.description}</p>
+              
+              {/* Content */}
+              <div className="p-8 flex-1 flex flex-col">
+                <h3 className="text-3xl font-black text-white mb-3">{recipe.title}</h3>
+                <p className="text-zinc-400 mb-8 font-light text-lg leading-relaxed">{recipe.description}</p>
                 
                 <h4 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4">Required Commands</h4>
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm">"Next"</span>
-                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm">"Back"</span>
-                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm">"Repeat"</span>
-                  <span className="px-4 py-2 bg-black border border-red-900/50 text-red-400 rounded-lg font-mono text-sm">"Stop"</span>
+                <div className="flex flex-wrap gap-3 mb-10">
+                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Next"</span>
+                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Back"</span>
+                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Repeat"</span>
+                  <span className="px-4 py-2 bg-black border border-red-900/30 text-red-400 rounded-lg font-mono text-sm shadow-inner">"Stop"</span>
+                </div>
+
+                <div className="mt-auto pt-6 border-t border-zinc-800">
+                  <button 
+                    onClick={() => setShowKitchenMode(true)}
+                    className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xl py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 flex items-center justify-center gap-3"
+                  >
+                    <span className="text-2xl">👨‍🍳</span>
+                    LAUNCH KITCHEN MODE
+                  </button>
                 </div>
               </div>
             </div>
-          )}
-        </div>
-
-        {/* Right: The Assistant Interface */}
-        <div className="glass-panel border border-zinc-800 rounded-[2.5rem] p-10 shadow-[0_0_50px_rgba(34,211,238,0.1)] relative overflow-hidden h-full flex flex-col justify-center mt-12 lg:mt-0">
-          <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 background-animate"></div>
-          
-          <div className="flex justify-between items-center mb-10 pb-6 border-b border-zinc-800">
-            <h2 className="text-2xl font-bold text-white">Assistant Mode</h2>
-            <div className="flex flex-col items-end">
-              <span className="flex items-center gap-2 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800 text-xs font-mono text-cyan-400 mb-1">
-                Step 2: Edge Voice AI
-              </span>
-            </div>
-          </div>
-
-          {recipe ? (
-            <div className="flex flex-col items-center justify-center h-full text-center p-8 z-10">
-              <div className="w-32 h-32 bg-emerald-500/20 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(16,185,129,0.3)] animate-pulse">
-                <span className="text-5xl">👨‍🍳</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Kitchen Mode Ready</h3>
-              <p className="text-zinc-400 mb-8">
-                Launch the exact 1-to-1 Voice Assistant UI used in the B2C App.
-              </p>
-              <button 
-                onClick={() => setShowKitchenMode(true)}
-                className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xl py-4 rounded-xl transition-all shadow-xl active:scale-95"
-              >
-                LAUNCH KITCHEN MODE
-              </button>
-            </div>
           ) : (
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 rounded-[2.5rem]">
-              <p className="text-zinc-500 font-mono text-sm text-center px-8">
+            <div className="flex-1 flex items-center justify-center p-12 text-center bg-black/80 backdrop-blur-sm z-50">
+              <p className="text-zinc-500 font-mono text-sm">
                 Select a simulation scenario on the left to extract a recipe and unlock the Voice Assistant.
               </p>
             </div>
