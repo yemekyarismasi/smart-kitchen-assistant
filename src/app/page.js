@@ -43,10 +43,10 @@ export default function Home() {
       {/* WHY OUR METHODOLOGY IS DIFFERENT */}
       <section className="w-full max-w-7xl mx-auto mb-20 px-4 pt-8">
         <div className="text-center mb-12">
-          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Competitive Edge</span>
+          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Strategic Consulting</span>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at the Smart Kitchen</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Amazon, Google, and Samsung all tried cloud-first kitchen AI. They all failed the same way. Here is why our Edge-First methodology is structurally different.
+            Amazon, Google, and Samsung all launched cloud-first kitchen AI. They all hit the same structural wall. We help your engineering team understand exactly where they failed — and how to avoid the same traps.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function Home() {
 
         <div className="mt-6 p-6 rounded-2xl bg-emerald-950/20 border border-emerald-800/40 text-center">
           <p className="text-emerald-300 text-lg font-semibold">
-            Our answer: <strong className="text-white">100% on-device processing</strong>, zero cloud dependency, built-in Acoustic Ignore Shield, and a hardware SDK that speaks directly to your appliance firmware.
+            We provide your R&D team with the <strong className="text-white">architectural blueprints, acoustic processing patterns, and edge deployment methodology</strong> to avoid every one of these failure modes — from day one.
           </p>
         </div>
       </section>
@@ -78,10 +78,10 @@ export default function Home() {
       {/* B2B MANUFACTURER VALUE MAP */}
       <section className="w-full max-w-7xl mx-auto mb-20 px-4">
         <div className="text-center mb-12">
-          <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold">For OEM Manufacturers</span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">What You Get With Our SDK</h2>
+          <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting & Integration Roadmap</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Three Capabilities We Guide You to Build</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Three capabilities your engineering team cannot build in-house without 3+ years of R&D. Available immediately via our B2B Commercial License.
+            These are not off-the-shelf features — they are <strong className="text-white">complex engineering challenges</strong> that require deep domain expertise. We provide the methodology, reference architecture, and hands-on consulting so your team implements them correctly the first time.
           </p>
         </div>
 
@@ -91,11 +91,11 @@ export default function Home() {
               <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
             </div>
             <h3 className="text-2xl font-bold text-white mb-3">Acoustic Anomaly Detection</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">Our microphones listen to the <strong className="text-white">machine itself</strong>, not just the user. Bearing wear, fan imbalance, and motor stress patterns are detected weeks before failure.</p>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">We consult your team on how to repurpose the appliance microphone to <strong className="text-white">monitor the machine itself</strong>. Bearing wear, fan imbalance, and motor stress patterns — detectable weeks before failure, with no additional hardware cost.</p>
             <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
-              <p className="text-cyan-400 font-mono text-xs">→ Predictive maintenance alerts</p>
-              <p className="text-cyan-400 font-mono text-xs">→ Reduce warranty claims by up to 30%</p>
-              <p className="text-cyan-400 font-mono text-xs">→ Auto-notify authorized service</p>
+              <p className="text-cyan-400 font-mono text-xs">→ Predictive maintenance architecture</p>
+              <p className="text-cyan-400 font-mono text-xs">→ Can reduce warranty claims by up to 30%</p>
+              <p className="text-cyan-400 font-mono text-xs">→ Service notification protocol design</p>
             </div>
           </div>
 
@@ -104,11 +104,11 @@ export default function Home() {
               <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"></path></svg>
             </div>
             <h3 className="text-2xl font-bold text-white mb-3">Direct Hardware Control</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">The AI does not just <em>suggest</em> — it <strong className="text-white">acts</strong>. "Scale to 2 people and start the oven" triggers a direct firmware command: <code className="text-emerald-400 bg-emerald-950 px-1 rounded text-sm">SET_TEMP=180°C</code>.</p>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">We provide the integration roadmap for bridging the AI voice layer directly to your appliance firmware — so a user saying <em>"scale to 2 people and preheat"</em> can translate to a real <code className="text-emerald-400 bg-emerald-950 px-1 rounded text-sm">SET_TEMP=180°C</code> firmware call, with no cloud hop.</p>
             <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
-              <p className="text-emerald-400 font-mono text-xs">→ Works on Linux, RTOS, and bare-metal</p>
-              <p className="text-emerald-400 font-mono text-xs">→ Lightweight SDK (~2MB footprint)</p>
-              <p className="text-emerald-400 font-mono text-xs">→ Compatible with Oven, Fridge, Hood MCUs</p>
+              <p className="text-emerald-400 font-mono text-xs">→ Firmware bridge design for Linux, RTOS, bare-metal</p>
+              <p className="text-emerald-400 font-mono text-xs">→ Lightweight integration layer (~2MB footprint)</p>
+              <p className="text-emerald-400 font-mono text-xs">→ Adaptable for Oven, Fridge, and Hood MCUs</p>
             </div>
           </div>
 
@@ -117,11 +117,11 @@ export default function Home() {
               <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
             <h3 className="text-2xl font-bold text-white mb-3">Zero Infrastructure Cost</h3>
-            <p className="text-zinc-400 text-base leading-relaxed mb-4">Every inference runs on the appliance NPU. No GPU server. No monthly API bill. <strong className="text-white">The cost to serve 1 user and 1 million users is identical: zero.</strong></p>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">Our architecture runs entirely on the appliance NPU. We guide your team to eliminate the GPU server from the equation entirely. <strong className="text-white">Ship AI-powered appliances at any scale with zero ongoing cloud cost.</strong></p>
             <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
               <p className="text-purple-400 font-mono text-xs">→ $0 cloud cost per unit shipped</p>
-              <p className="text-purple-400 font-mono text-xs">→ Fully offline — GDPR compliant</p>
-              <p className="text-purple-400 font-mono text-xs">→ No internet = still fully functional</p>
+              <p className="text-purple-400 font-mono text-xs">→ Fully offline — GDPR compliant by design</p>
+              <p className="text-purple-400 font-mono text-xs">→ No internet connection required to operate</p>
             </div>
           </div>
         </div>

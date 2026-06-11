@@ -64,50 +64,6 @@ export default function DemoSection() {
           "Grill over hot charcoal, turning frequently until completely cooked and charred."
         ]
       }
-    },
-    {
-      id: "fridge",
-      name: "Smart Fridge Camera",
-      image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=800&auto=format&fit=crop",
-      badge: "B2B",
-      recipe: {
-        title: "Cream-Free Carbonara",
-        description: "Fridge camera detected: No heavy cream. AI instantly substituted with butter + milk. Zero user intervention required.",
-        difficulty: "Medium",
-        prepTime: "25 mins",
-        ingredients: ["200g spaghetti", "100g pancetta", "2 egg yolks", "50g parmesan", "1 tbsp butter + 2 tbsp milk (cream substitute)"],
-        nutrition: { calories: 520, protein: 28, fat: 22, carbs: 55 },
-        chefTouch: "The AI detected missing cream via fridge camera and auto-substituted in real-time. Hardware sees, AI thinks.",
-        steps: [
-          "[AI] Fridge camera scanned: heavy cream NOT found.",
-          "[AI] Substitution calculated: 1 tbsp butter + 2 tbsp milk = equivalent fat ratio.",
-          "Cook pancetta in a pan until crispy, then remove from heat.",
-          "Mix egg yolks, parmesan, butter and milk in a bowl.",
-          "Toss hot pasta with pancetta, remove from heat, and mix in the egg sauce."
-        ]
-      }
-    },
-    {
-      id: "oven",
-      name: "Smart Oven Integration",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
-      badge: "B2B",
-      recipe: {
-        title: "Herb-Crusted Salmon (2 Servings)",
-        description: "User said: \"Scale to 2 people and set the oven.\" AI recalculated portions and sent 180°C command directly to oven hardware.",
-        difficulty: "Easy",
-        prepTime: "30 mins",
-        ingredients: ["2 salmon fillets (150g each)", "1 tbsp olive oil", "1 tsp rosemary", "1 tsp thyme", "Salt & pepper"],
-        nutrition: { calories: 380, protein: 42, fat: 18, carbs: 2 },
-        chefTouch: "Oven set to 180°C automatically via hardware API. No manual input needed. This is the future of cooking.",
-        steps: [
-          "[VOICE] User: \"Scale to 2 people and preheat the oven.\"",
-          "[AI] Recipe scaled from 4 → 2 servings. Cooking time adjusted: 25 min.",
-          "[HARDWARE] Oven command sent: SET_TEMP=180°C, MODE=FAN_ASSIST.",
-          "Coat salmon fillets with olive oil, rosemary, and thyme.",
-          "Place in oven when preheated. Serve when timer completes."
-        ]
-      }
     }
   ];
 
