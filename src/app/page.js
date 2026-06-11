@@ -19,20 +19,23 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-zinc-400 w-full mx-auto font-light leading-relaxed px-4">
           The definitive open-source methodology for offline appliance intelligence. Featuring Acoustic Shields, 100% Visual Ground Truth, and Zero-Latency Hardware Integration.
         </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10 relative z-50">
-          <a href="#licensing" className="w-full sm:w-auto px-10 py-5 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center cursor-pointer">
-            B2B Licensing
-          </a>
-        </div>
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div className="w-full max-w-7xl text-center mt-0 mb-2">
-        <h2 className="text-[1.6rem] min-[400px]:text-3xl sm:text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 whitespace-nowrap">
-          Experience Live Edge AI
-        </h2>
-        <p className="text-zinc-400 mt-2 text-base md:text-xl">Select a scenario below to see the exact B2C user experience in real-time.</p>
+      <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between mt-8 mb-2 px-6 gap-6">
+        <div className="text-center md:text-left">
+          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
+            Experience Live Edge AI
+          </h2>
+          <p className="text-zinc-400 text-base md:text-lg">
+            Select a scenario below to see the exact B2C user experience in real-time.
+          </p>
+        </div>
+        <div className="shrink-0 w-full md:w-auto">
+          <a href="#licensing" className="block w-full md:inline-block md:w-auto px-8 py-4 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center cursor-pointer">
+            B2B Licensing
+          </a>
+        </div>
       </div>
       <DemoSection />
 
