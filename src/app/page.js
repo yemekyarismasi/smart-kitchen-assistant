@@ -4,7 +4,8 @@ import OpenSourceSection from "@/components/OpenSourceSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center px-4 py-8 md:px-24 md:py-12 overflow-x-hidden bg-black text-white">
+    <>
+      <main className="flex min-h-screen flex-col items-center px-4 py-8 md:px-24 md:py-12 overflow-x-hidden bg-black text-white">
       
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
@@ -500,5 +501,6 @@ graph TD
         </div>
       </div>
     </footer>
+    </>
   );
 }
