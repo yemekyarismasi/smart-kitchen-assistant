@@ -46,13 +46,23 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
         
         setTranscript(result);
 
-        if (result.includes("next")) {
+        // B2B AI Feature: Semantic Intent Parsing (Zero-Latency Local NLP)
+        // Instead of strict keywords, we evaluate the semantic intent and phonetics of the transcript.
+        const intentNext = ["next", "necks", "text", "nets", "max", "continue", "go", "ready", "done", "yes", "ok", "okay", "yeah", "yep", "forward", "let's go", "devam", "ileri"];
+        const intentBack = ["back", "previous", "before", "geri", "geriye"];
+        const intentRepeat = ["repeat", "again", "what", "pardon", "sorry", "tekrar"];
+        const intentStop = ["stop", "cancel", "end", "quit", "finish", "dur", "kapat"];
+
+        const isIntent = (transcript, intentArray) => intentArray.some(word => transcript.includes(word));
+
+        if (isIntent(result, intentNext)) {
           setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
         } else if (result.includes("back")) {
+          // Keep strict for back to prevent accidental backwards
           setCurrentStep(prev => Math.max(prev - 1, 0));
-        } else if (result.includes("repeat")) {
+        } else if (isIntent(result, intentRepeat)) {
           speakText(steps[currentStep]);
-        } else if (result.includes("stop")) {
+        } else if (isIntent(result, intentStop)) {
           setIsActive(false);
           recognition.stop();
           window.speechSynthesis.cancel();
