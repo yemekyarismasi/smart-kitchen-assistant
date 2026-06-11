@@ -151,18 +151,18 @@ export default function DemoSection() {
               {/* Content */}
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-[1.2rem] min-[400px]:text-[1.3rem] sm:text-xl md:text-[1.6rem] font-black text-white mb-3 whitespace-nowrap overflow-hidden text-ellipsis">{recipe.title}</h3>
-                <p className="text-zinc-400 mb-8 font-light text-base md:text-lg leading-relaxed">{recipe.description}</p>
+                <p className="text-zinc-400 mb-8 font-light text-base md:text-sm leading-relaxed">{recipe.description}</p>
                 
                 <h4 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4 text-center">Required Commands</h4>
-                <div className="flex flex-wrap justify-center gap-3 mb-10">
+                <div className="flex flex-wrap justify-center gap-3 mb-6">
                   <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Next"</span>
                   <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Back"</span>
                   <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Repeat"</span>
                   <span className="px-4 py-2 bg-black border border-red-900/30 text-red-400 rounded-lg font-mono text-sm shadow-inner">"Stop"</span>
                 </div>
 
-                <div className="mt-auto pt-6 border-t border-zinc-800">
-                  <p className="text-sm md:text-[11px] text-center text-white font-mono mb-4 animate-pulse whitespace-nowrap">
+                <div className="mt-auto">
+                  <p className="text-base text-center text-white font-mono mb-4 animate-pulse whitespace-nowrap">
                     No Cloud Required. Disconnect Wi-Fi to test offline mode.
                   </p>
                   <button 
