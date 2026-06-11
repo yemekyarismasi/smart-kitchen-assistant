@@ -6,6 +6,25 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-8 md:px-24 md:py-12 overflow-x-hidden bg-black text-white">
       
+      {/* ECOSYSTEM BANNER */}
+      <div className="w-full max-w-7xl mx-auto px-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm text-sm">
+          <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Part of the Yemek AI Ecosystem</span>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors font-medium">
+              <span className="text-base">🍽️</span>
+              <span>yemekyarismasi.com</span>
+            </a>
+            <span className="text-zinc-700 hidden sm:inline">·</span>
+            <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">
+              <span className="text-base">🤖</span>
+              <span>YEMEK AI Assistant</span>
+              <span className="text-[10px] font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 px-1.5 py-0.5 rounded-full">FLAGSHIP</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-12 relative z-10 px-4">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
@@ -373,6 +392,9 @@ graph TD
         </div>
       </section>
 
+      {/* OPEN SOURCE & RESEARCH */}
+      <OpenSourceSection />
+
       {/* 5. B2B LICENSING & HARDWARE OS INTEGRATION */}
       <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-6 md:space-y-10 mb-20 p-6 md:p-12 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
@@ -394,5 +416,89 @@ graph TD
       </section>
 
     </main>
+
+    <footer className="w-full border-t border-zinc-900 bg-black">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+          {/* Col 1: About */}
+          <div>
+            <h3 className="text-white font-bold mb-4">Smart Kitchen Assistant</h3>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              Open-source Edge AI methodology for smart appliance manufacturers. Built and maintained by the Yemek AI engineering team.
+            </p>
+          </div>
+
+          {/* Col 2: Yemek AI Ecosystem */}
+          <div>
+            <h3 className="text-white font-bold mb-4">Yemek AI Ecosystem</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <span>🍽️</span> yemekyarismasi.com
+                </a>
+              </li>
+              <li>
+                <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors flex items-center gap-2 font-medium">
+                  <span>🤖</span> YEMEK AI — Flagship Assistant
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <span>✉️</span> info@yemekyarismasi.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Open Source & Research */}
+          <div>
+            <h3 className="text-white font-bold mb-4">Open Source & Research</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  smart-kitchen-assistant
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/yemekyarismasi/smart-kitchen-voice-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  smart-kitchen-voice-assistant
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/yemekyarismasi/yemek-ai-whitepaper" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  yemek-ai-whitepaper
+                </a>
+              </li>
+              <li>
+                <a href="https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                  Medium — Why Big Tech Fails
+                </a>
+              </li>
+              <li>
+                <a href="https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                  Medium — Solving AI Hallucinations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-zinc-600 text-xs">
+            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white underline transition-colors">AGPL-3.0</a>.
+          </p>
+          <p className="text-zinc-600 text-xs">
+            Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">Yemek AI Engineering</a>
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
