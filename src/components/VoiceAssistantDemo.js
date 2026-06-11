@@ -17,7 +17,7 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
   const [isActive, setIsActive] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [isListening, setIsListening] = useState(false);
-  const [transcript, setTranscript] = useState("");
+  const [isSpeakingUI, setIsSpeakingUI] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   
   // HFSCA Acoustic Shield Logic
@@ -87,12 +87,13 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       
       recognition.onend = () => {
         setIsListening(false);
-        if (isActive) {
+        // Only auto-restart if we are active AND the assistant is not currently speaking
+        if (isActive && isSpeakingRef.current === false) {
           setTimeout(() => {
-            if (recognitionRef.current && isActive) {
+            if (recognitionRef.current && isActive && isSpeakingRef.current === false) {
               try { recognitionRef.current.start(); } catch(e) {}
             }
-          }, 500); // Increased buffer time to prevent crash
+          }, 500); 
         }
       };
 
@@ -112,12 +113,18 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
   const speakText = (text) => {
     if (typeof window === "undefined" || !isActive) return;
     
+    // Half-Duplex: Completely stop the microphone while speaking to prevent Android zombie mic
+    if (recognitionRef.current) {
+      try { recognitionRef.current.stop(); } catch(e) {}
+    }
+
     // First cancel anything playing
     window.speechSynthesis.cancel(); 
 
     // Generate a unique ID for this specific utterance
     const speechId = Date.now();
     isSpeakingRef.current = speechId;
+    setIsSpeakingUI(true);
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
@@ -129,8 +136,13 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
     const failsafeTimer = setTimeout(() => {
       if (isSpeakingRef.current === speechId) {
         isSpeakingRef.current = false;
+        setIsSpeakingUI(false);
+        // Restart mic after failsafe drops
+        if (recognitionRef.current && isActive) {
+          try { recognitionRef.current.start(); } catch(e) {}
+        }
       }
-    }, Math.max(text.length * 60, 2000)); // 60ms per character is more accurate for speech duration
+    }, Math.max(text.length * 70, 2500)); 
 
     const clearSpeakingState = () => {
       if (isSpeakingRef.current === speechId) {
@@ -138,6 +150,11 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
         setTimeout(() => {
           if (isSpeakingRef.current === speechId) {
             isSpeakingRef.current = false;
+            setIsSpeakingUI(false);
+            // Restart mic cleanly after speech ends
+            if (recognitionRef.current && isActive) {
+              try { recognitionRef.current.start(); } catch(e) {}
+            }
           }
         }, 400);
       }
@@ -199,15 +216,15 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       <div className="relative w-48 h-48 flex items-center justify-center mb-8">
         {isActive && (
           <>
-            <div className={`absolute inset-0 rounded-full border-4 ${isSpeakingRef.current !== false ? 'border-cyan-400 scale-110 opacity-50' : 'border-emerald-500 scale-125 opacity-20'} animate-ping transition-all duration-500`}></div>
-            <div className={`absolute inset-2 rounded-full border-2 ${isSpeakingRef.current !== false ? 'border-cyan-400 opacity-70' : 'border-emerald-500 opacity-40'} animate-pulse`}></div>
+            <div className={`absolute inset-0 rounded-full border-4 ${isSpeakingUI ? 'border-cyan-400 scale-110 opacity-50' : 'border-emerald-500 scale-125 opacity-20'} animate-ping transition-all duration-500`}></div>
+            <div className={`absolute inset-2 rounded-full border-2 ${isSpeakingUI ? 'border-cyan-400 opacity-70' : 'border-emerald-500 opacity-40'} animate-pulse`}></div>
           </>
         )}
         <button 
           onClick={toggleSession}
           className={`w-36 h-36 rounded-full flex flex-col items-center justify-center relative z-10 transition-all shadow-2xl ${
             isActive 
-              ? isSpeakingRef.current !== false
+              ? isSpeakingUI
                 ? 'bg-cyan-500 text-black shadow-[0_0_40px_rgba(34,211,238,0.6)] border-4 border-cyan-300' 
                 : 'bg-emerald-500 text-black shadow-[0_0_40px_rgba(16,185,129,0.6)] border-4 border-emerald-300'
               : 'bg-zinc-900 border-2 border-zinc-700 text-white hover:border-cyan-400 hover:bg-zinc-800'
@@ -229,10 +246,10 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
 
       {/* State Indicators */}
       <div className="flex gap-4 mb-8">
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingRef.current !== false ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingUI ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
           Output: SPEAKING
         </div>
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingRef.current === false && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && !isSpeakingUI && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
           Input: LISTENING
         </div>
       </div>
