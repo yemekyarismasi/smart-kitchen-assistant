@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DemoSection from "@/components/DemoSection";
 
 export default function Home() {
   return (
@@ -24,16 +25,19 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10 relative z-50">
-          <Link href="/demo" className="w-full sm:w-auto px-10 py-5 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center flex items-center justify-center gap-2 group cursor-pointer">
+          <a href="#interactive-demo" className="w-full sm:w-auto px-10 py-5 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center flex items-center justify-center gap-2 group cursor-pointer">
             <div className="w-3 h-3 rounded-full bg-black animate-pulse"></div>
             Experience Live Edge AI
-          </Link>
+          </a>
           <a href="#licensing" className="w-full sm:w-auto px-10 py-5 rounded-xl glass-panel text-white font-bold text-lg hover:bg-zinc-800 transition-all border border-zinc-700 text-center cursor-pointer">
             B2B Licensing
           </a>
         </div>
         <p className="text-sm text-zinc-500 mt-4 font-mono uppercase tracking-widest">No Cloud Required. Disconnect your Wi-Fi to test.</p>
       </section>
+
+      {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
+      <DemoSection />
 
       {/* 2. THE CORE METHODOLOGY: HFSCA & ACOUSTIC SHIELD */}
       <section className="w-full max-w-7xl mb-40 relative">
