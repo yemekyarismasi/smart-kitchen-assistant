@@ -36,18 +36,16 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
-      recognition.interimResults = true; // B2B Feature: Live Transcriptions
+      recognition.interimResults = false; // Reverted back to false to prevent engine crash
       recognition.lang = 'en-US';
 
       recognition.onresult = (event) => {
         if (isSpeakingRef.current !== false) return;
 
-        let currentTranscript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          currentTranscript += event.results[i][0].transcript;
-        }
+        // Process only the last finalized result to avoid buffer bloat safely
+        const last = event.results.length - 1;
+        const result = event.results[last][0].transcript.toLowerCase().trim();
         
-        const result = currentTranscript.toLowerCase().trim();
         setTranscript(result);
 
         // B2B AI Feature: Semantic Intent Parsing (Zero-Latency Local NLP)
@@ -61,19 +59,15 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
         if (isIntent(result, intentNext)) {
           setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
           setTranscript("");
-          try { recognition.stop(); } catch(e) {} // Hard reset engine to clear buffer and keep awake
         } else if (result.includes("back") || isIntent(result, intentBack)) {
           setCurrentStep(prev => Math.max(prev - 1, 0));
           setTranscript("");
-          try { recognition.stop(); } catch(e) {}
         } else if (isIntent(result, intentRepeat)) {
           speakText(steps[currentStep]);
           setTranscript("");
-          try { recognition.stop(); } catch(e) {}
         } else if (isIntent(result, intentStop)) {
           setIsActive(false);
           setTranscript("");
-          try { recognition.stop(); } catch(e) {}
           window.speechSynthesis.cancel();
         }
       };
@@ -98,7 +92,7 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
             if (recognitionRef.current && isActive) {
               try { recognitionRef.current.start(); } catch(e) {}
             }
-          }, 300);
+          }, 500); // Increased buffer time to prevent crash
         }
       };
 
