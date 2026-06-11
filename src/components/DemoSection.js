@@ -88,11 +88,11 @@ export default function DemoSection() {
             Step 1: Test Vision AI
           </div>
           
-          <h2 className="text-[1.2rem] min-[400px]:text-[1.3rem] sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight leading-tight text-white whitespace-nowrap">
-            Upload Food. Get The Recipe.
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight text-white">
+            Select Scenario. Extract Recipe.
           </h2>
           <p className="text-xl text-zinc-400 leading-relaxed font-light mb-8">
-            Experience the <strong>Yemek AI Vision Technology</strong>. Upload any food image and watch the AI extract a complete recipe instantly.
+            Experience the <strong>Yemek AI Vision Technology</strong>. Select any food scenario below and watch the AI extract a complete recipe instantly.
           </p>
 
           <div className="flex flex-col gap-4">
