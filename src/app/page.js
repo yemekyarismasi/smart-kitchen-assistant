@@ -40,6 +40,93 @@ export default function Home() {
       </div>
       <DemoSection />
 
+      {/* WHY OUR METHODOLOGY IS DIFFERENT */}
+      <section className="w-full max-w-7xl mx-auto mb-20 px-4 pt-8">
+        <div className="text-center mb-12">
+          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Competitive Edge</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at the Smart Kitchen</h2>
+          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+            Amazon, Google, and Samsung all tried cloud-first kitchen AI. They all failed the same way. Here is why our Edge-First methodology is structurally different.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
+            <div className="text-3xl mb-4">☁️</div>
+            <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Cloud Dependency</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">Every voice command travels to a data center and back. In a steamy kitchen with background noise, latency kills the experience. 800ms delay = burned food.</p>
+          </div>
+          <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
+            <div className="text-3xl mb-4">💸</div>
+            <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Infinite Scaling Costs</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">Each user request hits their GPU server. 1M users = 1M API calls per day. The economics of cloud-based kitchen AI are fundamentally broken for hardware OEMs.</p>
+          </div>
+          <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
+            <div className="text-3xl mb-4">🎙️</div>
+            <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Kitchen Acoustics</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">Generic voice assistants were not designed for kitchens. The echo from tile walls, mixer noise, and extractor fans create a recognition failure rate exceeding 40%.</p>
+          </div>
+        </div>
+
+        <div className="mt-6 p-6 rounded-2xl bg-emerald-950/20 border border-emerald-800/40 text-center">
+          <p className="text-emerald-300 text-lg font-semibold">
+            Our answer: <strong className="text-white">100% on-device processing</strong>, zero cloud dependency, built-in Acoustic Ignore Shield, and a hardware SDK that speaks directly to your appliance firmware.
+          </p>
+        </div>
+      </section>
+
+      {/* B2B MANUFACTURER VALUE MAP */}
+      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+        <div className="text-center mb-12">
+          <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold">For OEM Manufacturers</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">What You Get With Our SDK</h2>
+          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+            Three capabilities your engineering team cannot build in-house without 3+ years of R&D. Available immediately via our B2B Commercial License.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500 transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 group-hover:bg-cyan-500/20 transition-colors">
+              <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Acoustic Anomaly Detection</h3>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">Our microphones listen to the <strong className="text-white">machine itself</strong>, not just the user. Bearing wear, fan imbalance, and motor stress patterns are detected weeks before failure.</p>
+            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
+              <p className="text-cyan-400 font-mono text-xs">→ Predictive maintenance alerts</p>
+              <p className="text-cyan-400 font-mono text-xs">→ Reduce warranty claims by up to 30%</p>
+              <p className="text-cyan-400 font-mono text-xs">→ Auto-notify authorized service</p>
+            </div>
+          </div>
+
+          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-emerald-500 transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
+              <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"></path></svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Direct Hardware Control</h3>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">The AI does not just <em>suggest</em> — it <strong className="text-white">acts</strong>. "Scale to 2 people and start the oven" triggers a direct firmware command: <code className="text-emerald-400 bg-emerald-950 px-1 rounded text-sm">SET_TEMP=180°C</code>.</p>
+            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
+              <p className="text-emerald-400 font-mono text-xs">→ Works on Linux, RTOS, and bare-metal</p>
+              <p className="text-emerald-400 font-mono text-xs">→ Lightweight SDK (~2MB footprint)</p>
+              <p className="text-emerald-400 font-mono text-xs">→ Compatible with Oven, Fridge, Hood MCUs</p>
+            </div>
+          </div>
+
+          <div className="glass-panel p-8 rounded-3xl border border-zinc-800 hover:border-purple-500 transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
+              <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Zero Infrastructure Cost</h3>
+            <p className="text-zinc-400 text-base leading-relaxed mb-4">Every inference runs on the appliance NPU. No GPU server. No monthly API bill. <strong className="text-white">The cost to serve 1 user and 1 million users is identical: zero.</strong></p>
+            <div className="bg-black/50 rounded-xl p-4 border border-zinc-800">
+              <p className="text-purple-400 font-mono text-xs">→ $0 cloud cost per unit shipped</p>
+              <p className="text-purple-400 font-mono text-xs">→ Fully offline — GDPR compliant</p>
+              <p className="text-purple-400 font-mono text-xs">→ No internet = still fully functional</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. THE CORE METHODOLOGY: HFSCA & ACOUSTIC SHIELD */}
       <section className="w-full max-w-7xl mb-20 relative px-4">
         <div className="mb-8 md:mb-16 text-center md:text-left">

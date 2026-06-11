@@ -64,6 +64,50 @@ export default function DemoSection() {
           "Grill over hot charcoal, turning frequently until completely cooked and charred."
         ]
       }
+    },
+    {
+      id: "fridge",
+      name: "Smart Fridge Camera",
+      image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=800&auto=format&fit=crop",
+      badge: "B2B",
+      recipe: {
+        title: "Cream-Free Carbonara",
+        description: "Fridge camera detected: No heavy cream. AI instantly substituted with butter + milk. Zero user intervention required.",
+        difficulty: "Medium",
+        prepTime: "25 mins",
+        ingredients: ["200g spaghetti", "100g pancetta", "2 egg yolks", "50g parmesan", "1 tbsp butter + 2 tbsp milk (cream substitute)"],
+        nutrition: { calories: 520, protein: 28, fat: 22, carbs: 55 },
+        chefTouch: "The AI detected missing cream via fridge camera and auto-substituted in real-time. Hardware sees, AI thinks.",
+        steps: [
+          "[AI] Fridge camera scanned: heavy cream NOT found.",
+          "[AI] Substitution calculated: 1 tbsp butter + 2 tbsp milk = equivalent fat ratio.",
+          "Cook pancetta in a pan until crispy, then remove from heat.",
+          "Mix egg yolks, parmesan, butter and milk in a bowl.",
+          "Toss hot pasta with pancetta, remove from heat, and mix in the egg sauce."
+        ]
+      }
+    },
+    {
+      id: "oven",
+      name: "Smart Oven Integration",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
+      badge: "B2B",
+      recipe: {
+        title: "Herb-Crusted Salmon (2 Servings)",
+        description: "User said: \"Scale to 2 people and set the oven.\" AI recalculated portions and sent 180°C command directly to oven hardware.",
+        difficulty: "Easy",
+        prepTime: "30 mins",
+        ingredients: ["2 salmon fillets (150g each)", "1 tbsp olive oil", "1 tsp rosemary", "1 tsp thyme", "Salt & pepper"],
+        nutrition: { calories: 380, protein: 42, fat: 18, carbs: 2 },
+        chefTouch: "Oven set to 180°C automatically via hardware API. No manual input needed. This is the future of cooking.",
+        steps: [
+          "[VOICE] User: \"Scale to 2 people and preheat the oven.\"",
+          "[AI] Recipe scaled from 4 → 2 servings. Cooking time adjusted: 25 min.",
+          "[HARDWARE] Oven command sent: SET_TEMP=180°C, MODE=FAN_ASSIST.",
+          "Coat salmon fillets with olive oil, rosemary, and thyme.",
+          "Place in oven when preheated. Serve when timer completes."
+        ]
+      }
     }
   ];
 
@@ -98,26 +142,30 @@ export default function DemoSection() {
           <div className="flex flex-col gap-4">
             <p className="text-zinc-500 font-mono text-sm md:text-base mb-2 text-center lg:text-left">Select a scenario to run Vision AI simulation:</p>
             {SCENARIOS.map((s) => {
+              const isB2B = !!s.badge;
               const isSelected = recipe?.title === s.recipe.title;
               return (
                 <div 
                   key={s.id}
                   onClick={() => handleScenarioClick(s)}
-                  className={`w-full flex items-center gap-6 p-4 rounded-2xl border cursor-pointer transition-all group ${isSelected ? 'border-cyan-500 bg-cyan-950/30' : 'border-zinc-800 hover:border-cyan-500 hover:bg-cyan-950/20'}`}
+                  className={`w-full flex items-center gap-6 p-4 rounded-2xl border cursor-pointer transition-all group ${isSelected ? (isB2B ? 'border-amber-500 bg-amber-950/20' : 'border-cyan-500 bg-cyan-950/30') : (isB2B ? 'border-amber-900/50 hover:border-amber-500 hover:bg-amber-950/20' : 'border-zinc-800 hover:border-cyan-500 hover:bg-cyan-950/20')}`}
                 >
                   <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 relative">
                     <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     {isSelected && (
-                      <div className="absolute inset-0 bg-cyan-500/20 flex items-center justify-center">
-                        <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
+                      <div className={`absolute inset-0 flex items-center justify-center ${isB2B ? 'bg-amber-500/20' : 'bg-cyan-500/20'}`}>
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center ${isB2B ? 'bg-amber-500' : 'bg-cyan-500'}`}>
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                       </div>
                     )}
                   </div>
                   <div className="flex-1 text-left min-w-0">
-                    <h3 className={`text-base sm:text-lg md:text-xl font-bold transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${isSelected ? 'text-cyan-400' : 'text-white group-hover:text-cyan-400'}`}>{s.name}</h3>
-                    <p className="text-sm text-zinc-500 font-mono mt-1">{isSelected ? 'Currently Selected' : 'Run Extraction Simulation →'}</p>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className={`text-base sm:text-lg md:text-xl font-bold transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${isSelected ? (isB2B ? 'text-amber-400' : 'text-cyan-400') : (isB2B ? 'text-white group-hover:text-amber-400' : 'text-white group-hover:text-cyan-400')}`}>{s.name}</h3>
+                      {isB2B && <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase tracking-widest shrink-0">B2B</span>}
+                    </div>
+                    <p className={`text-sm font-mono mt-1 ${isB2B ? 'text-amber-600' : 'text-zinc-500'}`}>{isSelected ? 'Currently Selected' : (isB2B ? 'Hardware Integration Demo →' : 'Run Extraction Simulation →')}</p>
                   </div>
                 </div>
               );
