@@ -77,10 +77,10 @@ export default function DemoSection() {
   };
 
   return (
-    <div className="w-full relative py-20" id="interactive-demo">
+    <div className="w-full relative py-6 md:py-16" id="interactive-demo">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative z-10 px-6">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start relative z-10 px-6">
         
         {/* Left: Scenario Selection (Always Visible) */}
         <div className="space-y-6 text-center lg:text-left">
@@ -126,23 +126,25 @@ export default function DemoSection() {
         </div>
 
         {/* Right: Extracted Recipe Details & Launch Button */}
-        <div className="glass-panel border border-zinc-800 rounded-[2.5rem] shadow-[0_0_50px_rgba(34,211,238,0.1)] relative overflow-hidden h-full flex flex-col mt-12 lg:mt-0">
+        <div className="glass-panel border border-zinc-800 rounded-[2.5rem] shadow-[0_0_50px_rgba(34,211,238,0.1)] relative overflow-hidden h-full flex flex-col mt-8 lg:mt-0">
           <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 background-animate z-20"></div>
           
           {recipe ? (
             <div className="flex flex-col h-full relative z-10">
+              
+              {/* Badge Area Above Image */}
+              <div className="absolute top-6 right-6 flex items-center gap-2 bg-zinc-900/90 px-4 py-2 rounded-full border border-cyan-500/50 backdrop-blur-md z-30 shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+                <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-widest">Step 2: Edge Voice AI</span>
+              </div>
+
               {/* Image Header */}
               <div className="h-56 bg-black relative border-b border-zinc-800 shrink-0">
-                {image && <img src={image} alt="Food" className="w-full h-full object-cover opacity-60" />}
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-                
-                <div className="absolute top-6 right-6 flex items-center gap-2 bg-zinc-900/80 px-3 py-1.5 rounded-full border border-zinc-700 backdrop-blur-md">
-                  <span className="text-xs font-mono text-cyan-400">Step 2: Edge Voice AI</span>
-                </div>
+                {image && <img src={image} alt="Food" className="w-full h-full object-cover opacity-100" />}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent"></div>
 
                 <div className="absolute bottom-4 left-6 flex gap-2">
-                  <span className="bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{recipe.difficulty}</span>
-                  <span className="bg-white text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{recipe.prepTime}</span>
+                  <span className="bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">{recipe.difficulty}</span>
+                  <span className="bg-white text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">{recipe.prepTime}</span>
                 </div>
               </div>
               
