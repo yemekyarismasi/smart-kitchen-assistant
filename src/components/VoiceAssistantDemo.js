@@ -60,18 +60,21 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
 
         if (isIntent(result, intentNext)) {
           setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
-          setTranscript(""); // Clear transcript after execution
+          setTranscript("");
+          try { recognition.stop(); } catch(e) {} // Hard reset engine to clear buffer and keep awake
         } else if (result.includes("back") || isIntent(result, intentBack)) {
           setCurrentStep(prev => Math.max(prev - 1, 0));
           setTranscript("");
+          try { recognition.stop(); } catch(e) {}
         } else if (isIntent(result, intentRepeat)) {
           speakText(steps[currentStep]);
           setTranscript("");
+          try { recognition.stop(); } catch(e) {}
         } else if (isIntent(result, intentStop)) {
           setIsActive(false);
-          recognition.stop();
-          window.speechSynthesis.cancel();
           setTranscript("");
+          try { recognition.stop(); } catch(e) {}
+          window.speechSynthesis.cancel();
         }
       };
 
@@ -133,7 +136,7 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       if (isSpeakingRef.current === speechId) {
         isSpeakingRef.current = false;
       }
-    }, Math.max(text.length * 100, 3000));
+    }, Math.max(text.length * 60, 2000)); // 60ms per character is more accurate for speech duration
 
     const clearSpeakingState = () => {
       if (isSpeakingRef.current === speechId) {
