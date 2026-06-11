@@ -162,8 +162,8 @@ export default function DemoSection() {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-zinc-800">
-                  <p className="text-sm text-center text-white font-mono mb-4 animate-pulse">
-                    No Cloud Required. Disconnect your Wi-Fi to test offline Kitchen Mode.
+                  <p className="text-sm text-center text-white font-mono mb-4 animate-pulse whitespace-nowrap">
+                    No Cloud Required. Disconnect Wi-Fi to test offline mode.
                   </p>
                   <button 
                     onClick={() => setShowKitchenMode(true)}
