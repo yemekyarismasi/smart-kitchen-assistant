@@ -159,9 +159,9 @@ graph TD
           <p className="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 leading-relaxed">
             To bypass the AGPL-3.0 mandate and securely integrate the Smart Kitchen Assistant into closed-source IoT firmware (e.g., Oven MCU, Smart Fridge OS), tech manufacturers must acquire a B2B Commercial License.
           </p>
-          <button className="w-full py-4 md:py-5 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
+          <a href="mailto:info@yemekyarismasi.com" className="block text-center w-full py-4 md:py-5 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
             Contact Yemek AI Engineering
-          </button>
+          </a>
         </div>
       </section>
 
