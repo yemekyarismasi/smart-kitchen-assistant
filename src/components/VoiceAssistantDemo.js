@@ -179,20 +179,38 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
     }
   }, [currentStep, isActive, steps]);
 
-  const toggleSession = () => {
+  const toggleSession = async () => {
     if (!isActive) {
+      // Platform detection
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      
+      if (!isIOS) {
+        // Prevent Android Chrome Tab Crash (Aw, Snap!) by requesting mic permission explicitly first
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          stream.getTracks().forEach(track => track.stop());
+        } catch (err) {
+          setErrorMsg("Browser blocked microphone. Please check URL bar permissions.");
+          return;
+        }
+      }
+
       setIsActive(true);
       setCurrentStep(0);
       setErrorMsg("");
       setTranscript("");
       
-      if (recognitionRef.current) {
-        try { 
-          recognitionRef.current.start(); 
-        } catch(e) {
-          console.error("Mic start error:", e);
+      // Delay start slightly on Android to let getUserMedia cleanup finish, synchronous on iOS
+      setTimeout(() => {
+        if (recognitionRef.current) {
+          try { 
+            recognitionRef.current.start(); 
+          } catch(e) {
+            console.error("Mic start error:", e);
+          }
         }
-      }
+      }, isIOS ? 0 : 50);
+
     } else {
       setIsActive(false);
       if (recognitionRef.current) {
