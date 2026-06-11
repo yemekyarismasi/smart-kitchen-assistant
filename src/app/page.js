@@ -47,7 +47,7 @@ export default function Home() {
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-2xl md:text-3xl font-black mb-4 tracking-tight whitespace-nowrap">
             1. The HFSCA Architecture
           </h2>
-          <p className="text-base md:text-base text-zinc-200 font-normal leading-relaxed mx-auto md:mx-0">
+          <p className="text-lg text-zinc-200 font-normal leading-relaxed mx-auto md:mx-0">
             Hands-Free Semantic Culinary Assistant methodology completely decouples intelligence from the cloud, eliminating latency and server costs.
           </p>
         </div>

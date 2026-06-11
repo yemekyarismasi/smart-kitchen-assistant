@@ -88,7 +88,7 @@ export default function DemoSection() {
             Step 1: Test Vision AI
           </div>
           
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight text-white">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight leading-tight text-white">
             Select Scenario. Extract Recipe.
           </h2>
           <p className="text-xl text-zinc-400 leading-relaxed font-light mb-8">
