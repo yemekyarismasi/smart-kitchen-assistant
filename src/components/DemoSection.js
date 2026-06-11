@@ -80,23 +80,23 @@ export default function DemoSection() {
     <div className="w-full relative py-6 md:py-16" id="interactive-demo">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-      <div className="w-full max-w-7xl mx-auto px-6 relative z-10 text-center mb-12">
-        <div className="inline-block px-4 py-1.5 rounded-full border border-cyan-900/50 bg-cyan-950/20 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-          Step 1: Test Vision AI
-        </div>
-        <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-5xl font-black tracking-tight leading-tight text-white mb-4 whitespace-nowrap">
-          Select Scenario. Extract Recipe.
-        </h2>
-        <p className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
-          Experience the <strong>Yemek AI Vision Technology</strong>. Select any food scenario below and watch the AI extract a complete recipe instantly.
-        </p>
-      </div>
-
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start relative z-10 px-6">
         
         {/* Left: Scenario Selection (Always Visible) */}
-        <div className="flex flex-col gap-4">
-          <p className="text-zinc-500 font-mono text-sm mb-2 text-center lg:text-left">Select a scenario to run Vision AI simulation:</p>
+        <div className="space-y-6 text-center lg:text-left">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-cyan-900/50 bg-cyan-950/20 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-2 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+            Step 1: Test Vision AI
+          </div>
+          
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight leading-tight text-white">
+            Select Scenario. Extract Recipe.
+          </h2>
+          <p className="text-xl text-zinc-400 leading-relaxed font-light mb-8">
+            Experience the <strong>Yemek AI Vision Technology</strong>. Select any food scenario below and watch the AI extract a complete recipe instantly.
+          </p>
+
+          <div className="flex flex-col gap-4">
+            <p className="text-zinc-500 font-mono text-sm mb-2 text-center lg:text-left">Select a scenario to run Vision AI simulation:</p>
             {SCENARIOS.map((s) => {
               const isSelected = recipe?.title === s.recipe.title;
               return (

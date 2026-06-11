@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center px-4 py-8 md:px-24 md:py-12 overflow-x-hidden bg-black text-white">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-5xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-12 relative z-10">
+      <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-12 relative z-10 px-4">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
         
         <div className="inline-block px-5 py-2 rounded-full border border-cyan-900 bg-cyan-950/30 mb-6 backdrop-blur-md">
@@ -15,12 +15,14 @@ export default function Home() {
           </span>
         </div>
         
-        <h1 className="text-[1.5rem] min-[400px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight flex flex-col gap-2 md:gap-4 items-center justify-center">
-          <span className="whitespace-nowrap">Smart Kitchen Assistant</span>
-          <span className="neon-text-gradient whitespace-nowrap">Next-Gen Edge AI</span>
+        <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.8rem] lg:text-6xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
+          <span>Smart Kitchen Assistant</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-500 whitespace-nowrap">
+            Next-Gen Edge AI
+          </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+        <p className="text-xl md:text-2xl text-zinc-400 w-full mx-auto font-light leading-relaxed px-4">
           The definitive open-source methodology for offline appliance intelligence. Featuring Acoustic Shields, 100% Visual Ground Truth, and Zero-Latency Hardware Integration.
         </p>
 
