@@ -28,7 +28,7 @@ export default function Home() {
             Experience Live Edge AI
           </h2>
           <p className="text-zinc-400 text-base md:text-lg">
-            Select a scenario below to see the exact B2C user experience in real-time.
+            Select a scenario below to preview the live B2C experience.
           </p>
         </div>
         <div className="w-full">
