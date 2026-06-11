@@ -44,10 +44,10 @@ export default function Home() {
       {/* 2. THE CORE METHODOLOGY: HFSCA & ACOUSTIC SHIELD */}
       <section className="w-full max-w-7xl mb-20 relative px-4">
         <div className="mb-8 md:mb-16 text-center md:text-left">
-          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-4xl md:text-5xl font-black mb-4 tracking-tight whitespace-nowrap">
+          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-2xl md:text-3xl font-black mb-4 tracking-tight whitespace-nowrap">
             1. The HFSCA Architecture
           </h2>
-          <p className="text-lg md:text-2xl text-zinc-200 font-normal leading-relaxed mx-auto md:mx-0">
+          <p className="text-lg md:text-xl text-zinc-200 font-normal leading-relaxed mx-auto md:mx-0">
             Hands-Free Semantic Culinary Assistant methodology completely decouples intelligence from the cloud, eliminating latency and server costs.
           </p>
         </div>
