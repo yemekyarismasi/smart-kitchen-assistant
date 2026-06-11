@@ -147,13 +147,7 @@ export default function DemoPage() {
               </div>
             )}
 
-            {/* Error state */}
-            {error && (
-              <div className="p-4 bg-red-950/50 border border-red-900 rounded-xl text-red-400 font-mono text-sm mt-4">
-                {error}
-                <button onClick={() => setError("")} className="ml-4 underline hover:text-red-300">Try Again</button>
-              </div>
-            )}
+
 
             {/* Extracted Recipe Card */}
             {recipe && !loading && (
