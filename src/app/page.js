@@ -25,11 +25,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10 relative z-50">
-          <a href="#interactive-demo" className="w-full sm:w-auto px-10 py-5 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center flex items-center justify-center gap-2 group cursor-pointer">
-            <div className="w-3 h-3 rounded-full bg-black animate-pulse"></div>
-            Experience Live Edge AI
-          </a>
-          <a href="#licensing" className="w-full sm:w-auto px-10 py-5 rounded-xl glass-panel text-white font-bold text-lg hover:bg-zinc-800 transition-all border border-zinc-700 text-center cursor-pointer">
+          <a href="#licensing" className="w-full sm:w-auto px-10 py-5 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center cursor-pointer">
             B2B Licensing
           </a>
         </div>
@@ -37,6 +33,12 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
+      <div className="w-full max-w-7xl text-center mt-10 mb-6">
+        <h2 className="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+          Experience Live Edge AI
+        </h2>
+        <p className="text-zinc-400 mt-4 text-xl">Select a scenario below to see the exact B2C user experience in real-time.</p>
+      </div>
       <DemoSection />
 
       {/* 2. THE CORE METHODOLOGY: HFSCA & ACOUSTIC SHIELD */}
