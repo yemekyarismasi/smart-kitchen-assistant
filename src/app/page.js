@@ -147,12 +147,12 @@ graph TD
       </section>
 
       {/* 5. B2B LICENSING & HARDWARE OS INTEGRATION */}
-      <section id="licensing" className="w-full max-w-7xl mx-auto text-left space-y-6 md:space-y-10 mb-20 p-6 md:p-12 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
+      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-6 md:space-y-10 mb-20 p-6 md:p-12 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
         <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-4xl md:text-5xl font-black relative z-10 whitespace-nowrap">Dual-Licensing Strategy</h2>
-        <p className="text-base md:text-xl text-zinc-300 max-w-3xl leading-relaxed relative z-10">
+        <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>
         <div className="bg-black/50 p-6 md:p-10 rounded-2xl border border-zinc-800 inline-block text-left mt-6 md:mt-10 max-w-3xl relative z-10 w-full shadow-2xl">
