@@ -29,7 +29,6 @@ export default function Home() {
             B2B Licensing
           </a>
         </div>
-        <p className="text-sm text-zinc-500 mt-4 font-mono uppercase tracking-widest">No Cloud Required. Disconnect your Wi-Fi to test.</p>
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}

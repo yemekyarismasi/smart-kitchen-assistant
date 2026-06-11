@@ -162,6 +162,9 @@ export default function DemoSection() {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-zinc-800">
+                  <p className="text-xs text-center text-zinc-500 font-mono mb-4 uppercase tracking-widest">
+                    No Cloud Required. Disconnect your Wi-Fi to test offline Kitchen Mode.
+                  </p>
                   <button 
                     onClick={() => setShowKitchenMode(true)}
                     className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[1.1rem] sm:text-lg md:text-xl py-3 md:py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3"
