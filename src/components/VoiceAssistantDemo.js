@@ -35,19 +35,21 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
-      recognition.interimResults = false;
+      recognition.interimResults = true; // B2B Feature: Live Transcriptions
       recognition.lang = 'en-US';
 
       recognition.onresult = (event) => {
         if (isSpeakingRef.current) return;
 
-        const last = event.results.length - 1;
-        const result = event.results[last][0].transcript.toLowerCase().trim();
+        let currentTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          currentTranscript += event.results[i][0].transcript;
+        }
         
+        const result = currentTranscript.toLowerCase().trim();
         setTranscript(result);
 
         // B2B AI Feature: Semantic Intent Parsing (Zero-Latency Local NLP)
-        // Instead of strict keywords, we evaluate the semantic intent and phonetics of the transcript.
         const intentNext = ["next", "necks", "text", "nets", "max", "continue", "go", "ready", "done", "yes", "ok", "okay", "yeah", "yep", "forward", "let's go", "devam", "ileri"];
         const intentBack = ["back", "previous", "before", "geri", "geriye"];
         const intentRepeat = ["repeat", "again", "what", "pardon", "sorry", "tekrar"];
@@ -57,15 +59,18 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
 
         if (isIntent(result, intentNext)) {
           setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
-        } else if (result.includes("back")) {
-          // Keep strict for back to prevent accidental backwards
+          setTranscript(""); // Clear transcript after execution
+        } else if (result.includes("back") || isIntent(result, intentBack)) {
           setCurrentStep(prev => Math.max(prev - 1, 0));
+          setTranscript("");
         } else if (isIntent(result, intentRepeat)) {
           speakText(steps[currentStep]);
+          setTranscript("");
         } else if (isIntent(result, intentStop)) {
           setIsActive(false);
           recognition.stop();
           window.speechSynthesis.cancel();
+          setTranscript("");
         }
       };
 
