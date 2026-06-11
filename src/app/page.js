@@ -22,7 +22,7 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-6 px-6">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-2 md:mb-4 px-6">
         <div className="text-center lg:text-left">
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
             Experience Live Edge AI

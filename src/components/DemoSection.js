@@ -77,7 +77,7 @@ export default function DemoSection() {
   };
 
   return (
-    <div className="w-full relative py-6 md:py-16" id="interactive-demo">
+    <div className="w-full relative pt-2 md:pt-4 pb-6 md:pb-16" id="interactive-demo">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start relative z-10 px-6">
