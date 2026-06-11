@@ -1,54 +1,52 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
 
-export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
-  const steps = recipeSteps && recipeSteps.length > 0 ? [
-    `Welcome. Let's make ${recipeTitle || 'this recipe'}. Say 'next' when you are ready.`,
-    ...recipeSteps,
-    "Say 'stop' to end the session."
-  ] : [
-    "Welcome. Let's make Heart-Shaped Sunny-Side Up Eggs. Say 'next' when you are ready.",
-    "Step 1: Place a heart-shaped silicone mold in the center of your pan over medium heat.",
-    "Step 2: Add half a tablespoon of butter inside the mold and let it melt. Say 'next'.",
-    "Step 3: Gently crack an egg directly into the heart shape.",
-    "Step 4: Cook for 3 minutes until the whites are firm. Say 'stop' to end the session."
-  ];
+import { useState, useEffect, useRef } from 'react';
 
+export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
   const [isActive, setIsActive] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [isListening, setIsListening] = useState(false);
   const [isSpeakingUI, setIsSpeakingUI] = useState(false);
+  const [transcript, setTranscript] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   
-  // HFSCA Acoustic Shield Logic
-  // We use a unique ID to prevent old cancel events from dropping the shield of new utterances
   const isSpeakingRef = useRef(false);
   const recognitionRef = useRef(null);
 
-  // Store utterance globally to prevent Chrome garbage collection bug
-  useEffect(() => {
-    window.activeUtterances = [];
-  }, []);
+  const defaultSteps = [
+    "Welcome. Let's make something delicious. Say 'next' when you are ready.",
+    "Step 1: Gather your ingredients and prepare your workspace.",
+    "Step 2: Follow the first instruction carefully.",
+    "Step 3: Combine everything and cook.",
+    "Step 4: Plate your dish beautifully. Enjoy!"
+  ];
 
-  // Initialize Speech Recognition
+  const steps = recipeSteps && recipeSteps.length > 0 
+    ? [`Welcome. Let's make ${recipeTitle || 'this recipe'}. Say 'next' when you are ready.`, ...recipeSteps, "Recipe complete. Enjoy your meal! Say 'stop' to end."] 
+    : defaultSteps;
+
   useEffect(() => {
-    if (typeof window !== "undefined" && ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
+    if (typeof window !== "undefined") {
+      window.activeUtterances = [];
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        setErrorMsg("Your browser does not support Voice AI. Try Chrome.");
+        return;
+      }
+      
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
-      recognition.interimResults = false; // Reverted back to false to prevent engine crash
+      recognition.interimResults = false; 
       recognition.lang = 'en-US';
 
       recognition.onresult = (event) => {
-        if (isSpeakingRef.current !== false) return;
+        if (isSpeakingRef.current) return;
 
-        // Process only the last finalized result to avoid buffer bloat safely
         const last = event.results.length - 1;
         const result = event.results[last][0].transcript.toLowerCase().trim();
         
         setTranscript(result);
 
-        // B2B AI Feature: Semantic Intent Parsing (Zero-Latency Local NLP)
         const intentNext = ["next", "necks", "text", "nets", "max", "continue", "go", "ready", "done", "yes", "ok", "okay", "yeah", "yep", "forward", "let's go", "devam", "ileri"];
         const intentBack = ["back", "previous", "before", "geri", "geriye"];
         const intentRepeat = ["repeat", "again", "what", "pardon", "sorry", "tekrar"];
@@ -74,10 +72,6 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
 
       recognition.onerror = (event) => {
         console.error("Speech Recognition Error:", event.error);
-        if (event.error === 'not-allowed') {
-          setErrorMsg("Microphone blocked. Please click the camera/mic icon in your URL bar and select 'Allow'.");
-          setIsActive(false);
-        }
       };
 
       recognition.onstart = () => {
@@ -87,43 +81,35 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       
       recognition.onend = () => {
         setIsListening(false);
-        // Only auto-restart if we are active AND the assistant is not currently speaking
-        if (isActive && isSpeakingRef.current === false) {
+        if (isActive) {
           setTimeout(() => {
-            if (recognitionRef.current && isActive && isSpeakingRef.current === false) {
+            if (recognitionRef.current && isActive) {
               try { recognitionRef.current.start(); } catch(e) {}
             }
-          }, 500); 
+          }, 300);
         }
       };
 
       recognitionRef.current = recognition;
-    } else {
-      setErrorMsg("Your browser does not support Web Speech API. Please use Chrome or Edge.");
     }
-    
+
     return () => {
       if (recognitionRef.current) {
-        recognitionRef.current.onend = null; 
+        recognitionRef.current.onend = null;
         try { recognitionRef.current.stop(); } catch(e) {}
       }
+      if (typeof window !== "undefined") {
+        window.speechSynthesis.cancel();
+      }
     };
-  }, [isActive, currentStep]);
+  }, [isActive, currentStep, steps]);
 
   const speakText = (text) => {
     if (typeof window === "undefined" || !isActive) return;
     
-    // Half-Duplex: Completely stop the microphone while speaking to prevent Android zombie mic
-    if (recognitionRef.current) {
-      try { recognitionRef.current.stop(); } catch(e) {}
-    }
-
-    // First cancel anything playing
     window.speechSynthesis.cancel(); 
 
-    // Generate a unique ID for this specific utterance
-    const speechId = Date.now();
-    isSpeakingRef.current = speechId;
+    isSpeakingRef.current = true;
     setIsSpeakingUI(true);
 
     const utterance = new SpeechSynthesisUtterance(text);
@@ -132,44 +118,26 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
     
     window.activeUtterances.push(utterance);
 
-    // Failsafe timer: in case onend never fires (Chrome bug)
+    // Bulletproof Failsafe
     const failsafeTimer = setTimeout(() => {
-      if (isSpeakingRef.current === speechId) {
-        isSpeakingRef.current = false;
-        setIsSpeakingUI(false);
-        // Restart mic after failsafe drops
-        if (recognitionRef.current && isActive) {
-          try { recognitionRef.current.start(); } catch(e) {}
-        }
-      }
-    }, Math.max(text.length * 70, 2500)); 
+      isSpeakingRef.current = false;
+      setIsSpeakingUI(false);
+    }, Math.max(text.length * 60, 2000)); 
 
     const clearSpeakingState = () => {
-      if (isSpeakingRef.current === speechId) {
-        clearTimeout(failsafeTimer);
-        setTimeout(() => {
-          if (isSpeakingRef.current === speechId) {
-            isSpeakingRef.current = false;
-            setIsSpeakingUI(false);
-            // Restart mic cleanly after speech ends
-            if (recognitionRef.current && isActive) {
-              try { recognitionRef.current.start(); } catch(e) {}
-            }
-          }
-        }, 400);
-      }
+      clearTimeout(failsafeTimer);
+      setTimeout(() => {
+        isSpeakingRef.current = false;
+        setIsSpeakingUI(false);
+      }, 400);
     };
 
     utterance.onend = clearSpeakingState;
     utterance.onerror = clearSpeakingState;
-    // Don't bind oncancel to clearSpeakingState, because cancel is used intentionally to overlap
     utterance.oncancel = () => {};
 
-    // Small delay to ensure previous cancels are fully processed by Chrome before speaking
     setTimeout(() => {
-      if (isSpeakingRef.current === speechId) {
-        window.speechSynthesis.speak(utterance);
-      }
+      window.speechSynthesis.speak(utterance);
     }, 50);
   };
 
@@ -181,18 +149,12 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
 
   const toggleSession = async () => {
     if (!isActive) {
-      // Platform detection
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      
-      if (!isIOS) {
-        // Prevent Android Chrome Tab Crash (Aw, Snap!) by requesting mic permission explicitly first
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          stream.getTracks().forEach(track => track.stop());
-        } catch (err) {
-          setErrorMsg("Browser blocked microphone. Please check URL bar permissions.");
-          return;
-        }
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        stream.getTracks().forEach(track => track.stop());
+      } catch (err) {
+        setErrorMsg("Browser blocked microphone. Please check URL bar permissions.");
+        return;
       }
 
       setIsActive(true);
@@ -200,10 +162,13 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       setErrorMsg("");
       setTranscript("");
       
-      // We DO NOT call recognitionRef.current.start() here anymore!
-      // Because setIsActive(true) triggers speakText() immediately, 
-      // which will handle stopping and starting the mic cleanly.
-
+      if (recognitionRef.current) {
+        try { 
+          recognitionRef.current.start(); 
+        } catch(e) {
+          console.error("Mic start error:", e);
+        }
+      }
     } else {
       setIsActive(false);
       if (recognitionRef.current) {
@@ -215,15 +180,18 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center text-center w-full">
+    <div className="flex flex-col items-center justify-center w-full h-full p-4 relative z-10">
       
-      {errorMsg && (
-        <div className="mb-6 p-4 bg-red-950/50 border border-red-900 rounded-lg text-red-400 text-sm animate-pulse w-full shadow-[0_0_15px_rgba(239,68,68,0.2)] font-mono">
-          {errorMsg}
+      {/* State Indicators */}
+      <div className="flex gap-4 mb-8">
+        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingUI ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+          Output: SPEAKING
         </div>
-      )}
+        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && !isSpeakingUI && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+          Input: LISTENING
+        </div>
+      </div>
 
-      {/* Visualizer Circle */}
       <div className="relative w-48 h-48 flex items-center justify-center mb-8">
         {isActive && (
           <>
@@ -241,42 +209,33 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
               : 'bg-zinc-900 border-2 border-zinc-700 text-white hover:border-cyan-400 hover:bg-zinc-800'
           }`}
         >
-          {isActive ? (
-             <svg className="w-12 h-12 mb-1 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
-             </svg>
-          ) : (
-            <svg className="w-12 h-12 mb-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-             </svg>
-          )}
-          <span className="font-bold text-sm uppercase tracking-widest mt-1">{isActive ? 'Turn Off' : 'Activate Mode'}</span>
+          <svg className={`w-12 h-12 mb-2 transition-colors ${isActive ? (isSpeakingUI ? 'text-cyan-900' : 'text-emerald-900') : 'text-zinc-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+          </svg>
+          <span className={`font-bold tracking-widest uppercase text-sm ${isActive ? 'text-black' : 'text-white'}`}>
+            {isActive ? 'Turn Off' : 'Activate'}
+          </span>
         </button>
       </div>
 
-      {/* State Indicators */}
-      <div className="flex gap-4 mb-8">
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingUI ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
-          Output: SPEAKING
+      {errorMsg && (
+        <div className="mb-6 p-3 bg-red-950/50 border border-red-900 rounded-lg text-red-400 text-xs font-mono text-center">
+          {errorMsg}
         </div>
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && !isSpeakingUI && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
-          Input: LISTENING
-        </div>
-      </div>
+      )}
 
-      {/* The Recipe Text */}
-      <div className="bg-zinc-900/50 w-full rounded-2xl p-6 border border-zinc-800 min-h-[140px] flex items-center justify-center shadow-inner">
-        <p className={`text-xl sm:text-2xl font-light transition-all ${isActive ? 'text-white' : 'text-zinc-600'}`}>
-          {isActive ? steps[currentStep] : "Press activate to start Kitchen Assistant."}
-        </p>
-      </div>
-
-      {/* Live Transcript */}
       {isActive && (
-        <div className="mt-6 w-full text-left bg-black p-4 rounded-xl border border-zinc-800 font-mono text-sm shadow-lg">
-          <span className="text-zinc-500">System heard: </span>
-          <span className="text-emerald-400">"{transcript || 'Waiting for voice command...'}"</span>
+        <div className="w-full max-w-md bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 text-center shadow-xl backdrop-blur-md">
+          <p className="text-xl font-light text-zinc-200 leading-relaxed">
+            {steps[currentStep]}
+          </p>
+        </div>
+      )}
+
+      {isActive && transcript && (
+        <div className="mt-6 w-full max-w-md bg-black border border-emerald-900/30 rounded-xl p-4 text-left">
+          <p className="text-zinc-500 font-mono text-xs mb-1">System heard:</p>
+          <p className="text-emerald-400 font-mono text-sm">"{transcript}"</p>
         </div>
       )}
     </div>
