@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DemoSection from "@/components/DemoSection";
+import OpenSourceSection from "@/components/OpenSourceSection";
 
 export default function Home() {
   return (
