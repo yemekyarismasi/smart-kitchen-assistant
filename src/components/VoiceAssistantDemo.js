@@ -11,6 +11,8 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
   const [errorMsg, setErrorMsg] = useState("");
   
   const isSpeakingRef = useRef(false);
+  const isListeningRef = useRef(false);
+  const utteranceRef = useRef(null);
   const recognitionRef = useRef(null);
 
   const defaultSteps = [
@@ -27,7 +29,6 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.activeUtterances = [];
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SpeechRecognition) {
         setErrorMsg("Your browser does not support Voice AI. Try Chrome.");
@@ -40,10 +41,10 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
       recognition.lang = 'en-US';
 
       recognition.onresult = (event) => {
-        if (isSpeakingRef.current) return;
-
         const last = event.results.length - 1;
         const result = event.results[last][0].transcript.toLowerCase().trim();
+        
+        if (isSpeakingRef.current) return;
         
         setTranscript(result);
 
@@ -72,6 +73,9 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
 
       recognition.onerror = (event) => {
         console.error("Speech Recognition Error:", event.error);
+        if (event.error !== 'no-speech') {
+          setIsListening(false);
+        }
       };
 
       recognition.onstart = () => {
@@ -80,13 +84,13 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
       };
       
       recognition.onend = () => {
-        setIsListening(false);
-        if (isActive) {
+        // Eğer kullanıcı kapatmadıysa ve ASİSTAN KONUŞMUYORSA mikrofonu yeniden başlat
+        if (isListeningRef.current && !isSpeakingRef.current) {
           setTimeout(() => {
-            if (recognitionRef.current && isActive) {
-              try { recognitionRef.current.start(); } catch(e) {}
-            }
-          }, 300);
+            try { recognition.start(); } catch (e) {}
+          }, 400);
+        } else {
+          setIsListening(false);
         }
       };
 
@@ -113,32 +117,26 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
     setIsSpeakingUI(true);
 
     const utterance = new SpeechSynthesisUtterance(text);
+    utteranceRef.current = utterance; // Garbage collection bug fix
+    
     utterance.lang = "en-US";
     utterance.rate = 1.0;
     
-    window.activeUtterances.push(utterance);
-
-    // Bulletproof Failsafe
-    const failsafeTimer = setTimeout(() => {
+    const onSpeechEnd = () => {
       isSpeakingRef.current = false;
       setIsSpeakingUI(false);
-    }, Math.max(text.length * 60, 2000)); 
-
-    const clearSpeakingState = () => {
-      clearTimeout(failsafeTimer);
-      setTimeout(() => {
-        isSpeakingRef.current = false;
-        setIsSpeakingUI(false);
-      }, 400);
+      if (isListeningRef.current && recognitionRef.current) {
+        setTimeout(() => {
+          try { recognitionRef.current.start(); } catch (e) {}
+        }, 400);
+      }
     };
 
-    utterance.onend = clearSpeakingState;
-    utterance.onerror = clearSpeakingState;
+    utterance.onend = onSpeechEnd;
+    utterance.onerror = onSpeechEnd;
     utterance.oncancel = () => {};
 
-    setTimeout(() => {
-      window.speechSynthesis.speak(utterance);
-    }, 50);
+    window.speechSynthesis.speak(utterance);
   };
 
   useEffect(() => {
@@ -147,33 +145,28 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
     }
   }, [currentStep, isActive, steps]);
 
-  const toggleSession = async () => {
+  const toggleSession = () => {
     if (!isActive) {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        stream.getTracks().forEach(track => track.stop());
-      } catch (err) {
-        setErrorMsg("Browser blocked microphone. Please check URL bar permissions.");
-        return;
-      }
-
       setIsActive(true);
       setCurrentStep(0);
       setErrorMsg("");
       setTranscript("");
       
-      if (recognitionRef.current) {
-        try { 
-          recognitionRef.current.start(); 
-        } catch(e) {
-          console.error("Mic start error:", e);
+      try {
+        if (recognitionRef.current) {
+          recognitionRef.current.start();
+          setIsListening(true);
+          isListeningRef.current = true;
         }
+      } catch (e) {
+        console.error("Mic start error:", e);
       }
     } else {
       setIsActive(false);
       if (recognitionRef.current) {
-        recognitionRef.current.onend = null; 
-        try { recognitionRef.current.stop(); } catch(e) {}
+        recognitionRef.current.stop();
+        setIsListening(false);
+        isListeningRef.current = false;
       }
       window.speechSynthesis.cancel();
     }
