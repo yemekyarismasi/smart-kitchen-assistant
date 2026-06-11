@@ -88,8 +88,8 @@ export default function DemoSection() {
             Step 1: Test Vision AI
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-white">
-            Upload Food.<br/>Get The Recipe.
+          <h2 className="text-[1.2rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white whitespace-nowrap">
+            Upload Food. Get The Recipe.
           </h2>
           <p className="text-xl text-zinc-400 leading-relaxed font-light mb-8">
             Experience the <strong>Yemek AI Vision Technology</strong>. Upload any food image and watch the AI extract a complete recipe instantly.
@@ -115,8 +115,8 @@ export default function DemoSection() {
                       </div>
                     )}
                   </div>
-                  <div className="flex-1 text-left">
-                    <h3 className={`text-xl font-bold transition-colors ${isSelected ? 'text-cyan-400' : 'text-white group-hover:text-cyan-400'}`}>{s.name}</h3>
+                  <div className="flex-1 text-left min-w-0">
+                    <h3 className={`text-base sm:text-lg md:text-xl font-bold transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${isSelected ? 'text-cyan-400' : 'text-white group-hover:text-cyan-400'}`}>{s.name}</h3>
                     <p className="text-sm text-zinc-500 font-mono mt-1">{isSelected ? 'Currently Selected' : 'Run Extraction Simulation →'}</p>
                   </div>
                 </div>
@@ -150,8 +150,8 @@ export default function DemoSection() {
               
               {/* Content */}
               <div className="p-8 flex-1 flex flex-col">
-                <h3 className="text-3xl font-black text-white mb-3">{recipe.title}</h3>
-                <p className="text-zinc-400 mb-8 font-light text-lg leading-relaxed">{recipe.description}</p>
+                <h3 className="text-[1.2rem] min-[400px]:text-[1.3rem] sm:text-xl md:text-[1.6rem] font-black text-white mb-3 whitespace-nowrap overflow-hidden text-ellipsis">{recipe.title}</h3>
+                <p className="text-zinc-400 mb-8 font-light text-base md:text-lg leading-relaxed">{recipe.description}</p>
                 
                 <h4 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4">Required Commands</h4>
                 <div className="flex flex-wrap gap-3 mb-10">
@@ -164,10 +164,10 @@ export default function DemoSection() {
                 <div className="mt-auto pt-6 border-t border-zinc-800">
                   <button 
                     onClick={() => setShowKitchenMode(true)}
-                    className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xl py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 flex items-center justify-center gap-3"
+                    className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[1.1rem] sm:text-lg md:text-xl py-3 md:py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3"
                   >
-                    <span className="text-2xl">👨‍🍳</span>
-                    LAUNCH KITCHEN MODE
+                    <span className="text-2xl md:text-3xl">👨‍🍳</span>
+                    <span className="whitespace-nowrap">LAUNCH KITCHEN MODE</span>
                   </button>
                 </div>
               </div>
