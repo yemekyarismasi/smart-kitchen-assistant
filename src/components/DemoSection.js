@@ -162,7 +162,7 @@ export default function DemoSection() {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-zinc-800">
-                  <p className="text-xs text-center text-zinc-500 font-mono mb-4 uppercase tracking-widest">
+                  <p className="text-sm text-center text-white font-mono mb-4 animate-pulse">
                     No Cloud Required. Disconnect your Wi-Fi to test offline Kitchen Mode.
                   </p>
                   <button 
