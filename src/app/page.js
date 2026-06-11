@@ -9,7 +9,7 @@ export default function Home() {
       <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-12 relative z-10 px-4">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
         
-        <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.8rem] lg:text-6xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4 mt-8 md:mt-16">
+        <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.8rem] lg:text-6xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
           <span>Smart Kitchen Assistant</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-500 whitespace-nowrap">
             Next-Gen Edge AI
