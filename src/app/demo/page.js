@@ -74,14 +74,7 @@ export default function DemoPage() {
 
   const handleScenarioClick = (scenario) => {
     setImage(scenario.image);
-    setLoading(true);
-    setRecipe(null);
-
-    // Simulate Vision AI scanning time
-    setTimeout(() => {
-      setRecipe(scenario.recipe);
-      setLoading(false);
-    }, 2500);
+    setRecipe(scenario.recipe);
   };
 
   return (

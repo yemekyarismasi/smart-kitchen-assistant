@@ -79,17 +79,31 @@ export default function KitchenMode({ recipe, onClose }) {
               console.warn("Speech API restart error:", e);
             }
           }, 400); // 400ms gecikme
+        } else {
+          setIsListening(false);
         }
       };
 
       recognitionRef.current = recognition;
-      try {
-        recognition.start();
-        setIsListening(true);
-        isListeningRef.current = true;
-      } catch (e) {
-        console.error("Speech API start error:", e);
-      }
+      
+      const startMic = async () => {
+        try {
+          // Force native prompt
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          stream.getTracks().forEach(track => track.stop());
+        } catch(e) {
+          console.warn("Mic permission blocked", e);
+        }
+        try {
+          recognition.start();
+          setIsListening(true);
+          isListeningRef.current = true;
+        } catch (e) {
+          console.error("Speech API start error:", e);
+        }
+      };
+      startMic();
+
     } else {
       console.warn("Bu tarayıcı Web Speech API desteklemiyor.");
     }
@@ -477,12 +491,23 @@ export default function KitchenMode({ recipe, onClose }) {
           <h1 className="text-3xl md:text-5xl font-black text-amber-400 leading-tight">👨‍🍳 Mutfak Modu</h1>
           <h2 className="text-xl md:text-2xl font-bold text-slate-300 mt-2">{recipe.title}</h2>
         </div>
-        <button 
-          onClick={onClose}
-          className="bg-red-500/20 text-red-400 p-4 rounded-2xl hover:bg-red-500/30 transition text-lg font-bold"
-        >
-          Kapat (X)
-        </button>
+        <div className="flex flex-col items-end gap-2">
+          <button 
+            onClick={onClose}
+            className="bg-red-500/20 text-red-400 p-4 rounded-2xl hover:bg-red-500/30 transition text-lg font-bold"
+          >
+            Kapat (X)
+          </button>
+          {/* Debug Panel */}
+          <div className="text-xs font-mono text-right bg-black/50 p-2 rounded-xl border border-zinc-800">
+             <div className={isListening ? "text-emerald-400" : "text-red-400"}>
+               Mic: {isListening ? "ON" : "OFF"}
+             </div>
+             <div className="text-cyan-400">
+               Shield: {isSpeakingRef.current ? "ACTIVE" : "INACTIVE"}
+             </div>
+          </div>
+        </div>
       </div>
 
       {/* Main Content Area */}
