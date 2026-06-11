@@ -12,61 +12,61 @@ export default function DemoPage() {
   const SCENARIOS = [
     {
       id: "eggs",
-      name: "Kalpli Tavada Yumurta",
+      name: "Heart-Shaped Eggs",
       image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop",
       recipe: {
-        title: "Kalpli Tavada Yumurta",
-        description: "Güne harika bir başlangıç için, silikon kalıpla kusursuz şekillendirilmiş görsel bir kahvaltı klasiği.",
-        difficulty: "Kolay",
-        prepTime: "5 dk",
-        ingredients: ["2 büyük boy yumurta", "1 yemek kaşığı tereyağı", "Tuz ve karabiber (isteğe bağlı)"],
+        title: "Heart-Shaped Sunny-Side Up Eggs",
+        description: "A visually appealing breakfast classic formed perfectly using a silicone heart mold.",
+        difficulty: "Easy",
+        prepTime: "5 mins",
+        ingredients: ["2 large eggs", "1 tbsp butter", "Salt and pepper (to taste)"],
         nutrition: { calories: 250, protein: 14, fat: 20, carbs: 1 },
-        chefTouch: "Tavanın çok sıcak olmadığından emin olun, aksi halde yumurtanın altı yanabilir.",
+        chefTouch: "Make sure the pan is not too hot, otherwise the bottom will burn before the whites set.",
         steps: [
-          "Tavayı orta ateşte ısıtın ve silikon kalp kalıbını tam ortaya yerleştirin.",
-          "Kalıbın içine tereyağını ekleyin ve erimesini bekleyin.",
-          "Yumurtayı dikkatlice kalıbın içine kırın.",
-          "Beyazları tamamen pişene kadar yaklaşık 3 dakika pişirin."
+          "Place a heart-shaped silicone mold in the center of your pan over medium heat.",
+          "Add half a tablespoon of butter inside the mold and let it melt.",
+          "Gently crack an egg directly into the heart shape.",
+          "Cook for 3 minutes until the whites are firm."
         ]
       }
     },
     {
       id: "pasta",
-      name: "Bolonez Soslu Spagetti",
+      name: "Spaghetti Bolognese",
       image: "https://images.unsplash.com/photo-1622973536968-3ead9e780960?q=80&w=800&auto=format&fit=crop",
       recipe: {
-        title: "Klasik Bolonez Soslu Spagetti",
-        description: "Tam kıvamında haşlanmış spagetti üzerinde, zengin domates ve dana kıymalı nefis bir sos.",
-        difficulty: "Orta",
-        prepTime: "45 dk",
-        ingredients: ["400g spagetti makarna", "500g dana kıyma", "1 adet kuru soğan", "2 adet havuç", "400g ezilmiş domates"],
+        title: "Classic Spaghetti Bolognese",
+        description: "Rich tomato and ground beef sauce served over al dente spaghetti.",
+        difficulty: "Medium",
+        prepTime: "45 mins",
+        ingredients: ["400g spaghetti", "500g ground beef", "1 chopped onion", "2 diced carrots", "400g crushed tomatoes"],
         nutrition: { calories: 650, protein: 35, fat: 25, carbs: 70 },
-        chefTouch: "Sosu en kısık ateşte 1 saat boyunca pişirirseniz lezzeti katlanacaktır.",
+        chefTouch: "Simmer the sauce on the lowest heat possible for an hour to develop deep flavors.",
         steps: [
-          "Geniş bir tencerede zeytinyağını ısıtın. Doğranmış soğan ve havuçları yumuşayana kadar soteleyin.",
-          "Kıymayı ekleyin ve rengi dönene kadar kavurun.",
-          "Domates püresini ve tuzu ekleyip kısık ateşte 30 dakika pişmeye bırakın.",
-          "Makarnayı tuzlu kaynar suda haşlayın, ardından sos ile harmanlayın."
+          "Heat olive oil in a large pot and sauté finely chopped onions, carrots, and celery until soft.",
+          "Add the ground beef and cook until browned, breaking it apart with a spoon.",
+          "Stir in tomato paste, crushed tomatoes, and a pinch of salt. Let it simmer for 30 minutes.",
+          "Boil the spaghetti in salted water until al dente, then toss it with the sauce."
         ]
       }
     },
     {
       id: "kebab",
-      name: "Adana Kebap",
+      name: "Turkish Adana Kebab",
       image: "https://images.unsplash.com/photo-1599921841143-819065a55cc6?q=80&w=800&auto=format&fit=crop",
       recipe: {
-        title: "Geleneksel Adana Kebap",
-        description: "Kömür ateşinde pişmiş, acılı kuzu kıymadan muazzam bir lezzet.",
-        difficulty: "Zor",
-        prepTime: "60 dk",
-        ingredients: ["500g kuzu kıyma", "1 adet kırmızı kapya biber", "1 çay kaşığı tuz", "1 yemek kaşığı acı pul biber"],
+        title: "Traditional Adana Kebab",
+        description: "Spicy minced lamb skewers grilled over charcoal.",
+        difficulty: "Hard",
+        prepTime: "60 mins",
+        ingredients: ["500g ground lamb", "1 finely chopped red bell pepper", "1 tsp salt", "1 tbsp spicy paprika flakes"],
         nutrition: { calories: 450, protein: 30, fat: 35, carbs: 5 },
-        chefTouch: "Kıymayı çok iyi yoğurmanız gerekiyor, aksi halde şişten düşebilir.",
+        chefTouch: "Kneading the meat is crucial. Knead until the mixture gets sticky, otherwise it will fall off the skewers.",
         steps: [
-          "Kıymayı çok ince kıyılmış kapya biber, tuz ve pul biber ile karıştırın.",
-          "Karışımı 10 dakika boyunca yoğurun.",
-          "Etleri geniş yassı şişlere saplayın ve elinizle sıkarak şekil verin.",
-          "Izgarada her iki tarafı da iyice kızarana kadar pişirin."
+          "Mix ground lamb with finely chopped red bell peppers, salt, and spicy paprika.",
+          "Knead the mixture thoroughly for 10 minutes to release the proteins.",
+          "Mold the meat around wide, flat metal skewers.",
+          "Grill over hot charcoal, turning frequently until completely cooked and charred."
         ]
       }
     }
