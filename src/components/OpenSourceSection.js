@@ -68,7 +68,7 @@ export default function OpenSourceSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white">Publications</h3>
           </div>
           {mediumArticles.map((article, i) => (
-            <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="block p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm h-full">
+            <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="block p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm">
               <h4 className="text-lg font-bold text-emerald-400 group-hover:text-emerald-300 mb-2 flex items-center justify-between">
                 {article.title}
                 <span className="text-zinc-700 group-hover:text-emerald-400 transition-colors">↗</span>
