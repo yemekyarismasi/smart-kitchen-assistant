@@ -9,38 +9,70 @@ export default function DemoPage() {
   const [loading, setLoading] = useState(false);
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState("");
-  const fileInputRef = useRef(null);
+  const SCENARIOS = [
+    {
+      id: "eggs",
+      name: "Heart-Shaped Eggs",
+      image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop",
+      recipe: {
+        title: "Heart-Shaped Sunny-Side Up Eggs",
+        description: "A visually appealing breakfast classic formed perfectly using a silicone heart mold.",
+        difficulty: "Easy",
+        prepTime: "5 mins",
+        steps: [
+          "Step 1: Place a heart-shaped silicone mold in the center of your pan over medium heat.",
+          "Step 2: Add half a tablespoon of butter inside the mold and let it melt.",
+          "Step 3: Gently crack an egg directly into the heart shape.",
+          "Step 4: Cook for 3 minutes until the whites are firm."
+        ]
+      }
+    },
+    {
+      id: "pasta",
+      name: "Spaghetti Bolognese",
+      image: "https://images.unsplash.com/photo-1622973536968-3ead9e780960?q=80&w=800&auto=format&fit=crop",
+      recipe: {
+        title: "Classic Spaghetti Bolognese",
+        description: "Rich tomato and ground beef sauce served over al dente spaghetti.",
+        difficulty: "Medium",
+        prepTime: "45 mins",
+        steps: [
+          "Step 1: Heat olive oil in a large pot and sauté finely chopped onions, carrots, and celery until soft.",
+          "Step 2: Add the ground beef and cook until browned, breaking it apart with a spoon.",
+          "Step 3: Stir in tomato paste, crushed tomatoes, and a pinch of salt. Let it simmer for 30 minutes.",
+          "Step 4: Boil the spaghetti in salted water until al dente, then toss it with the sauce."
+        ]
+      }
+    },
+    {
+      id: "kebab",
+      name: "Turkish Adana Kebab",
+      image: "https://images.unsplash.com/photo-1599921841143-819065a55cc6?q=80&w=800&auto=format&fit=crop",
+      recipe: {
+        title: "Traditional Adana Kebab",
+        description: "Spicy minced lamb skewers grilled over charcoal.",
+        difficulty: "Hard",
+        prepTime: "60 mins",
+        steps: [
+          "Step 1: Mix ground lamb with finely chopped red bell peppers, salt, and spicy paprika.",
+          "Step 2: Knead the mixture thoroughly for 10 minutes to release the proteins.",
+          "Step 3: Mold the meat around wide, flat metal skewers.",
+          "Step 4: Grill over hot charcoal, turning frequently until completely cooked and charred."
+        ]
+      }
+    }
+  ];
 
-  const handleImageUpload = async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setImage(URL.createObjectURL(file));
+  const handleScenarioClick = (scenario) => {
+    setImage(scenario.image);
     setLoading(true);
-    setError("");
     setRecipe(null);
 
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = async () => {
-      try {
-        const base64Data = reader.result.split(",")[1];
-        const res = await fetch("/api/analyze", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ base64Image: base64Data, mimeType: file.type })
-        });
-        
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Failed to analyze the image.");
-        
-        setRecipe(data.recipe);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    // Simulate Vision AI scanning time
+    setTimeout(() => {
+      setRecipe(scenario.recipe);
+      setLoading(false);
+    }, 2500);
   };
 
   return (
@@ -79,24 +111,25 @@ export default function DemoPage() {
               Experience the <strong>Yemek AI Vision Technology</strong>. Upload any food image and watch the AI extract a complete recipe instantly.
             </p>
 
-            {/* Uploader Box */}
+            {/* Scenario Selection */}
             {!recipe && !loading && (
-              <div 
-                onClick={() => fileInputRef.current?.click()}
-                className="w-full aspect-video border-2 border-dashed border-zinc-700 hover:border-cyan-500 rounded-3xl flex flex-col items-center justify-center bg-zinc-900/50 cursor-pointer transition-colors group"
-              >
-                <input 
-                  type="file" 
-                  ref={fileInputRef} 
-                  onChange={handleImageUpload} 
-                  accept="image/*" 
-                  className="hidden" 
-                />
-                <svg className="w-12 h-12 text-zinc-500 group-hover:text-cyan-400 transition-colors mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
-                </svg>
-                <p className="font-bold text-zinc-300 group-hover:text-white">Click or Drag Image Here</p>
-                <p className="text-sm text-zinc-500 mt-2 font-mono">Supports JPG, PNG</p>
+              <div className="flex flex-col gap-4">
+                <p className="text-zinc-500 font-mono text-sm mb-2">Select a scenario to run Vision AI simulation:</p>
+                {SCENARIOS.map((s) => (
+                  <div 
+                    key={s.id}
+                    onClick={() => handleScenarioClick(s)}
+                    className="w-full flex items-center gap-6 p-4 rounded-2xl border border-zinc-800 hover:border-cyan-500 hover:bg-cyan-950/20 cursor-pointer transition-all group"
+                  >
+                    <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                      <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div className="flex-1 text-left">
+                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{s.name}</h3>
+                      <p className="text-sm text-zinc-500 font-mono mt-1">Run Extraction Simulation →</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
 
@@ -174,7 +207,7 @@ export default function DemoPage() {
             {!recipe && (
               <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 rounded-[2.5rem]">
                 <p className="text-zinc-500 font-mono text-sm text-center px-8">
-                  Upload an image first to extract a recipe and unlock the Voice Assistant.
+                  Select a simulation scenario on the left to extract a recipe and unlock the Voice Assistant.
                 </p>
               </div>
             )}
