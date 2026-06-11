@@ -33,7 +33,7 @@ export default function OpenSourceSection() {
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto py-16 md:py-24 px-6 relative z-10" id="resources">
+    <section className="w-full max-w-7xl mx-auto pb-16 md:pb-24 pt-4 md:pt-8 px-6 relative z-10" id="resources">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
           Open Source & Research

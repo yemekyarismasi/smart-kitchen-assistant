@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* SECTION B: EXTENSIBLE BY DESIGN */}
-      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+      <section className="w-full max-w-7xl mx-auto mb-8 md:mb-12 px-4">
         <div className="text-center mb-12">
           <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</span>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Where This Architecture Can Take You</h2>
