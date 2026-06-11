@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
-import VoiceAssistantDemo from "@/components/VoiceAssistantDemo";
+import KitchenMode from "@/components/KitchenMode";
 import Link from "next/link";
 
 export default function DemoPage() {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [recipe, setRecipe] = useState(null);
-  const [error, setError] = useState("");
+  const [showKitchenMode, setShowKitchenMode] = useState(false);
   const SCENARIOS = [
     {
       id: "eggs",
@@ -19,11 +19,14 @@ export default function DemoPage() {
         description: "A visually appealing breakfast classic formed perfectly using a silicone heart mold.",
         difficulty: "Easy",
         prepTime: "5 mins",
+        ingredients: ["2 büyük boy yumurta", "1 yemek kaşığı tereyağı", "Tuz ve karabiber (isteğe bağlı)"],
+        nutrition: { calories: 250, protein: 14, fat: 20, carbs: 1 },
+        chefTouch: "Tavanın çok sıcak olmadığından emin olun, aksi halde yumurtanın altı yanabilir.",
         steps: [
-          "Step 1: Place a heart-shaped silicone mold in the center of your pan over medium heat.",
-          "Step 2: Add half a tablespoon of butter inside the mold and let it melt.",
-          "Step 3: Gently crack an egg directly into the heart shape.",
-          "Step 4: Cook for 3 minutes until the whites are firm."
+          "Tavayı orta ateşte ısıtın ve silikon kalp kalıbını tam ortaya yerleştirin.",
+          "Kalıbın içine tereyağını ekleyin ve erimesini bekleyin.",
+          "Yumurtayı dikkatlice kalıbın içine kırın.",
+          "Beyazları tamamen pişene kadar yaklaşık 3 dakika pişirin."
         ]
       }
     },
@@ -36,11 +39,14 @@ export default function DemoPage() {
         description: "Rich tomato and ground beef sauce served over al dente spaghetti.",
         difficulty: "Medium",
         prepTime: "45 mins",
+        ingredients: ["400g spagetti makarna", "500g dana kıyma", "1 adet kuru soğan", "2 adet havuç", "400g ezilmiş domates"],
+        nutrition: { calories: 650, protein: 35, fat: 25, carbs: 70 },
+        chefTouch: "Sosu en kısık ateşte 1 saat boyunca pişirirseniz lezzeti katlanacaktır.",
         steps: [
-          "Step 1: Heat olive oil in a large pot and sauté finely chopped onions, carrots, and celery until soft.",
-          "Step 2: Add the ground beef and cook until browned, breaking it apart with a spoon.",
-          "Step 3: Stir in tomato paste, crushed tomatoes, and a pinch of salt. Let it simmer for 30 minutes.",
-          "Step 4: Boil the spaghetti in salted water until al dente, then toss it with the sauce."
+          "Geniş bir tencerede zeytinyağını ısıtın. Doğranmış soğan ve havuçları yumuşayana kadar soteleyin.",
+          "Kıymayı ekleyin ve rengi dönene kadar kavurun.",
+          "Domates püresini ve tuzu ekleyip kısık ateşte 30 dakika pişmeye bırakın.",
+          "Makarnayı tuzlu kaynar suda haşlayın, ardından sos ile harmanlayın."
         ]
       }
     },
@@ -53,11 +59,14 @@ export default function DemoPage() {
         description: "Spicy minced lamb skewers grilled over charcoal.",
         difficulty: "Hard",
         prepTime: "60 mins",
+        ingredients: ["500g kuzu kıyma", "1 adet kırmızı kapya biber", "1 çay kaşığı tuz", "1 yemek kaşığı acı pul biber"],
+        nutrition: { calories: 450, protein: 30, fat: 35, carbs: 5 },
+        chefTouch: "Kıymayı çok iyi yoğurmanız gerekiyor, aksi halde şişten düşebilir.",
         steps: [
-          "Step 1: Mix ground lamb with finely chopped red bell peppers, salt, and spicy paprika.",
-          "Step 2: Knead the mixture thoroughly for 10 minutes to release the proteins.",
-          "Step 3: Mold the meat around wide, flat metal skewers.",
-          "Step 4: Grill over hot charcoal, turning frequently until completely cooked and charred."
+          "Kıymayı çok ince kıyılmış kapya biber, tuz ve pul biber ile karıştırın.",
+          "Karışımı 10 dakika boyunca yoğurun.",
+          "Etleri geniş yassı şişlere saplayın ve elinizle sıkarak şekil verin.",
+          "Izgarada her iki tarafı da iyice kızarana kadar pişirin."
         ]
       }
     }
@@ -198,13 +207,23 @@ export default function DemoPage() {
               </div>
             </div>
 
-            {/* Pass the dynamically generated recipe to the Voice Assistant */}
-            <VoiceAssistantDemo 
-              recipeTitle={recipe?.title} 
-              recipeSteps={recipe?.steps} 
-            />
-            
-            {!recipe && (
+            {recipe ? (
+              <div className="flex flex-col items-center justify-center h-full text-center p-8 z-10">
+                <div className="w-32 h-32 bg-emerald-500/20 border-4 border-emerald-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(16,185,129,0.3)] animate-pulse">
+                  <span className="text-5xl">👨‍🍳</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Kitchen Mode Ready</h3>
+                <p className="text-zinc-400 mb-8">
+                  Launch the exact 1-to-1 Voice Assistant UI used in the B2C App.
+                </p>
+                <button 
+                  onClick={() => setShowKitchenMode(true)}
+                  className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xl py-4 rounded-xl transition-all shadow-xl active:scale-95"
+                >
+                  LAUNCH KITCHEN MODE
+                </button>
+              </div>
+            ) : (
               <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 rounded-[2.5rem]">
                 <p className="text-zinc-500 font-mono text-sm text-center px-8">
                   Select a simulation scenario on the left to extract a recipe and unlock the Voice Assistant.
@@ -215,6 +234,10 @@ export default function DemoPage() {
 
         </div>
       </div>
+      
+      {showKitchenMode && recipe && (
+        <KitchenMode recipe={recipe} onClose={() => setShowKitchenMode(false)} />
+      )}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes scan {
           0% { transform: translateY(-100%); }
