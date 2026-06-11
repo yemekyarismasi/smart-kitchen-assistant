@@ -200,16 +200,9 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       setErrorMsg("");
       setTranscript("");
       
-      // Delay start slightly on Android to let getUserMedia cleanup finish, synchronous on iOS
-      setTimeout(() => {
-        if (recognitionRef.current) {
-          try { 
-            recognitionRef.current.start(); 
-          } catch(e) {
-            console.error("Mic start error:", e);
-          }
-        }
-      }, isIOS ? 0 : 50);
+      // We DO NOT call recognitionRef.current.start() here anymore!
+      // Because setIsActive(true) triggers speakText() immediately, 
+      // which will handle stopping and starting the mic cleanly.
 
     } else {
       setIsActive(false);
