@@ -75,7 +75,11 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
       recognition.onend = () => {
         setIsListening(false);
         if (isActive) {
-          try { recognition.start(); } catch(e) {}
+          setTimeout(() => {
+            if (recognitionRef.current && isActive) {
+              try { recognitionRef.current.start(); } catch(e) {}
+            }
+          }, 300);
         }
       };
 
@@ -104,15 +108,21 @@ export default function VoiceAssistantDemo({ recipeSteps, recipeTitle }) {
     
     window.activeUtterances.push(utterance);
 
-    utterance.onend = () => {
+    // Failsafe timer: in case onend never fires (Chrome bug)
+    const failsafeTimer = setTimeout(() => {
+      isSpeakingRef.current = false;
+    }, Math.max(text.length * 100, 3000));
+
+    const clearSpeakingState = () => {
+      clearTimeout(failsafeTimer);
       setTimeout(() => {
         isSpeakingRef.current = false;
       }, 400);
     };
-    
-    utterance.onerror = () => {
-      isSpeakingRef.current = false;
-    };
+
+    utterance.onend = clearSpeakingState;
+    utterance.onerror = clearSpeakingState;
+    utterance.oncancel = clearSpeakingState;
 
     window.speechSynthesis.speak(utterance);
   };
