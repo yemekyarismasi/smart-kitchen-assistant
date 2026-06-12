@@ -142,7 +142,7 @@ export default function DemoSection() {
           </p>
 
           <div className="flex flex-col gap-4">
-            <p className="text-zinc-500 font-mono text-sm md:text-base mb-2 text-center lg:text-left">Select a scenario to run Vision AI simulation:</p>
+            <p className="text-zinc-300 font-mono text-sm md:text-base mb-2 text-center lg:text-left">Select a scenario to run Vision AI simulation:</p>
             {SCENARIOS.map((s) => {
               const isB2B = !!s.badge;
               const isSelected = recipe?.title === s.recipe.title;
