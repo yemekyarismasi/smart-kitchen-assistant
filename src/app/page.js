@@ -11,9 +11,9 @@ export default function Home() {
       
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm text-sm">
-          <span className="text-zinc-500 font-mono text-sm md:text-xs uppercase tracking-widest">Part of the Yemek AI Ecosystem</span>
-          <div className="flex items-center gap-4 flex-wrap justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm">
+          <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Ecosystem:</span>
+          <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
             <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors font-medium">
               <span className="text-base">🍽️</span>
               <span>yemekyarismasi.com</span>

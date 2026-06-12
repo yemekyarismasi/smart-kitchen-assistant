@@ -38,12 +38,12 @@ export default function StickyNav() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 shrink-0">
-          <span className="text-white font-black text-sm md:text-base tracking-tight whitespace-nowrap">
-            Smart<span className="text-cyan-400">Kitchen</span>
+        <a href="#" className="flex flex-col shrink-0 justify-center">
+          <span className="text-white font-black text-[15px] md:text-base tracking-tight whitespace-nowrap leading-tight">
+            Smart Kitchen Assistant
           </span>
-          <span className="hidden sm:inline text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded-full uppercase tracking-widest">
-            Edge AI
+          <span className="hidden sm:block text-[10px] md:text-[11px] text-zinc-400 font-medium tracking-wide leading-tight">
+            Edge AI Solutions for Appliances
           </span>
         </a>
 
