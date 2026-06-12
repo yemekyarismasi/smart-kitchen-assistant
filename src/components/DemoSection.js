@@ -174,36 +174,6 @@ export default function DemoSection() {
             })}
           </div>
 
-          {/* Offline Test Promo Box */}
-          <div className="mt-4 p-5 rounded-xl bg-cyan-950/20 border border-cyan-900/50 text-left">
-            <h4 className="text-sm font-bold text-cyan-400 mb-3 flex items-center gap-2">
-              <span className="animate-pulse">⚡</span> Offline Test Information
-            </h4>
-            
-            <p className="text-xs text-cyan-300/90 font-mono mb-4 leading-relaxed font-bold border-b border-cyan-900/30 pb-3">
-              Our native application (mobile/hardware) operates at full capacity 100% offline using Edge AI. 
-              <br/><br/>
-              (Since this web demo runs in a browser, it requires an internet connection for the voice recognition feature.)
-            </p>
-
-            <p className="text-[11px] text-zinc-400 font-mono mb-3 leading-relaxed">
-              The built-in Speech Recognition (Speech-to-Text) system in browsers must connect to Google or Apple's cloud servers to transcribe audio into text.
-              <br/><br/>
-              When you disconnect the internet:
-            </p>
-            
-            <ul className="text-[11px] text-zinc-400 font-mono space-y-2 pl-3 border-l-2 border-cyan-900/50">
-              <li>
-                <strong className="text-emerald-400">UI and Buttons:</strong> Work flawlessly since they run entirely locally in the browser.
-              </li>
-              <li>
-                <strong className="text-emerald-400">Assistant's Voice:</strong> Works offline because it uses your device's built-in local computer voice.
-              </li>
-              <li>
-                <strong className="text-rose-400">Understanding Your Voice (Mic):</strong> The browser attempts to connect to cloud servers to transcribe your voice. Without internet, it cannot transcribe and therefore cannot send the "next" or "go back" commands to our code.
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Right: Extracted Recipe Details & Launch Button */}
@@ -274,6 +244,37 @@ export default function DemoSection() {
           )}
         </div>
 
+      </div>
+
+      {/* Offline Test Promo Box (Moved to full width) */}
+      <div className="mt-8 w-full max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-cyan-950/20 border border-cyan-900/50 text-left shadow-lg">
+        <h4 className="text-base md:text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+          <span className="animate-pulse">⚡</span> Offline Test Information
+        </h4>
+        
+        <p className="text-sm md:text-base text-cyan-300/90 font-mono mb-6 leading-relaxed font-bold border-b border-cyan-900/30 pb-4">
+          Our native application (mobile/hardware) operates at full capacity 100% offline using Edge AI. 
+          <br/><br/>
+          (Since this web demo runs in a browser, it requires an internet connection for the voice recognition feature.)
+        </p>
+
+        <p className="text-xs md:text-sm text-zinc-400 font-mono mb-4 leading-relaxed">
+          The built-in Speech Recognition (Speech-to-Text) system in browsers must connect to Google or Apple's cloud servers to transcribe audio into text.
+          <br/><br/>
+          When you disconnect the internet:
+        </p>
+        
+        <ul className="text-xs md:text-sm text-zinc-400 font-mono space-y-3 pl-4 border-l-2 border-cyan-900/50">
+          <li>
+            <strong className="text-emerald-400">UI and Buttons:</strong> Work flawlessly since they run entirely locally in the browser.
+          </li>
+          <li>
+            <strong className="text-emerald-400">Assistant's Voice:</strong> Works offline because it uses your device's built-in local computer voice.
+          </li>
+          <li>
+            <strong className="text-rose-400">Understanding Your Voice (Mic):</strong> The browser attempts to connect to cloud servers to transcribe your voice. Without internet, it cannot transcribe and therefore cannot send the "next" or "go back" commands to our code.
+          </li>
+        </ul>
       </div>
       
       {showKitchenMode && recipe && (
