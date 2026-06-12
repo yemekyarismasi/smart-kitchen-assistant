@@ -253,6 +253,17 @@ export default function Home() {
                 <p className="text-zinc-400 text-sm leading-relaxed">Implements the browser <code className="text-emerald-400 bg-emerald-950 px-1 rounded">navigator.wakeLock</code> API to prevent the device display from sleeping during active cooking sessions. The screen stays on for the full duration of Kitchen Mode — zero configuration, zero touch required.</p>
               </div>
             </div>
+          {/* 12 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-amber-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Mid-Sentence Pause & Resume</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Voice narration can be paused at any moment via <em>"Pause"</em> and resumed exactly where it left off via <em>"Resume"</em> — without restarting the step or losing session state. Built for real cooking interruptions: phone calls, oven alarms, unexpected moments.</p>
+              </div>
+            </div>
           </div>
 
         </div>
