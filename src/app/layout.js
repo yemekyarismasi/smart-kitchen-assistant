@@ -41,6 +41,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://smartkitchenassistant.com',
   },
+  verification: {
+    google: 'lHacXz77kG6cnidWR3IjMpqn7KN-47psxUF7dyY9Fgs',
+  },
 };
 
 export default function RootLayout({ children }) {
