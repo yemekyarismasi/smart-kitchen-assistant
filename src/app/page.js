@@ -1,11 +1,13 @@
 import Link from "next/link";
 import DemoSection from "@/components/DemoSection";
 import OpenSourceSection from "@/components/OpenSourceSection";
+import StickyNav from "@/components/StickyNav";
 
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center px-4 py-8 md:px-24 md:py-12 overflow-x-hidden bg-black text-white">
+      <StickyNav />
+      <main className="flex min-h-screen flex-col items-center px-4 pt-20 md:px-24 md:pt-20 pb-12 overflow-x-hidden bg-black text-white">
       
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
@@ -43,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-2 md:mb-4 px-6">
+      <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-2 md:mb-4 px-6">
         <div className="text-center lg:text-left">
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
             Experience Live Edge AI
@@ -96,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* SECTION A: PROVEN ENGINEERING SOLUTIONS */}
-      <section className="w-full max-w-7xl mx-auto mb-12 px-4">
+      <section id="features" className="w-full max-w-7xl mx-auto mb-12 px-4">
         <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
@@ -359,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* 3. MULTIMODAL REVERSE ENGINEERING */}
-      <section className="w-full max-w-7xl mb-20 px-4">
+      <section id="architecture" className="w-full max-w-7xl mb-20 px-4">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
           <div className="flex-1 space-y-6 md:space-y-8">
             <p className="text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">Vision Pipeline</p>
@@ -420,7 +422,7 @@ graph TD
       </section>
 
       {/* FAQ SECTION */}
-      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+      <section id="faq" className="w-full max-w-7xl mx-auto mb-20 px-4">
         <div className="flex items-center gap-4 mb-10">
           <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold whitespace-nowrap">FAQ</span>
           <div className="h-px flex-1 bg-zinc-800"></div>
