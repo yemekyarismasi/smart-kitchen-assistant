@@ -15,13 +15,9 @@ export default function KitchenMode({ recipe, onClose }) {
   const [showIntro, setShowIntro] = useState(true); // Başlangıç bilgilendirmesi
   const [isPaused, setIsPaused] = useState(false);
   const recognitionRef = useRef(null);
-  const hasPromptedMeasurementRef = useRef(false);
   const wakeLockRef = useRef(null);
   const timerRef = useRef(null);
 
-  const [measurementMode, setMeasurementMode] = useState('grams');
-  const [householdIngredients, setHouseholdIngredients] = useState([]);
-  const [isConverting, setIsConverting] = useState(false);
   const [timerSeconds, setTimerSeconds] = useState(null);
 
   useEffect(() => {
@@ -153,40 +149,18 @@ export default function KitchenMode({ recipe, onClose }) {
     });
   }
 
-  const activeIngredients = measurementMode === 'household' && householdIngredients.length > 0
-    ? householdIngredients
-    : (recipe.ingredients || []);
+  const activeIngredients = recipe.ingredients || [];
 
   let ingredientsSpeakText = ``;
   if (!recipe.description) {
       ingredientsSpeakText += `Welcome to Kitchen Mode, Chef. For ${recipe.title}, `;
   }
   ingredientsSpeakText += `Ingredients: ${activeIngredients.map(formatIngredientForSpeech).join('. ')}. If you're ready, say 'next' to proceed to the first step.`;
-  
-  if (!hasPromptedMeasurementRef.current && measurementMode === 'grams' && (recipe.ingredients || []).some(i => i.toLowerCase().includes('g ') || i.toLowerCase().includes('gram') || i.toLowerCase().includes('gr '))) {
-    ingredientsSpeakText = "I am reading the ingredients in original grams. You can switch to household measurements by saying 'Household measurements' or using the button on screen. " + ingredientsSpeakText;
-  }
 
   playList.push({
     title: 'INGREDIENTS',
     content: (
       <div className="flex flex-col gap-4 w-full">
-        <div className="flex justify-center gap-4">
-          <button 
-            onClick={() => handleMeasurementToggle('grams')}
-            className={`px-4 py-2 md:px-6 md:py-3 rounded-xl font-bold transition-all ${measurementMode === 'grams' ? 'bg-amber-500 text-black shadow-lg scale-105' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}
-          >
-            📏 Grams
-          </button>
-          <button 
-            onClick={() => handleMeasurementToggle('household')}
-            disabled={isConverting}
-            className={`px-4 py-2 md:px-6 md:py-3 rounded-xl font-bold transition-all flex items-center gap-2 ${measurementMode === 'household' ? 'bg-amber-500 text-black shadow-lg scale-105' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}
-          >
-            🥄 Cups & Spoons
-            {isConverting && <div className="w-4 h-4 rounded-full border-2 border-amber-500 border-t-transparent animate-spin" />}
-          </button>
-        </div>
         <ul className="text-2xl md:text-4xl text-slate-200 leading-relaxed space-y-4 font-medium text-left bg-slate-800/50 p-6 md:p-8 rounded-3xl border border-slate-700 w-full pointer-events-auto">
           {activeIngredients.map((ing, idx) => {
             if (ing.startsWith('--') && ing.endsWith('--')) {
@@ -270,14 +244,6 @@ export default function KitchenMode({ recipe, onClose }) {
         setCurrentStepIndex(ingIndex);
         speak(playList[ingIndex].speakText);
       }
-    } else if (command.includes('cups') || command.includes('spoons') || command.includes('household')) {
-      const ingIndex = playList.findIndex(p => p.title === 'INGREDIENTS');
-      if (ingIndex !== -1) setCurrentStepIndex(ingIndex);
-      handleMeasurementToggle('household', true);
-    } else if (command.includes('grams') || command.includes('original') || command.includes('weight')) {
-      const ingIndex = playList.findIndex(p => p.title === 'INGREDIENTS');
-      if (ingIndex !== -1) setCurrentStepIndex(ingIndex);
-      handleMeasurementToggle('grams', true);
     } else if (command.includes('how much time') || command.includes('how long') || command.includes('time left') || command.includes('timer status')) {
       if (timerSeconds !== null && timerSeconds > 0) {
         const mins = Math.floor(timerSeconds / 60);
@@ -338,38 +304,6 @@ export default function KitchenMode({ recipe, onClose }) {
     }
   };
 
-  const handleMeasurementToggle = async (mode, triggerSpeech = false) => {
-    setMeasurementMode(mode);
-    hasPromptedMeasurementRef.current = true;
-    
-    if (mode === 'household' && householdIngredients.length === 0) {
-      setIsConverting(true);
-      if (triggerSpeech) {
-         speak("Converting to cups and spoons, please wait...");
-      }
-      try {
-        // B2B Demo Fake Conversion
-        await new Promise(r => setTimeout(r, 1000));
-        const enriched = (recipe.ingredients || []).map(i => i + " (Cup/Spoon)");
-        setHouseholdIngredients(enriched);
-        
-        if (triggerSpeech) {
-          const newSpeakText = `Switched to household measurements. Ingredients: ${enriched.map(formatIngredientForSpeech).join('. ')}. Say 'next' when ready.`;
-          speak(newSpeakText);
-        }
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setIsConverting(false);
-      }
-    } else if (triggerSpeech) {
-      const activeList = mode === 'household' ? householdIngredients : recipe.ingredients;
-      const prefix = mode === 'household' ? "Switched to household measurements. " : "Reverted to original grams. ";
-      const newSpeakText = `${prefix} Ingredients: ${activeList.map(formatIngredientForSpeech).join('. ')}. Say 'next' when ready.`;
-      speak(newSpeakText);
-    }
-  };
-
   const pauseSpeech = () => {
     window.speechSynthesis.pause();
     setIsPaused(true);
@@ -383,10 +317,6 @@ export default function KitchenMode({ recipe, onClose }) {
   const speak = (text, onEndCallback) => {
     window.speechSynthesis.cancel(); 
     setIsPaused(false);
-    
-    if (text.includes("Malzemeleri orijinal gramajıyla okuyorum")) {
-      hasPromptedMeasurementRef.current = true;
-    }
 
     isSpeakingRef.current = true;
 
