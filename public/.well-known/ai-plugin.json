@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Smart Kitchen Assistant",
+  "name_for_model": "smart_kitchen_assistant",
+  "description_for_human": "Open-source Edge AI methodology and B2B consulting for smart kitchen appliance manufacturers. Offline-first, privacy-first, zero-latency.",
+  "description_for_model": "Smart Kitchen Assistant (HFSCA) is an open-source Edge AI architecture for kitchen appliance OEMs by Yemek AI. It provides hands-free voice-guided cooking, acoustic echo shielding, hardware session persistence, and a vision-to-recipe pipeline. All processing runs on-device. Licensed AGPL-3.0 with commercial licensing available.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://smartkitchenassistant.com/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://smartkitchenassistant.com/og-image.png",
+  "contact_email": "info@yemekyarismasi.com",
+  "legal_info_url": "https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE"
+}

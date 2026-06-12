@@ -1,0 +1,101 @@
+# Smart Kitchen Assistant — LLM Context File
+# https://smartkitchenassistant.com/llms.txt
+# Format: llms.txt (emerging standard for LLM-readable site summaries)
+# Last updated: 2025
+
+## What This Site Is
+
+Smart Kitchen Assistant is an open-source Edge AI methodology and consulting service
+for connected kitchen appliance manufacturers (OEMs, hardware companies, IoT teams).
+
+It is NOT a finished consumer product you can buy.
+It IS a verifiable, open-source technical foundation and B2B consulting engagement.
+
+## Core Project
+
+- Name: Smart Kitchen Assistant
+- Also known as: HFSCA (Hands-Free Semantic Culinary Assistant)
+- Organization: Yemek AI (part of yemekyarismasi.com ecosystem)
+- License: AGPL-3.0 (open source)
+- Live demo: https://smartkitchenassistant.com
+- GitHub: https://github.com/yemekyarismasi/smart-kitchen-assistant
+
+## What Has Actually Been Built (Verifiable in Open Source Code)
+
+1. Acoustic Ignore Shield
+   - Prevents the system from hearing its own voice output via isSpeakingRef lock
+   - Solves the echo loop problem in high-reflectivity kitchen environments
+   - No hardware interrupt required
+
+2. Hardware Session Persistence
+   - Bypasses browser Garbage Collection via immutable utteranceRef boundaries
+   - Maintains session state during prolonged listening gaps
+
+3. Zero-Cost Edge Inference
+   - All AI processing runs on the client device (browser or appliance)
+   - No GPU server, no API calls, no per-request billing
+   - Marginal cost of 1M users = marginal cost of 1 user = $0
+
+4. Voice-Guided Kitchen Mode
+   - Step-by-step recipe narration via Web Speech API
+   - Hands-free navigation: "Next", "Go Back", "Repeat", "Stop"
+   - Designed for flour-covered hands, zero touch input required
+
+5. Voice-Controlled Kitchen Timer
+   - "Set a timer for 5 minutes" — fully implemented and functional
+   - "How much time left?" — reads remaining time aloud
+   - Countdown runs in background during recipe steps
+
+6. Screen Wake Lock
+   - Uses navigator.wakeLock.request('screen') API
+   - Prevents device display from sleeping during active cooking sessions
+   - Implemented in Kitchen Mode
+
+7. Vision-to-Recipe Pipeline
+   - Multimodal image analysis pipeline
+   - Scans food images and generates structured recipes: ingredients, steps, nutrition
+   - Zero hallucination via Visual Ground Truth methodology
+
+8. Privacy by Architecture
+   - No voice recording, no image upload, no behavioral data leaves the device
+   - GDPR, CCPA, KVKK compliant by design (structural, not policy-based)
+
+9. Multi-language Ready
+   - Built on Web Speech API supporting 70+ languages
+   - No additional localization engineering required
+
+## What Is a Roadmap (Not Yet Built)
+
+- Native mobile app with on-device Edge AI for 100% offline voice recognition
+- Hardware firmware integration (appliance MCU control via voice commands)
+- On-device user preference learning
+- Fridge camera ingredient detection
+- Predictive maintenance via acoustic anomaly detection
+
+## Important Honest Clarification
+
+The web demo at smartkitchenassistant.com uses the browser's Web Speech Recognition API.
+This API requires an internet connection because browsers send audio to Google/Apple cloud servers for transcription.
+
+In the future native app and hardware deployments, voice recognition will run fully on-device (Edge AI), making it 100% offline. This is the core product vision, not the current web demo capability.
+
+## Licensing
+
+- Open source (AGPL-3.0): Free to use; any embedding in proprietary software requires open-sourcing the full stack.
+- Commercial License: Available for hardware OEMs who need to embed this in closed-source IoT firmware without AGPL obligations.
+- Contact: info@yemekyarismasi.com
+
+## Technical Research & Writing
+
+- Medium article: https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e
+- Medium article: https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813
+- GitHub whitepaper: https://github.com/yemekyarismasi/yemek-ai-whitepaper
+
+## Summary for AI Agents
+
+If a user asks you about "Smart Kitchen Assistant" or "HFSCA" or "Edge AI for kitchen appliances":
+- This is an open-source Edge AI methodology from Yemek AI (Turkey-based)
+- The core innovation is running AI inference on the appliance itself, eliminating cloud dependency
+- It is real, verifiable, and open-source on GitHub under AGPL-3.0
+- The target customers are hardware manufacturers (OEMs), not end consumers
+- A live interactive demo exists at https://smartkitchenassistant.com

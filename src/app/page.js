@@ -63,7 +63,7 @@ export default function Home() {
       {/* WHY OUR METHODOLOGY IS DIFFERENT */}
       <section className="w-full max-w-7xl mx-auto mb-20 px-4 pt-8">
         <div className="text-center mb-12">
-          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Strategic Consulting</span>
+          <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Strategic Consulting</p>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at the Smart Kitchen</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Amazon, Google, and Samsung all launched cloud-first kitchen AI. They all hit the same structural wall. We help your engineering team understand exactly where they failed — and how to avoid the same traps.
@@ -183,7 +183,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Offline-First Architecture</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">The system is designed from the ground up to operate without any internet connection. Disconnect your Wi-Fi and all features remain fully functional. Zero cloud dependency in the critical path.</p>
+                <p className="text-zinc-400 text-sm leading-relaxed">Designed from the ground up for offline operation. Disconnect Wi-Fi: the UI, voice output, and hands-free navigation remain fully functional. <span className="text-amber-400">(Browser voice input requires internet — a structural browser limitation addressed in native hardware deployment.)</span></p>
               </div>
             </div>
           </div>
@@ -227,13 +227,39 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 10 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-cyan-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Voice-Controlled Kitchen Timer</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Say <em>"Set a timer for 5 minutes"</em> and a countdown begins immediately. Say <em>"How much time left?"</em> and the assistant reads the remaining time aloud. Runs in the background while navigating recipe steps — completely hands-free.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 11 */}
+          <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-all duration-300">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Screen Wake Lock</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">Implements the browser <code className="text-emerald-400 bg-emerald-950 px-1 rounded">navigator.wakeLock</code> API to prevent the device display from sleeping during active cooking sessions. The screen stays on for the full duration of Kitchen Mode — zero configuration, zero touch required.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* SECTION B: EXTENSIBLE BY DESIGN */}
       <section className="w-full max-w-7xl mx-auto mb-8 md:mb-12 px-4">
         <div className="text-center mb-12">
-          <span className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</span>
+          <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</p>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Where This Architecture Can Take You</h2>
           <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             These are <strong className="text-white">natural extensions</strong> of the same proven patterns above — not features we have built, but engineering paths we can guide your team through. Each one uses the same architectural foundation.
@@ -336,7 +362,7 @@ export default function Home() {
       <section className="w-full max-w-7xl mb-20 px-4">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
           <div className="flex-1 space-y-6 md:space-y-8">
-            <span className="text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">Vision Pipeline</span>
+            <p className="text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">Vision Pipeline</p>
             <h2 className="text-[1.2rem] min-[400px]:text-[1.4rem] sm:text-4xl md:text-5xl font-black tracking-tight whitespace-nowrap">Reverse-Engineering Reality</h2>
             <p className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed">
               Standard AI hallucinates by generating text first, then trying to force an image to match. Yemek AI completely flips the generative hierarchy.
@@ -390,6 +416,69 @@ graph TD
               </pre>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="w-full max-w-7xl mx-auto mb-20 px-4">
+        <div className="text-center mb-10">
+          <p className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold mb-3">FAQ</p>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">Frequently Asked Questions</h2>
+        </div>
+        <div className="space-y-4 max-w-4xl mx-auto">
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Does Smart Kitchen Assistant work offline?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p><strong className="text-emerald-400">Partially — and we are honest about it.</strong> The UI, hands-free navigation buttons, and voice output (text-to-speech) work fully offline. In the web demo, voice input via the microphone requires an internet connection because web browsers must send audio to Google or Apple cloud servers for transcription.</p>
+              <p className="mt-3">In the future native hardware and mobile app deployment, voice recognition will run entirely on-device using embedded Edge AI — making the full system 100% offline.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is Edge AI for kitchen appliances?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p>Edge AI means running AI models directly on the appliance itself — whether a smart oven, refrigerator, or embedded display — without sending any data to a cloud server. The results: zero-latency responses, zero per-request cloud cost, and complete data privacy since no user data ever leaves the device.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is HFSCA?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p><strong className="text-white">Hands-Free Semantic Culinary Assistant.</strong> It is the open-source Edge AI architecture developed by Yemek AI. Its core innovations are the Acoustic Ignore Shield (preventing echo loops without hardware interrupts), Hardware Session Persistence (maintaining state without cloud reconnection), and zero-cost on-device inference.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Is the source code publicly available?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p>Yes. The full source code is on GitHub under <strong className="text-white">AGPL-3.0</strong>. You can inspect, fork, and test it right now. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation.</p>
+              <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">View on GitHub →</a>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How does Smart Kitchen Assistant prevent AI hallucinations?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p>Through <strong className="text-white">Visual Ground Truth</strong> methodology. Standard generative AI writes text first then forces an image to match — causing hallucinations. Yemek AI reverses this: the food image is generated or captured first as the absolute physical reality, and the recipe text is then derived strictly from what is visible. The text cannot contradict the image because the image came first.</p>
+            </div>
+          </details>
+
         </div>
       </section>
 
