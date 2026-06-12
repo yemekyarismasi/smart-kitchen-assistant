@@ -6,72 +6,118 @@ import KitchenMode from "@/components/KitchenMode";
 export default function DemoSection() {
   const SCENARIOS = [
     {
-      id: "eggs",
-      name: "Heart-Shaped Eggs",
-      image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop",
+      id: "krep-durum",
+      name: "Beef Crepe Wrap",
+      image: "https://lofxbrwkmufhniwetjtf.supabase.co/storage/v1/object/public/recipe_images/a24104a9-d8e4-4138-a389-c092ef500e80/1780667490027-etli-krep-d-r-m.jpg",
+      sourceLink: "https://yemekyarismasi.com/profil/apspha/tarif/etli-krep-durum",
       recipe: {
-        title: "Heart-Shaped Sunny-Side Up Eggs",
-        description: "A visually appealing breakfast classic formed perfectly using a silicone heart mold.",
+        title: "Beef Crepe Wrap",
+        description: "A satisfying and delicious main dish where thin crepes meet a slow-cooked, pulled beef filling. It offers both a practical and elegant presentation to impress your guests.",
+        difficulty: "Medium",
+        prepTime: "40 mins",
+        cookTime: "2.5 hours",
+        portions: "4-6 servings",
+        ingredients: [
+          "--For the Crepes--",
+          "1 cup all-purpose flour",
+          "1.5 cups milk",
+          "2 large eggs",
+          "Half a teaspoon of salt",
+          "1 tablespoon vegetable oil or melted butter",
+          "--For the Beef Filling--",
+          "500g beef (brisket, shank, or round)",
+          "1 large onion",
+          "2 cloves of garlic",
+          "1 tablespoon tomato paste",
+          "Half a cup of beef broth or water",
+          "2 tablespoons olive oil",
+          "Salt, black pepper, thyme, cumin",
+          "Red pepper flakes and 50g grated cheddar cheese (optional)"
+        ],
+        nutrition: { calories: 380, protein: 30, fat: 18, carbs: 30 },
+        chefTouch: "You can balance the flavor by serving it with yogurt, tzatziki, or a fresh seasonal salad. Sprinkle finely chopped parsley or dill on top for an elegant visual touch.",
+        steps: [
+          "Preparing the Beef Filling: Cut the beef into cubes. Heat olive oil in a large pot. Dice the onion and sauté until pink. Add the garlic and sauté for 1 more minute.",
+          "Add the beef to the pot and cook over high heat until it releases and reabsorbs its juices. Add the tomato paste and spices.",
+          "Add the beef broth, cover the pot, and cook over low heat until the meat is incredibly tender (about 2-2.5 hours), then shred it with a fork.",
+          "Preparing the Crepe Batter: Whisk the eggs with salt. Add the milk and oil. Gradually whisk in the flour until you get a smooth, pourable batter.",
+          "Cooking the Crepes: Lightly oil a non-stick pan over medium heat. Pour a ladle of batter, spread evenly, and cook both sides until golden.",
+          "Serving: Place the beef filling inside each crepe and roll them up to serve."
+        ]
+      }
+    },
+    {
+      id: "kalpli-yumurta",
+      name: "Heart-Shaped Eggs",
+      image: "https://lofxbrwkmufhniwetjtf.supabase.co/storage/v1/object/public/recipe_images/b39e2102-3ed3-4022-9f54-ab21f282c274/1780666083614-kalpli-sahanda-yumurta.jpg",
+      sourceLink: "https://yemekyarismasi.com/profil/ajiba/tarif/kalpli-sahanda-yumurta",
+      recipe: {
+        title: "Heart-Shaped Fried Eggs",
+        description: "A practical and eye-catching breakfast recipe for those who want to start the day with love. A heart-shaped egg yolk is served surrounded by fresh green onions.",
         difficulty: "Easy",
         prepTime: "5 mins",
-        ingredients: ["2 large eggs", "1 tbsp butter", "Salt and pepper (to taste)"],
-        nutrition: { calories: 250, protein: 14, fat: 20, carbs: 1 },
-        chefTouch: "Make sure the pan is not too hot, otherwise the bottom will burn before the whites set.",
+        cookTime: "3-5 mins",
+        portions: "1 serving",
+        ingredients: [
+          "1 large egg",
+          "2-3 stalks of fresh green onions",
+          "1 tablespoon olive oil or butter",
+          "Salt",
+          "Black pepper or red pepper flakes",
+          "1 metal heart-shaped mold (optional)"
+        ],
+        nutrition: { calories: 190, protein: 6, fat: 13, carbs: 2 },
+        chefTouch: "To make the egg even more special, you can sprinkle a little red pepper flakes or paprika over the cooked yolk.",
         steps: [
-          "Place a heart-shaped silicone mold in the center of your pan over medium heat.",
-          "Add half a tablespoon of butter inside the mold and let it melt.",
-          "Gently crack an egg directly into the heart shape.",
-          "Cook for 3 minutes until the whites are firm."
+          "Heat a non-stick pan over medium heat. Once hot, add the olive oil or butter.",
+          "If using, place the heart-shaped mold in the center of the pan.",
+          "Carefully crack the egg into the mold. Be careful not to let the egg white overflow outside the mold.",
+          "Cook until the egg white is completely set and the yolk reaches your desired consistency.",
+          "Gently remove the mold and decorate around the egg with washed green onion stalks to emphasize the heart shape.",
+          "Sprinkle with salt and spices, and serve hot."
         ]
       }
     },
     {
-      id: "pasta",
-      name: "Spaghetti Bolognese",
-      image: "https://images.unsplash.com/photo-1622973536968-3ead9e780960?q=80&w=800&auto=format&fit=crop",
+      id: "sosisli-sis",
+      name: "Sausage Skewers",
+      image: "https://lofxbrwkmufhniwetjtf.supabase.co/storage/v1/object/public/recipe_images/ccdcc281-54b4-4b5e-b342-acf378f80c0e/1780667175581-sosisli-peynirli--i-ler.jpg",
+      sourceLink: "https://yemekyarismasi.com/profil/ceylan/tarif/sosisli-peynirli-sisler",
       recipe: {
-        title: "Classic Spaghetti Bolognese",
-        description: "Rich tomato and ground beef sauce served over al dente spaghetti.",
-        difficulty: "Medium",
-        prepTime: "45 mins",
-        ingredients: ["400g spaghetti", "500g ground beef", "1 chopped onion", "2 diced carrots", "400g crushed tomatoes"],
-        nutrition: { calories: 650, protein: 35, fat: 25, carbs: 70 },
-        chefTouch: "Simmer the sauce on the lowest heat possible for an hour to develop deep flavors.",
+        title: "Sausage and Cheese Skewers",
+        description: "A practical and delicious snack that you can prepare in a short time with just two main ingredients. A lifesaver for party tables or quick dinners.",
+        difficulty: "Easy",
+        prepTime: "10 mins",
+        cookTime: "10 mins",
+        portions: "4 servings",
+        ingredients: [
+          "4 large hot dog sausages",
+          "8-12 slices of cheddar or mozzarella cheese",
+          "4 wooden skewers",
+          "1 tablespoon vegetable oil (optional, for cooking)"
+        ],
+        nutrition: { calories: 450, protein: 25, fat: 40, carbs: 5 },
+        chefTouch: "You can serve these skewers with ketchup, mustard, or your favorite hot sauce. Accompanied by french fries, it can become a hearty meal.",
         steps: [
-          "Heat olive oil in a large pot and sauté finely chopped onions, carrots, and celery until soft.",
-          "Add the ground beef and cook until browned, breaking it apart with a spoon.",
-          "Stir in tomato paste, crushed tomatoes, and a pinch of salt. Let it simmer for 30 minutes.",
-          "Boil the spaghetti in salted water until al dente, then toss it with the sauce."
-        ]
-      }
-    },
-    {
-      id: "kebab",
-      name: "Turkish Adana Kebab",
-      image: "https://images.unsplash.com/photo-1599921841143-819065a55cc6?q=80&w=800&auto=format&fit=crop",
-      recipe: {
-        title: "Traditional Adana Kebab",
-        description: "Spicy minced lamb skewers grilled over charcoal.",
-        difficulty: "Hard",
-        prepTime: "60 mins",
-        ingredients: ["500g ground lamb", "1 finely chopped red bell pepper", "1 tsp salt", "1 tbsp spicy paprika flakes"],
-        nutrition: { calories: 450, protein: 30, fat: 35, carbs: 5 },
-        chefTouch: "Kneading the meat is crucial. Knead until the mixture gets sticky, otherwise it will fall off the skewers.",
-        steps: [
-          "Mix ground lamb with finely chopped red bell peppers, salt, and spicy paprika.",
-          "Knead the mixture thoroughly for 10 minutes to release the proteins.",
-          "Mold the meat around wide, flat metal skewers.",
-          "Grill over hot charcoal, turning frequently until completely cooked and charred."
+          "Wash and dry the sausages, then cut each one into bite-sized pieces about 3-4 cm long.",
+          "Cut the cheese slices large enough to wrap around the sausage pieces.",
+          "Tightly wrap each sausage piece with a slice of cheese.",
+          "Carefully thread the cheese-wrapped sausage pieces onto the wooden skewers.",
+          "Heat a non-stick pan over medium heat and optionally add a tiny amount of oil.",
+          "Place the skewers in the pan and cook for about 5-8 minutes, turning them so all sides are lightly browned and the cheese melts.",
+          "Serve hot."
         ]
       }
     }
   ];
 
+  const [activeScenario, setActiveScenario] = useState(SCENARIOS[0]);
   const [recipe, setRecipe] = useState(SCENARIOS[0].recipe);
   const [image, setImage] = useState(SCENARIOS[0].image);
   const [showKitchenMode, setShowKitchenMode] = useState(false);
 
   const handleScenarioClick = (scenario) => {
+    setActiveScenario(scenario);
     setImage(scenario.image);
     setRecipe(scenario.recipe);
   };
@@ -146,16 +192,28 @@ export default function DemoSection() {
                 {image && <img src={image} alt="Food" className="w-full h-full object-cover opacity-100" />}
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent"></div>
 
-                <div className="absolute bottom-4 left-6 flex gap-2">
+                <div className="absolute bottom-4 left-6 flex flex-wrap gap-2 pr-6">
                   <span className="bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">{recipe.difficulty}</span>
-                  <span className="bg-white text-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">{recipe.prepTime}</span>
+                  <span className="bg-zinc-800 border border-zinc-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1">⏱️ Prep: {recipe.prepTime}</span>
+                  <span className="bg-zinc-800 border border-zinc-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1">🔥 Cook: {recipe.cookTime}</span>
+                  <span className="bg-zinc-800 border border-zinc-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1">🍽️ {recipe.portions}</span>
                 </div>
               </div>
               
               {/* Content */}
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-[1.2rem] min-[400px]:text-[1.3rem] sm:text-xl md:text-[1.6rem] font-black text-white mb-3 whitespace-nowrap overflow-hidden text-ellipsis">{recipe.title}</h3>
-                <p className="text-zinc-400 mb-8 font-light text-base md:text-sm leading-relaxed">{recipe.description}</p>
+                <p className="text-zinc-400 mb-6 font-light text-base md:text-sm leading-relaxed">{recipe.description}</p>
+                
+                {/* AI Creation Footnote */}
+                <div className="bg-cyan-950/20 border border-cyan-900/40 rounded-xl p-4 mb-8">
+                  <p className="text-xs text-zinc-300 leading-relaxed font-mono">
+                    <span className="text-cyan-400 font-bold uppercase">🤖 AI Generated:</span> This recipe was generated by a user using YEMEK AI and added to their personal recipe library. You can view the original link on the attached page:{' '}
+                    <a href={activeScenario?.sourceLink} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline underline-offset-2 transition-colors">
+                      Source Page ↗
+                    </a>
+                  </p>
+                </div>
                 
                 <h4 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4 text-center">Required Commands</h4>
                 <div className="flex flex-wrap justify-center gap-3 mb-6">
@@ -166,7 +224,7 @@ export default function DemoSection() {
                 </div>
 
                 <div className="mt-auto">
-                  <p className="text-base text-center text-white font-mono mb-4 animate-pulse whitespace-nowrap">
+                  <p className="text-xs sm:text-sm md:text-base text-center text-white font-mono mb-4 animate-pulse px-2">
                     No Cloud Required. Disconnect Wi-Fi to test offline mode.
                   </p>
                   <button 

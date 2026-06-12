@@ -25,8 +25,8 @@ export default function KitchenMode({ recipe, onClose }) {
   const [timerSeconds, setTimerSeconds] = useState(null);
 
   useEffect(() => {
-    // Mutfak Modu açıldığında Body scroll'u kapat
-    document.body.style.overflow = 'hidden';
+    // Mobil uyumluluk için scroll'u tamamen kapatmak yerine kapsayıcıda h-[100dvh] kullanacağız
+    // document.body.style.overflow = 'hidden';
     
     // Screen Wake Lock API (Ekranın kapanmasını engelle)
     const requestWakeLock = async () => {
@@ -109,7 +109,7 @@ export default function KitchenMode({ recipe, onClose }) {
     }
 
     return () => {
-      document.body.style.overflow = 'auto';
+      // document.body.style.overflow = 'auto';
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (wakeLockRef.current) {
         wakeLockRef.current.release().catch(() => {});
@@ -454,7 +454,7 @@ export default function KitchenMode({ recipe, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-slate-900 text-white flex flex-col p-6 overflow-hidden">
+    <div className="fixed inset-0 z-[9999] bg-slate-900 text-white flex flex-col p-4 md:p-6 h-[100dvh] w-full overflow-hidden">
       
       {/* Başlangıç Bilgilendirme Ekranı */}
       {showIntro && (
@@ -486,18 +486,27 @@ export default function KitchenMode({ recipe, onClose }) {
       )}
       
       {/* Header */}
-      <div className="flex items-center justify-between mb-8 border-b border-slate-700 pb-4">
-        <div>
-          <h1 className="text-3xl md:text-5xl font-black text-amber-400 leading-tight">👨‍🍳 Kitchen Mode</h1>
-          <h2 className="text-xl md:text-2xl font-bold text-slate-300 mt-2">{recipe.title}</h2>
+      <div className="flex items-start md:items-center justify-between mb-6 border-b border-slate-700 pb-4 gap-4">
+        <div className="flex-1">
+          <h1 className="text-2xl md:text-5xl font-black text-amber-400 leading-tight">👨‍🍳 Kitchen Mode</h1>
+          <h2 className="text-lg md:text-2xl font-bold text-slate-300 mt-1">{recipe.title}</h2>
         </div>
         <div className="flex flex-col items-end gap-2">
-          <button 
-            onClick={onClose}
-            className="bg-red-500/20 text-red-400 p-4 rounded-2xl hover:bg-red-500/30 transition text-lg font-bold"
-          >
-            Close (X)
-          </button>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={handlePrev}
+              disabled={currentStepIndex === 0}
+              className="bg-slate-700 text-slate-200 px-4 py-3 rounded-2xl hover:bg-slate-600 active:scale-95 transition text-base md:text-lg font-bold disabled:opacity-50 flex items-center gap-2"
+            >
+              ⬅️ BACK
+            </button>
+            <button 
+              onClick={onClose}
+              className="bg-red-500/20 text-red-400 px-4 py-3 rounded-2xl hover:bg-red-500/30 active:scale-95 transition text-base md:text-lg font-bold flex items-center gap-2"
+            >
+              🛑 STOP
+            </button>
+          </div>
           {/* Debug Panel */}
           <div className="text-xs font-mono text-right bg-black/50 p-2 rounded-xl border border-zinc-800">
              <div className={isListening ? "text-emerald-400" : "text-red-400"}>
@@ -511,7 +520,7 @@ export default function KitchenMode({ recipe, onClose }) {
       </div>
 
       {/* Main Content Area */}
-        <div className="flex-1 flex flex-col justify-center items-center w-full min-h-[50vh] p-4 relative z-10 transition-all duration-500 overflow-y-auto">
+        <div className="flex-1 flex flex-col justify-start md:justify-center items-center w-full relative z-10 transition-all duration-500 overflow-y-auto overflow-x-hidden pt-4 pb-10">
           
           {timerSeconds !== null && (
             <div className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 glass px-6 py-3 rounded-full border-2 border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.6)] flex items-center gap-4 animate-pulse backdrop-blur-xl bg-black/40">
@@ -558,29 +567,20 @@ export default function KitchenMode({ recipe, onClose }) {
         </div>
 
         {/* Dokunmatik Kontroller */}
-        <div className="flex flex-col w-full gap-3 mt-2 max-w-4xl">
-          <div className="flex gap-3 w-full">
-            <button 
-              onClick={handlePrev}
-              disabled={currentStepIndex === 0}
-              className="flex-1 bg-slate-800 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-bold disabled:opacity-50 hover:bg-slate-700 active:scale-95 transition shadow-lg"
-            >
-              👆 PREV (BACK)
-            </button>
-            <button 
-              onClick={readCurrent}
-              className="flex-1 bg-blue-600 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-bold hover:bg-blue-500 active:scale-95 transition shadow-lg"
-            >
-              🔊 REPEAT
-            </button>
-          </div>
-
+        <div className="flex flex-row w-full gap-3 mt-2 max-w-4xl pb-4">
           <button 
             onClick={handleNext}
             disabled={currentStepIndex >= playList.length - 1}
-            className="w-full bg-emerald-600 p-6 md:p-8 rounded-3xl text-2xl md:text-4xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800"
+            className="flex-1 bg-blue-600 p-4 md:p-6 rounded-2xl text-xl md:text-3xl font-black disabled:opacity-50 hover:bg-blue-500 active:scale-95 transition shadow-lg border-b-4 border-blue-800 flex items-center justify-center gap-2"
           >
-            👇 NEXT STEP
+            ⏭️ SKIP
+          </button>
+          <button 
+            onClick={handleNext}
+            disabled={currentStepIndex >= playList.length - 1}
+            className="flex-[2] bg-emerald-600 p-4 md:p-6 rounded-2xl text-xl md:text-3xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800 flex items-center justify-center gap-2"
+          >
+            ➡️ NEXT
           </button>
         </div>
       </div>
