@@ -226,7 +226,7 @@ export default function DemoSection() {
                 <h4 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4 text-center">Required Commands</h4>
                 <div className="flex flex-wrap justify-center gap-3 mb-6">
                   <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Next"</span>
-                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Back"</span>
+                  <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Go Back"</span>
                   <span className="px-4 py-2 bg-black border border-zinc-700 rounded-lg text-white font-mono text-sm shadow-inner">"Repeat"</span>
                   <span className="px-4 py-2 bg-black border border-red-900/30 text-red-400 rounded-lg font-mono text-sm shadow-inner">"Stop"</span>
                 </div>

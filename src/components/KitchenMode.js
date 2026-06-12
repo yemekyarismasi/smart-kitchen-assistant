@@ -498,7 +498,7 @@ export default function KitchenMode({ recipe, onClose }) {
               disabled={currentStepIndex === 0}
               className="bg-slate-700 text-slate-200 px-4 py-3 rounded-2xl hover:bg-slate-600 active:scale-95 transition text-base md:text-lg font-bold disabled:opacity-50 flex items-center gap-2"
             >
-              ⬅️ BACK
+              ⬅️ GO BACK
             </button>
             <button 
               onClick={onClose}
