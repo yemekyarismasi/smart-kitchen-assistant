@@ -421,11 +421,13 @@ graph TD
 
       {/* FAQ SECTION */}
       <section className="w-full max-w-7xl mx-auto mb-20 px-4">
-        <div className="text-center mb-10">
-          <p className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">Frequently Asked Questions</h2>
+        <div className="flex items-center gap-4 mb-10">
+          <span className="text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold whitespace-nowrap">FAQ</span>
+          <div className="h-px flex-1 bg-zinc-800"></div>
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight whitespace-nowrap">Frequently Asked Questions</h2>
+          <div className="h-px flex-1 bg-zinc-800"></div>
         </div>
-        <div className="space-y-4 max-w-4xl mx-auto">
+        <div className="space-y-4 w-full">
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
