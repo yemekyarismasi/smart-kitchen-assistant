@@ -42,7 +42,7 @@ export default function StickyNav() {
           <span className="text-white font-black text-[15px] md:text-base tracking-tight whitespace-nowrap leading-tight mt-0.5">
             Smart Kitchen Assistant
           </span>
-          <span className="block text-[9px] md:text-[11px] text-zinc-400 font-medium tracking-wide leading-tight mt-0.5">
+          <span className="block text-[10px] md:text-[11px] text-zinc-200 font-medium tracking-wide leading-tight mt-0.5">
             Edge AI Solutions for Appliances
           </span>
         </a>
