@@ -503,7 +503,7 @@ graph TD
       <OpenSourceSection />
 
       {/* 5. B2B LICENSING & HARDWARE OS INTEGRATION */}
-      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-6 md:space-y-10 mb-20 p-6 md:p-12 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
+      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-4 md:space-y-6 mb-8 md:mb-12 p-6 md:p-8 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
@@ -511,12 +511,12 @@ graph TD
         <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>
-        <div className="bg-black/50 p-6 md:p-10 rounded-2xl border border-zinc-800 inline-block text-left mt-6 md:mt-10 max-w-3xl relative z-10 w-full shadow-2xl">
-          <h3 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl font-bold text-white mb-4 whitespace-nowrap">Enterprise / Commercial SDK</h3>
-          <p className="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 leading-relaxed">
+        <div className="bg-black/50 p-6 md:p-8 rounded-2xl border border-zinc-800 inline-block text-left max-w-3xl relative z-10 w-full shadow-2xl">
+          <h3 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl font-bold text-white mb-3 md:mb-4 whitespace-nowrap">Enterprise / Commercial SDK</h3>
+          <p className="text-zinc-300 text-sm md:text-lg mb-5 md:mb-6 leading-relaxed">
             To bypass the AGPL-3.0 mandate and securely integrate the Smart Kitchen Assistant into closed-source IoT firmware (e.g., Oven MCU, Smart Fridge OS), tech manufacturers must acquire a B2B Commercial License.
           </p>
-          <a href="mailto:info@yemekyarismasi.com" className="block text-center w-full py-4 md:py-5 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
+          <a href="mailto:info@yemekyarismasi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
             Contact Yemek AI Engineering
           </a>
         </div>

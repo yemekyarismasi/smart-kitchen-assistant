@@ -25,14 +25,14 @@ export default function OpenSourceSection() {
       desc: "And how we solved it with zero-cost edge AI.",
       link: "https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e",
       readTime: "5 min read",
-      author: "Oytun Ciba · Yemek AI Engineering"
+      author: "Yemek AI Engineering"
     },
     {
       title: "How We Solved Multimodal AI Hallucinations",
       desc: "Reverse engineering the generative pipeline for 100% Visual Ground Truth.",
       link: "https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813",
       readTime: "8 min read",
-      author: "Oytun Ciba · Yemek AI Engineering"
+      author: "Yemek AI Engineering"
     }
   ];
 
@@ -73,21 +73,17 @@ export default function OpenSourceSection() {
           </div>
           {mediumArticles.map((article, i) => (
             <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="flex flex-col p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm">
-              <div className="flex items-center gap-2 mb-3">
+              <div className="flex items-center gap-2 mb-3 flex-wrap">
                 <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Article</span>
+                <span className="text-[11px] text-zinc-300 font-medium">{article.author}</span>
+                <span className="text-[11px] text-zinc-600 hidden min-[400px]:inline">•</span>
                 <span className="text-[11px] text-zinc-500">{article.readTime}</span>
               </div>
               <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 mb-2 flex items-center justify-between transition-colors">
                 {article.title}
                 <span className="text-zinc-700 group-hover:text-emerald-400 transition-colors">↗</span>
               </h4>
-              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed mb-4 flex-1">{article.desc}</p>
-              <div className="flex items-center gap-2 mt-auto pt-4 border-t border-zinc-800/50">
-                <div className="w-6 h-6 rounded-full bg-zinc-800 flex items-center justify-center shrink-0">
-                  <span className="text-[10px] font-bold text-zinc-400">OC</span>
-                </div>
-                <span className="text-xs text-zinc-400 font-medium">{article.author}</span>
-              </div>
+              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed mb-1 flex-1">{article.desc}</p>
             </a>
           ))}
         </div>
