@@ -31,7 +31,7 @@ export default function InteractiveDemo() {
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">
           Non-Linear Culinary Intelligence
         </h2>
-        <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+        <p className="text-zinc-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
           Linear scaling breaks recipes. Our <strong className="text-white">Asymmetric Dynamic Multiplier Loop</strong> knows that reducing a Baklava recipe halves the pistachios, but <em className="text-cyan-400 not-italic">still requires 40 structural layers</em> of phyllo dough. Test the 0ms edge computing below.
         </p>
       </div>
@@ -65,7 +65,7 @@ export default function InteractiveDemo() {
           </div>
 
           <div className="mt-auto pt-8 border-t border-zinc-800/80">
-            <div className="flex items-center gap-3 text-sm text-zinc-400 bg-zinc-900/50 p-3 rounded-lg border border-zinc-800">
+            <div className="flex items-center gap-3 text-sm text-zinc-300 bg-zinc-900/50 p-3 rounded-lg border border-zinc-800">
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
               0ms Latency. Processed locally via Edge NPU.
             </div>
@@ -100,13 +100,13 @@ export default function InteractiveDemo() {
           </ul>
 
           <div className="mt-12 pt-8 border-t border-zinc-800">
-            <p className="text-xs text-zinc-500 mb-3 font-mono uppercase tracking-widest">Algorithm Insight</p>
+            <p className="text-sm md:text-xs text-zinc-500 mb-3 font-mono uppercase tracking-widest">Algorithm Insight</p>
             {portions !== 8 ? (
               <div className="text-sm text-cyan-300 bg-cyan-950/30 p-4 rounded-xl border border-cyan-900/50 leading-relaxed">
                 Notice how the Butter and Pistachios scaled down to match <strong>{portions} portions</strong>, while the <strong className="text-purple-400">Structural Requirement (Phyllo Layers)</strong> remained exactly at 40. This is true Culinary NLP.
               </div>
             ) : (
-              <div className="text-sm text-zinc-400 bg-zinc-900/50 p-4 rounded-xl border border-zinc-800 leading-relaxed">
+              <div className="text-sm text-zinc-300 bg-zinc-900/50 p-4 rounded-xl border border-zinc-800 leading-relaxed">
                 Adjust the portions using the controls to witness asymmetric scaling in real-time.
               </div>
             )}

@@ -38,7 +38,7 @@ export default function OpenSourceSection() {
         <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
           Open Source & Research
         </h2>
-        <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed">
+        <p className="text-zinc-300 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed">
           We believe in transparent, verifiable architecture. Explore our open-source repositories or dive into the technical methodology behind our engineering decisions.
         </p>
       </div>
@@ -56,7 +56,7 @@ export default function OpenSourceSection() {
                 {repo.title}
                 <span className="text-zinc-700 group-hover:text-cyan-400 transition-colors">↗</span>
               </h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">{repo.desc}</p>
+              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">{repo.desc}</p>
             </a>
           ))}
         </div>
@@ -73,7 +73,7 @@ export default function OpenSourceSection() {
                 {article.title}
                 <span className="text-zinc-700 group-hover:text-emerald-400 transition-colors">↗</span>
               </h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">{article.desc}</p>
+              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">{article.desc}</p>
             </a>
           ))}
         </div>

@@ -12,7 +12,7 @@ export default function Home() {
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm text-sm">
-          <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Part of the Yemek AI Ecosystem</span>
+          <span className="text-zinc-500 font-mono text-sm md:text-xs uppercase tracking-widest">Part of the Yemek AI Ecosystem</span>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors font-medium">
               <span className="text-base">🍽️</span>
@@ -39,7 +39,7 @@ export default function Home() {
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-zinc-400 w-full mx-auto font-light leading-relaxed px-4">
+        <p className="text-xl md:text-2xl text-zinc-300 w-full mx-auto font-light leading-relaxed px-4">
           The definitive open-source methodology for offline appliance intelligence. Featuring Acoustic Shields, 100% Visual Ground Truth, and Zero-Latency Hardware Integration.
         </p>
       </section>
@@ -50,7 +50,7 @@ export default function Home() {
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
             Experience Live Edge AI
           </h2>
-          <p className="text-zinc-400 text-base md:text-lg">
+          <p className="text-zinc-300 text-base md:text-lg">
             Select a scenario below to preview the live B2C experience.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Strategic Consulting</p>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at the Smart Kitchen</h2>
-          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Amazon, Google, and Samsung all launched cloud-first kitchen AI. They all hit the same structural wall. We help your engineering team understand exactly where they failed — and how to avoid the same traps.
           </p>
         </div>
@@ -76,17 +76,17 @@ export default function Home() {
           <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
             <div className="text-3xl mb-4">☁️</div>
             <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Cloud Dependency</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">Every voice command travels to a data center and back. In a steamy kitchen with background noise, latency kills the experience. 800ms delay = burned food.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Every voice command travels to a data center and back. In a steamy kitchen with background noise, latency kills the experience. 800ms delay = burned food.</p>
           </div>
           <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
             <div className="text-3xl mb-4">💸</div>
             <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Infinite Scaling Costs</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">Each user request hits their GPU server. 1M users = 1M API calls per day. The economics of cloud-based kitchen AI are fundamentally broken for hardware OEMs.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Each user request hits their GPU server. 1M users = 1M API calls per day. The economics of cloud-based kitchen AI are fundamentally broken for hardware OEMs.</p>
           </div>
           <div className="p-6 rounded-2xl bg-red-950/10 border border-red-900/30">
             <div className="text-3xl mb-4">🎙️</div>
             <h3 className="text-xl font-bold text-red-400 mb-2">Their Problem: Kitchen Acoustics</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">Generic voice assistants were not designed for kitchens. The echo from tile walls, mixer noise, and extractor fans create a recognition failure rate exceeding 40%.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Generic voice assistants were not designed for kitchens. The echo from tile walls, mixer noise, and extractor fans create a recognition failure rate exceeding 40%.</p>
           </div>
         </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
             Verified & Open Source
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">What We Have Actually Built</h2>
-          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Every capability below is <strong className="text-white">live in our open-source codebase</strong>. Inspect it, fork it, test it offline — right now. This is our engineering credibility.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Acoustic Ignore Shield</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Prevents the system from hearing its own voice output via <code className="text-cyan-400 bg-cyan-950 px-1 rounded">isSpeakingRef</code> lock. Solves the echo loop problem in high-reflectivity kitchens without any hardware interrupt.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Prevents the system from hearing its own voice output via <code className="text-cyan-400 bg-cyan-950 px-1 rounded">isSpeakingRef</code> lock. Solves the echo loop problem in high-reflectivity kitchens without any hardware interrupt.</p>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Kitchen Noise Segmentation</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Isolates human speech from mixer noise, running water, and extractor fans. The recognition pipeline is tuned specifically for kitchen acoustic profiles — not generic rooms.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Isolates human speech from mixer noise, running water, and extractor fans. The recognition pipeline is tuned specifically for kitchen acoustic profiles — not generic rooms.</p>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Hardware Session Persistence</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Bypasses native browser Garbage Collection via immutable <code className="text-emerald-400 bg-emerald-950 px-1 rounded">utteranceRef</code> boundaries. Session state survives prolonged listening gaps without reconnection.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Bypasses native browser Garbage Collection via immutable <code className="text-emerald-400 bg-emerald-950 px-1 rounded">utteranceRef</code> boundaries. Session state survives prolonged listening gaps without reconnection.</p>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Zero-Cost Edge Inference</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Every AI operation runs on the client device — no GPU server, no API calls, no per-request billing. The marginal cost of serving 1M users is identical to serving 1: zero.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Every AI operation runs on the client device — no GPU server, no API calls, no per-request billing. The marginal cost of serving 1M users is identical to serving 1: zero.</p>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Vision-to-Recipe Pipeline</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">A multimodal image analysis pipeline that scans food visuals and generates a fully structured recipe — ingredients, steps, nutrition — with zero hallucination via Visual Ground Truth.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">A multimodal image analysis pipeline that scans food visuals and generates a fully structured recipe — ingredients, steps, nutrition — with zero hallucination via Visual Ground Truth.</p>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Offline-First Architecture</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Designed from the ground up for offline operation. Disconnect Wi-Fi: the UI, voice output, and hands-free navigation remain fully functional. <span className="text-amber-400">(Browser voice input requires internet — a structural browser limitation addressed in native hardware deployment.)</span></p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Designed from the ground up for offline operation. Disconnect Wi-Fi: the UI, voice output, and hands-free navigation remain fully functional. <span className="text-amber-400">(Browser voice input requires internet — a structural browser limitation addressed in native hardware deployment.)</span></p>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Privacy by Architecture</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">No voice recording, no image upload, no behavioral data leaves the device — ever. GDPR, CCPA, and KVKK compliance is guaranteed by design, not by policy. This is structurally auditable.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">No voice recording, no image upload, no behavioral data leaves the device — ever. GDPR, CCPA, and KVKK compliance is guaranteed by design, not by policy. This is structurally auditable.</p>
               </div>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Multi-language Ready</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Built on Web Speech API which natively supports 70+ languages. No additional localization engineering required to deploy voice guidance in Turkish, English, German, Japanese, or Arabic.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Built on Web Speech API which natively supports 70+ languages. No additional localization engineering required to deploy voice guidance in Turkish, English, German, Japanese, or Arabic.</p>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Real-time Voice Navigation</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Hands-free step navigation via natural language commands: <em>"Next", "Back", "Repeat", "Stop"</em>. Designed for users with flour-covered hands — no touch input required at any point.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Hands-free step navigation via natural language commands: <em>"Next", "Back", "Repeat", "Stop"</em>. Designed for users with flour-covered hands — no touch input required at any point.</p>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Voice-Controlled Kitchen Timer</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Say <em>"Set a timer for 5 minutes"</em> and a countdown begins immediately. Say <em>"How much time left?"</em> and the assistant reads the remaining time aloud. Runs in the background while navigating recipe steps — completely hands-free.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Say <em>"Set a timer for 5 minutes"</em> and a countdown begins immediately. Say <em>"How much time left?"</em> and the assistant reads the remaining time aloud. Runs in the background while navigating recipe steps — completely hands-free.</p>
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Screen Wake Lock</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Implements the browser <code className="text-emerald-400 bg-emerald-950 px-1 rounded">navigator.wakeLock</code> API to prevent the device display from sleeping during active cooking sessions. The screen stays on for the full duration of Kitchen Mode — zero configuration, zero touch required.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Implements the browser <code className="text-emerald-400 bg-emerald-950 px-1 rounded">navigator.wakeLock</code> API to prevent the device display from sleeping during active cooking sessions. The screen stays on for the full duration of Kitchen Mode — zero configuration, zero touch required.</p>
               </div>
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Mid-Sentence Pause & Resume</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">Voice narration can be paused at any moment via <em>"Pause"</em> and resumed exactly where it left off via <em>"Resume"</em> — without restarting the step or losing session state. Built for real cooking interruptions: phone calls, oven alarms, unexpected moments.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Voice narration can be paused at any moment via <em>"Pause"</em> and resumed exactly where it left off via <em>"Resume"</em> — without restarting the step or losing session state. Built for real cooking interruptions: phone calls, oven alarms, unexpected moments.</p>
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</p>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Where This Architecture Can Take You</h2>
-          <p className="text-zinc-400 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             These are <strong className="text-white">natural extensions</strong> of the same proven patterns above — not features we have built, but engineering paths we can guide your team through. Each one uses the same architectural foundation.
           </p>
         </div>
@@ -284,45 +284,45 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Kitchen Noise Segmentation</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Kitchen Noise Segmentation</div>
             <h3 className="text-lg font-bold text-white mb-2">Machine Acoustic Anomaly Detection</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">The same microphone isolation logic that filters out mixer noise can be redirected to monitor motor, fan, and bearing signatures — detecting failure patterns weeks before breakdown, with no extra hardware.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">The same microphone isolation logic that filters out mixer noise can be redirected to monitor motor, fan, and bearing signatures — detecting failure patterns weeks before breakdown, with no extra hardware.</p>
           </div>
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Real-time Voice Navigation</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Real-time Voice Navigation</div>
             <h3 className="text-lg font-bold text-white mb-2">Direct Firmware Control Bridge</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">The voice command pipeline that navigates recipe steps can be extended to emit firmware signals. "Preheat the oven" becomes a real <code className="text-amber-400 bg-amber-950 px-1 rounded text-xs">SET_TEMP=180°C</code> call to your appliance MCU.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">The voice command pipeline that navigates recipe steps can be extended to emit firmware signals. "Preheat the oven" becomes a real <code className="text-amber-400 bg-amber-950 px-1 rounded text-sm md:text-xs">SET_TEMP=180°C</code> call to your appliance MCU.</p>
           </div>
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Vision-to-Recipe Pipeline</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Vision-to-Recipe Pipeline</div>
             <h3 className="text-lg font-bold text-white mb-2">Smart Inventory Vision</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">The same vision pipeline that identifies plated food from an image can be applied to a fridge camera feed — detecting available ingredients and triggering intelligent substitution suggestions when items are missing.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">The same vision pipeline that identifies plated food from an image can be applied to a fridge camera feed — detecting available ingredients and triggering intelligent substitution suggestions when items are missing.</p>
           </div>
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Offline-First Architecture</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Offline-First Architecture</div>
             <h3 className="text-lg font-bold text-white mb-2">Hybrid Edge-Cloud Mode</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">When internet is available, complex tasks (personalized recipe generation, nutritional analysis) can optionally route to cloud. When offline, the edge layer handles everything. No degraded experience either way.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">When internet is available, complex tasks (personalized recipe generation, nutritional analysis) can optionally route to cloud. When offline, the edge layer handles everything. No degraded experience either way.</p>
           </div>
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Privacy by Architecture</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Privacy by Architecture</div>
             <h3 className="text-lg font-bold text-white mb-2">On-Device User Profile Learning</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">Because all data stays on-device, user preferences (dietary restrictions, favorite cuisines, portion habits) can be learned and stored locally — creating personalization without any privacy trade-off.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Because all data stays on-device, user preferences (dietary restrictions, favorite cuisines, portion habits) can be learned and stored locally — creating personalization without any privacy trade-off.</p>
           </div>
 
           <div className="p-6 rounded-2xl border border-dashed border-amber-800/50 bg-amber-950/5 hover:border-amber-600/50 transition-all duration-300">
-            <div className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3">Extension of: Machine Acoustic Anomaly</div>
+            <div className="text-amber-400 font-mono text-sm md:text-xs uppercase tracking-widest mb-3">Extension of: Machine Acoustic Anomaly</div>
             <h3 className="text-lg font-bold text-white mb-2">Predictive Maintenance System</h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">Acoustic anomaly patterns, once detected, can trigger automated service notifications — alerting your authorized technicians before a customer experiences a breakdown. Reduces warranty costs and increases brand trust.</p>
+            <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Acoustic anomaly patterns, once detected, can trigger automated service notifications — alerting your authorized technicians before a customer experiences a breakdown. Reduces warranty costs and increases brand trust.</p>
           </div>
 
         </div>
 
         <div className="mt-8 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 text-center">
-          <p className="text-zinc-400 text-base">
+          <p className="text-zinc-300 text-base">
             Each extension above is a <strong className="text-white">consulting and co-development engagement</strong> — not a pre-built product. We bring the proven architectural foundation; your engineering team builds the integration.
             <a href="mailto:info@yemekyarismasi.com" className="text-cyan-400 hover:text-cyan-300 ml-2 underline underline-offset-4 transition-colors">Start a conversation →</a>
           </p>
@@ -346,7 +346,7 @@ export default function Home() {
               <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-white">Acoustic Ignore Shield</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <p className="text-zinc-300 text-base leading-relaxed">
               Solves the "echo loop" in high-reflectivity kitchens without hardware interrupts. By locking the <code className="text-cyan-400 bg-cyan-950 px-2 py-1 rounded text-sm mx-1">isSpeakingRef</code>, the system safely ignores its own voice output.
             </p>
           </div>
@@ -356,7 +356,7 @@ export default function Home() {
               <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-white">Hardware Persistence</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <p className="text-zinc-300 text-base leading-relaxed">
               Bypasses native Garbage Collection (GC) via immutable memory boundaries (<code className="text-emerald-400 bg-emerald-950 px-2 py-1 rounded text-sm mx-1">utteranceRef</code>), maintaining session state even during prolonged listening gaps.
             </p>
           </div>
@@ -366,7 +366,7 @@ export default function Home() {
               <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-white">0 USD Inference Cost</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <p className="text-zinc-300 text-base leading-relaxed">
               Running entirely on the client-side appliance NPU or browser layer, preventing linear server scaling costs for manufacturers. Zero API dependencies.
             </p>
           </div>
@@ -387,21 +387,21 @@ export default function Home() {
                 <div className="mt-1 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0 border border-cyan-500/30">1</div>
                 <div>
                   <strong className="text-xl text-white block mb-2">Visual Ground Truth</strong>
-                  <span className="text-zinc-400 text-base">The high-fidelity image is generated OR captured by the fridge camera first. It is the absolute physical reality.</span>
+                  <span className="text-zinc-300 text-base">The high-fidelity image is generated OR captured by the fridge camera first. It is the absolute physical reality.</span>
                 </div>
               </li>
               <li className="flex gap-6">
                 <div className="mt-1 w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-sm shrink-0 border border-emerald-500/30">2</div>
                 <div>
                   <strong className="text-xl text-white block mb-2">Multimodal Scanning</strong>
-                  <span className="text-zinc-400 text-base">The Vision-LLM scans the image pixel by pixel to deduce ingredients, textures, and plating techniques.</span>
+                  <span className="text-zinc-300 text-base">The Vision-LLM scans the image pixel by pixel to deduce ingredients, textures, and plating techniques.</span>
                 </div>
               </li>
               <li className="flex gap-6">
                 <div className="mt-1 w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm shrink-0 border border-purple-500/30">3</div>
                 <div>
                   <strong className="text-xl text-white block mb-2">Recipe Harmonization</strong>
-                  <span className="text-zinc-400 text-base">The NLP engine writes instructions strictly based on the visual evidence. 100% Zero-Hallucination output.</span>
+                  <span className="text-zinc-300 text-base">The NLP engine writes instructions strictly based on the visual evidence. 100% Zero-Hallucination output.</span>
                 </div>
               </li>
             </ul>
@@ -412,7 +412,7 @@ export default function Home() {
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span className="ml-4 text-xs font-mono text-zinc-500">pipeline_execution.log</span>
+                <span className="ml-4 text-sm md:text-xs font-mono text-zinc-500">pipeline_execution.log</span>
               </div>
               <pre className="text-sm md:text-base text-emerald-400 overflow-x-auto font-mono leading-loose">
 {`> INITIALIZING REVERSE PIPELINE...
@@ -449,7 +449,7 @@ graph TD
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">Does Smart Kitchen Assistant work offline?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
-            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p><strong className="text-emerald-400">Partially — and we are honest about it.</strong> The UI, hands-free navigation buttons, and voice output (text-to-speech) work fully offline. In the web demo, voice input via the microphone requires an internet connection because web browsers must send audio to Google or Apple cloud servers for transcription.</p>
               <p className="mt-3">In the future native hardware and mobile app deployment, voice recognition will run entirely on-device using embedded Edge AI — making the full system 100% offline.</p>
             </div>
@@ -460,7 +460,7 @@ graph TD
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is Edge AI for kitchen appliances?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
-            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p>Edge AI means running AI models directly on the appliance itself — whether a smart oven, refrigerator, or embedded display — without sending any data to a cloud server. The results: zero-latency responses, zero per-request cloud cost, and complete data privacy since no user data ever leaves the device.</p>
             </div>
           </details>
@@ -470,7 +470,7 @@ graph TD
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is HFSCA?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
-            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p><strong className="text-white">Hands-Free Semantic Culinary Assistant.</strong> It is the open-source Edge AI architecture developed by Yemek AI. Its core innovations are the Acoustic Ignore Shield (preventing echo loops without hardware interrupts), Hardware Session Persistence (maintaining state without cloud reconnection), and zero-cost on-device inference.</p>
             </div>
           </details>
@@ -480,7 +480,7 @@ graph TD
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">Is the source code publicly available?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
-            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p>Yes. The full source code is on GitHub under <strong className="text-white">AGPL-3.0</strong>. You can inspect, fork, and test it right now. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation.</p>
               <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">View on GitHub →</a>
             </div>
@@ -491,7 +491,7 @@ graph TD
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">How does Smart Kitchen Assistant prevent AI hallucinations?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
-            <div className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p>Through <strong className="text-white">Visual Ground Truth</strong> methodology. Standard generative AI writes text first then forces an image to match — causing hallucinations. Yemek AI reverses this: the food image is generated or captured first as the absolute physical reality, and the recipe text is then derived strictly from what is visible. The text cannot contradict the image because the image came first.</p>
             </div>
           </details>
@@ -531,7 +531,7 @@ graph TD
           {/* Col 1: About */}
           <div>
             <h3 className="text-white font-bold mb-4">Smart Kitchen Assistant</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">
+            <p className="text-zinc-500 text-[15px] md:text-sm leading-relaxed">
               Open-source Edge AI methodology for smart appliance manufacturers. Built and maintained by the Yemek AI engineering team.
             </p>
           </div>
@@ -541,7 +541,7 @@ graph TD
             <h3 className="text-white font-bold mb-4">Yemek AI Ecosystem</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <span>🍽️</span> yemekyarismasi.com
                 </a>
               </li>
@@ -551,7 +551,7 @@ graph TD
                 </a>
               </li>
               <li>
-                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <span>✉️</span> info@yemekyarismasi.com
                 </a>
               </li>
@@ -563,31 +563,31 @@ graph TD
             <h3 className="text-white font-bold mb-4">Open Source & Research</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   smart-kitchen-assistant
                 </a>
               </li>
               <li>
-                <a href="https://github.com/yemekyarismasi/smart-kitchen-voice-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/yemekyarismasi/smart-kitchen-voice-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   smart-kitchen-voice-assistant
                 </a>
               </li>
               <li>
-                <a href="https://github.com/yemekyarismasi/yemek-ai-whitepaper" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/yemekyarismasi/yemek-ai-whitepaper" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   yemek-ai-whitepaper
                 </a>
               </li>
               <li>
-                <a href="https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
                   Medium — Why Big Tech Fails
                 </a>
               </li>
               <li>
-                <a href="https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
                   Medium — Solving AI Hallucinations
                 </a>
@@ -598,11 +598,11 @@ graph TD
         </div>
 
         <div className="border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-600 text-xs">
-            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white underline transition-colors">AGPL-3.0</a>.
+          <p className="text-zinc-600 text-sm md:text-xs">
+            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white underline transition-colors">AGPL-3.0</a>.
           </p>
-          <p className="text-zinc-600 text-xs">
-            Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">Yemek AI Engineering</a>
+          <p className="text-zinc-600 text-sm md:text-xs">
+            Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors">Yemek AI Engineering</a>
           </p>
         </div>
       </div>

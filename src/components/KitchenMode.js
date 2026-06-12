@@ -431,7 +431,7 @@ export default function KitchenMode({ recipe, onClose }) {
             </button>
           </div>
           {/* Debug Panel */}
-          <div className="text-xs font-mono text-right bg-black/50 p-2 rounded-xl border border-zinc-800">
+          <div className="text-sm md:text-xs font-mono text-right bg-black/50 p-2 rounded-xl border border-zinc-800">
              <div className={isListening ? "text-emerald-400" : "text-red-400"}>
                Mic: {isListening ? "ON" : "OFF"}
              </div>

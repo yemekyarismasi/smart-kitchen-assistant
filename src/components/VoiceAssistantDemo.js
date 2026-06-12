@@ -177,10 +177,10 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
       
       {/* State Indicators */}
       <div className="flex gap-4 mb-8">
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && isSpeakingUI ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+        <div className={`px-4 py-1.5 rounded-full text-sm md:text-xs font-mono border transition-colors ${isActive && isSpeakingUI ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
           Output: SPEAKING
         </div>
-        <div className={`px-4 py-1.5 rounded-full text-xs font-mono border transition-colors ${isActive && !isSpeakingUI && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
+        <div className={`px-4 py-1.5 rounded-full text-sm md:text-xs font-mono border transition-colors ${isActive && !isSpeakingUI && isListening ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500'}`}>
           Input: LISTENING
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
               : 'bg-zinc-900 border-2 border-zinc-700 text-white hover:border-cyan-400 hover:bg-zinc-800'
           }`}
         >
-          <svg className={`w-12 h-12 mb-2 transition-colors ${isActive ? (isSpeakingUI ? 'text-cyan-900' : 'text-emerald-900') : 'text-zinc-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className={`w-12 h-12 mb-2 transition-colors ${isActive ? (isSpeakingUI ? 'text-cyan-900' : 'text-emerald-900') : 'text-zinc-300'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
           </svg>
           <span className={`font-bold tracking-widest uppercase text-sm ${isActive ? 'text-black' : 'text-white'}`}>
@@ -212,7 +212,7 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
       </div>
 
       {errorMsg && (
-        <div className="mb-6 p-3 bg-red-950/50 border border-red-900 rounded-lg text-red-400 text-xs font-mono text-center">
+        <div className="mb-6 p-3 bg-red-950/50 border border-red-900 rounded-lg text-red-400 text-sm md:text-xs font-mono text-center">
           {errorMsg}
         </div>
       )}
@@ -227,7 +227,7 @@ export default function VoiceAssistantDemo({ recipeTitle, recipeSteps }) {
 
       {isActive && transcript && (
         <div className="mt-6 w-full max-w-md bg-black border border-emerald-900/30 rounded-xl p-4 text-left">
-          <p className="text-zinc-500 font-mono text-xs mb-1">System heard:</p>
+          <p className="text-zinc-500 font-mono text-sm md:text-xs mb-1">System heard:</p>
           <p className="text-emerald-400 font-mono text-sm">"{transcript}"</p>
         </div>
       )}
