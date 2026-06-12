@@ -253,6 +253,8 @@ export default function Home() {
                 <p className="text-zinc-400 text-sm leading-relaxed">Implements the browser <code className="text-emerald-400 bg-emerald-950 px-1 rounded">navigator.wakeLock</code> API to prevent the device display from sleeping during active cooking sessions. The screen stays on for the full duration of Kitchen Mode — zero configuration, zero touch required.</p>
               </div>
             </div>
+          </div>
+
           {/* 12 */}
           <div className="glass-panel p-6 rounded-2xl border border-zinc-800 hover:border-amber-500/60 transition-all duration-300">
             <div className="flex items-start gap-4">
