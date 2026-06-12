@@ -520,7 +520,7 @@ export default function KitchenMode({ recipe, onClose }) {
       </div>
 
       {/* Main Content Area */}
-        <div className="flex-1 flex flex-col justify-start md:justify-center items-center w-full relative z-10 transition-all duration-500 overflow-y-auto overflow-x-hidden pt-4 pb-10">
+        <div className="flex-1 flex flex-col justify-start items-center w-full relative z-10 transition-all duration-500 overflow-y-auto overflow-x-hidden pt-4 pb-10">
           
           {timerSeconds !== null && (
             <div className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 glass px-6 py-3 rounded-full border-2 border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.6)] flex items-center gap-4 animate-pulse backdrop-blur-xl bg-black/40">
