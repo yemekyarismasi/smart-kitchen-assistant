@@ -494,13 +494,6 @@ export default function KitchenMode({ recipe, onClose }) {
         <div className="flex flex-col items-end gap-2">
           <div className="flex items-center gap-2">
             <button 
-              onClick={handlePrev}
-              disabled={currentStepIndex === 0}
-              className="bg-slate-700 text-slate-200 px-4 py-3 rounded-2xl hover:bg-slate-600 active:scale-95 transition text-base md:text-lg font-bold disabled:opacity-50 flex items-center gap-2"
-            >
-              ⬅️ GO BACK
-            </button>
-            <button 
               onClick={onClose}
               className="bg-red-500/20 text-red-400 px-4 py-3 rounded-2xl hover:bg-red-500/30 active:scale-95 transition text-base md:text-lg font-bold flex items-center gap-2"
             >
@@ -569,16 +562,16 @@ export default function KitchenMode({ recipe, onClose }) {
         {/* Dokunmatik Kontroller */}
         <div className="flex flex-row w-full gap-3 mt-2 max-w-4xl pb-4">
           <button 
-            onClick={handleNext}
-            disabled={currentStepIndex >= playList.length - 1}
-            className="flex-1 bg-blue-600 p-4 md:p-6 rounded-2xl text-xl md:text-3xl font-black disabled:opacity-50 hover:bg-blue-500 active:scale-95 transition shadow-lg border-b-4 border-blue-800 flex items-center justify-center gap-2"
+            onClick={handlePrev}
+            disabled={currentStepIndex === 0}
+            className="flex-1 bg-slate-700 text-slate-200 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-black disabled:opacity-50 hover:bg-slate-600 active:scale-95 transition shadow-lg border-b-4 border-slate-900 flex items-center justify-center gap-2"
           >
-            ⏭️ SKIP
+            ⬅️ GO BACK
           </button>
           <button 
             onClick={handleNext}
             disabled={currentStepIndex >= playList.length - 1}
-            className="flex-[2] bg-emerald-600 p-4 md:p-6 rounded-2xl text-xl md:text-3xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800 flex items-center justify-center gap-2"
+            className="flex-[2] bg-emerald-600 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800 flex items-center justify-center gap-2"
           >
             ➡️ NEXT
           </button>
