@@ -175,10 +175,18 @@ export default function DemoSection() {
           </div>
 
           {/* Offline Test Promo Box */}
-          <div className="mt-4 p-4 rounded-xl bg-emerald-950/30 border border-emerald-900/50">
-            <p className="text-xs sm:text-sm text-emerald-400 font-mono text-center leading-relaxed">
-              <span className="block font-bold mb-1 animate-pulse">⚡ No Cloud Required</span>
-              Select a recipe above, disconnect your Wi-Fi, and launch Kitchen Mode to test it offline!
+          <div className="mt-4 p-5 rounded-xl bg-cyan-950/20 border border-cyan-900/50 text-left">
+            <h4 className="text-sm font-bold text-cyan-400 mb-2 flex items-center gap-2">
+              <span className="animate-pulse">⚡</span> Offline Test Info
+            </h4>
+            <p className="text-xs text-zinc-400 font-mono mb-2">If you disconnect Wi-Fi to test offline capabilities in this web demo:</p>
+            <ul className="text-xs text-zinc-400 font-mono space-y-1.5 pl-2 border-l-2 border-cyan-900/50 mb-3">
+              <li><strong className="text-emerald-400">UI & Buttons:</strong> Work flawlessly offline.</li>
+              <li><strong className="text-emerald-400">Assistant Speech:</strong> Works offline (uses local device TTS).</li>
+              <li><strong className="text-rose-400">Voice Commands:</strong> Fails offline. (Web browsers strictly require cloud servers for Speech-to-Text).</li>
+            </ul>
+            <p className="text-xs text-cyan-300/80 font-mono italic">
+              * Note: Our future native apps and hardware will embed Edge AI to run voice recognition 100% offline.
             </p>
           </div>
         </div>
