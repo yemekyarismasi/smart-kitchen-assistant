@@ -571,7 +571,7 @@ export default function KitchenMode({ recipe, onClose }) {
           <button 
             onClick={handleNext}
             disabled={currentStepIndex >= playList.length - 1}
-            className="flex-[2] bg-emerald-600 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800 flex items-center justify-center gap-2"
+            className="flex-1 bg-emerald-600 p-4 md:p-6 rounded-2xl text-lg md:text-2xl font-black disabled:opacity-50 hover:bg-emerald-500 active:scale-95 transition shadow-xl border-b-4 border-emerald-800 flex items-center justify-center gap-2"
           >
             ➡️ NEXT
           </button>
