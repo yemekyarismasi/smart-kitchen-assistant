@@ -598,11 +598,11 @@ graph TD
         </div>
 
         <div className="border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-600 text-sm md:text-xs">
-            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white underline transition-colors">AGPL-3.0</a>.
+          <p className="text-zinc-400 text-[15px] md:text-sm text-center sm:text-left">
+            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-white underline transition-colors font-medium">AGPL-3.0</a>.
           </p>
-          <p className="text-zinc-600 text-sm md:text-xs">
-            Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white transition-colors">Yemek AI Engineering</a>
+          <p className="text-zinc-400 text-[15px] md:text-sm text-center sm:text-right">
+            Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-white transition-colors font-medium">Yemek AI Engineering</a>
           </p>
         </div>
       </div>
