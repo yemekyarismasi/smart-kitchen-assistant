@@ -260,7 +260,7 @@ export default function KitchenMode({ recipe, onClose }) {
   const handleVoiceCommand = (command) => {
     if (command.includes('next') || command.includes('forward')) {
       handleNext();
-    } else if (command.includes('back') || command.includes('previous') || command.includes('return') || command.includes('bag') || command.includes('pack') || command.includes('beg') || command.includes('bike')) {
+    } else if (command.includes('back') || command.includes('previous') || command.includes('return') || command.includes('bag') || command.includes('pack') || command.includes('beg') || command.includes('bike') || command.includes('beck') || command.includes('bake') || command.includes('bak') || command.includes('mac')) {
       handlePrev();
     } else if (command.includes('repeat') || command.includes('again')) {
       readCurrent();
