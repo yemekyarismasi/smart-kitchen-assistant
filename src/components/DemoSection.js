@@ -173,6 +173,14 @@ export default function DemoSection() {
               );
             })}
           </div>
+
+          {/* Offline Test Promo Box */}
+          <div className="mt-4 p-4 rounded-xl bg-emerald-950/30 border border-emerald-900/50">
+            <p className="text-xs sm:text-sm text-emerald-400 font-mono text-center leading-relaxed">
+              <span className="block font-bold mb-1 animate-pulse">⚡ No Cloud Required</span>
+              Select a recipe above, disconnect your Wi-Fi, and launch Kitchen Mode to test it offline!
+            </p>
+          </div>
         </div>
 
         {/* Right: Extracted Recipe Details & Launch Button */}
@@ -224,9 +232,6 @@ export default function DemoSection() {
                 </div>
 
                 <div className="mt-auto">
-                  <p className="text-xs sm:text-sm md:text-base text-center text-white font-mono mb-4 animate-pulse px-2">
-                    No Cloud Required. Disconnect Wi-Fi to test offline mode.
-                  </p>
                   <button 
                     onClick={() => setShowKitchenMode(true)}
                     className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[1.1rem] sm:text-lg md:text-xl py-3 md:py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3"
