@@ -45,20 +45,13 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-2 md:mt-8 mb-2 md:mb-4 px-6">
-        <div className="text-center lg:text-left">
-          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap">
-            Experience Live Kitchen Edge AI
-          </h2>
-          <p className="text-zinc-300 text-base md:text-lg">
-            Test the offline voice and vision pipeline locally in your browser.
-          </p>
-        </div>
-        <div className="w-full">
-          <a href="#licensing" className="block w-full py-4 rounded-xl bg-cyan-500 text-black font-extrabold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] text-center cursor-pointer">
-            B2B Licensing
-          </a>
-        </div>
+      <div id="demo" className="w-full max-w-7xl mx-auto text-center mt-2 md:mt-8 mb-2 md:mb-4 px-6">
+        <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap">
+          Experience Live Kitchen Edge AI
+        </h2>
+        <p className="text-zinc-300 text-base md:text-lg max-w-2xl mx-auto">
+          Test the offline voice and vision pipeline locally in your browser.
+        </p>
       </div>
       <DemoSection />
 

@@ -80,7 +80,7 @@ export default function StickyNav() {
             href="#licensing"
             className="px-3 md:px-4 py-1.5 rounded-lg bg-cyan-500 text-black font-bold text-sm md:text-xs md:text-sm hover:bg-cyan-400 transition-all shadow-[0_0_15px_rgba(34,211,238,0.3)]"
           >
-            B2B License
+            B2B Licensing
           </a>
 
           {/* Mobile Menu Toggle */}
