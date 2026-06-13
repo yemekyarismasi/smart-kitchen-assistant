@@ -439,7 +439,7 @@ graph TD
         <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-10 text-center">
           <span className="hidden sm:inline text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold whitespace-nowrap">FAQ</span>
           <div className="h-px w-8 sm:w-auto sm:flex-1 bg-zinc-800"></div>
-          <h2 className="text-base min-[400px]:text-lg sm:text-xl md:text-2xl font-black text-white tracking-tight px-1">Frequently Asked Questions</h2>
+          <h2 className="text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight px-1">Frequently Asked Questions</h2>
           <div className="h-px w-8 sm:w-auto sm:flex-1 bg-zinc-800"></div>
         </div>
         <div className="space-y-4 w-full">
@@ -519,7 +519,7 @@ graph TD
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
-        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">Freeculi Commercial Framework &<br />Dual-Licensing</h2>
+        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">Freeculi Commercial Framework & <br className="md:hidden" />Dual-Licensing</h2>
         <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>
