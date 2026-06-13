@@ -51,7 +51,7 @@ export default function Home() {
             Experience Live Kitchen Edge AI
           </h2>
           <p className="text-zinc-300 text-base md:text-lg">
-            Select a scenario below to preview the live B2C experience.
+            Test the offline voice and vision pipeline locally in your browser.
           </p>
         </div>
         <div className="w-full">
