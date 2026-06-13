@@ -470,6 +470,12 @@ graph TD
               <p>FreeCuli is the commercial <strong className="text-white">ingredient brand</strong> for the HFSCA methodology. While HFSCA represents the open-source architectural foundation, FreeCuli serves as the trademarked seal of quality and "zero-cloud dependency" for hardware manufacturers.</p>
               <p>For appliance OEMs, embedding FreeCuli means integrating three core innovations out-of-the-box: <strong className="text-cyan-400">Acoustic Ignore Shield</strong> (noise/echo cancellation), <strong className="text-cyan-400">Hardware Session Persistence</strong> (offline state management), and <strong className="text-cyan-400">Zero-Cost Inference</strong>.</p>
               <p>When consumers see the <em className="text-amber-400">"FreeCuli Inside"</em> badge on a smart oven or refrigerator, they are guaranteed absolute data privacy, zero-latency responses, and 100% offline functionality.</p>
+              <div className="pt-2">
+                <a href="https://medium.com/@oytunciba/freeculi-the-new-global-standard-for-smart-kitchen-ai-17f0cfbea03d" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+                  <span>Read the full FreeCuli Manifesto on Medium</span>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
             </div>
           </details>
 
