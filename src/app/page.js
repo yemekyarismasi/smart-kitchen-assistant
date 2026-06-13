@@ -104,9 +104,9 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
             Verified & Open Source
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">What We Have Actually Built</h2>
+          <h2 className="text-[1.8rem] md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Kitchen AI & Edge Computing for Smart Appliances</h2>
           <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Every capability below is <strong className="text-white">live in our open-source codebase</strong>. Inspect it, fork it, test it offline — right now. This is our engineering credibility.
+            Every embedded IoT capability below is <strong className="text-white">live in our open-source codebase</strong>. Inspect it, fork it, and test the offline voice control locally. This is our engineering credibility.
           </p>
         </div>
 
