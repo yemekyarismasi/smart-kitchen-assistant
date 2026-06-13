@@ -45,14 +45,7 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div id="demo" className="w-full max-w-7xl mx-auto text-center mt-2 md:mt-8 mb-2 md:mb-4 px-6">
-        <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap">
-          Experience Live Kitchen Edge AI
-        </h2>
-        <p className="text-zinc-300 text-base md:text-lg max-w-2xl mx-auto">
-          Test the offline voice and vision pipeline locally in your browser.
-        </p>
-      </div>
+
       <DemoSection />
 
       {/* WHY OUR METHODOLOGY IS DIFFERENT */}

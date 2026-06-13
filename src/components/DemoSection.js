@@ -130,6 +130,16 @@ export default function DemoSection() {
         
         {/* Left: Scenario Selection (Always Visible) */}
         <div className="space-y-6 text-center lg:text-left">
+          
+          <div id="demo" className="mb-10 lg:mb-12">
+            <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap text-white">
+              Experience Live Kitchen Edge AI
+            </h2>
+            <p className="text-zinc-300 text-base md:text-lg">
+              Test the offline voice and vision pipeline locally in your browser.
+            </p>
+          </div>
+
           <div className="inline-block px-4 py-1.5 rounded-full border border-cyan-900/50 bg-cyan-950/20 text-cyan-400 text-sm md:text-xs font-mono uppercase tracking-widest mb-2 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
             Step 1: Test Vision AI
           </div>
