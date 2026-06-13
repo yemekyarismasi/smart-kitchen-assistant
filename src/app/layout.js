@@ -14,11 +14,18 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL('https://smartkitchenassistant.com'),
   title: "Smart Kitchen Assistant: Next-Gen Edge AI for Appliances",
-  description: "Open-source Edge AI methodology for smart kitchen appliances. HFSCA architecture delivers offline voice guidance, zero-latency inference, and privacy-by-design for hardware OEMs. AGPL-3.0.",
-  keywords: ["Smart Kitchen Assistant", "Edge AI", "Kitchen AI", "Appliance Integration", "HFSCA", "Yemek AI", "Offline AI", "Voice Cooking Assistant", "Privacy by Design", "IoT AI"],
+  description: "The definitive Kitchen AI methodology for offline smart kitchen appliances. HFSCA architecture delivers zero-latency smart kitchen solutions, embedded voice assistants, and privacy-by-design for connected appliances. AGPL-3.0.",
+  keywords: [
+    "Smart Kitchen Assistant", "Edge AI", "Kitchen AI", "Smart Kitchen", "Smart kitchen solutions", 
+    "smart kitchen appliances", "smart kitchen app", "ai kitchen", "kitchen edge", "edge kitchen", 
+    "freeculi", "Freeculi Inside", "Appliance Integration", "HFSCA", "Yemek AI", "Offline AI", 
+    "Voice Cooking Assistant", "Privacy by Design", "IoT AI", "smart appliance AI", "IoT kitchen", 
+    "connected appliances", "embedded voice assistant", "offline voice control", "edge AI for IoT", 
+    "recipe hallucination", "visual ground truth"
+  ],
   openGraph: {
     title: "Smart Kitchen Assistant: Next-Gen Edge AI for Appliances",
-    description: "Open-source Edge AI methodology for smart kitchen appliances. HFSCA architecture delivers offline voice guidance, zero-latency inference, and privacy-by-design for hardware OEMs.",
+    description: "The definitive Kitchen AI methodology for offline smart kitchen appliances. HFSCA architecture delivers zero-latency smart kitchen solutions and embedded voice assistants for connected appliances.",
     url: 'https://smartkitchenassistant.com',
     siteName: 'Smart Kitchen Assistant',
     images: [
@@ -35,7 +42,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Smart Kitchen Assistant: Next-Gen Edge AI for Appliances",
-    description: "Open-source Edge AI methodology for smart kitchen appliances. HFSCA architecture: offline voice guidance, zero-latency, privacy-by-design.",
+    description: "Kitchen AI methodology for offline smart kitchen appliances. Zero-latency smart kitchen solutions and embedded voice assistants.",
     images: ['/og-image.png'],
   },
   alternates: {

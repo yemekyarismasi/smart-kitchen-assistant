@@ -12,7 +12,7 @@ export default function Home() {
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm">
-          <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Ecosystem:</span>
+          <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Smart Kitchen Ecosystem:</span>
           <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
             <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors font-medium">
               <span className="text-base">🍽️</span>
@@ -40,7 +40,7 @@ export default function Home() {
         </h1>
         
         <p className="text-xl md:text-2xl text-zinc-300 w-full mx-auto font-light leading-relaxed px-4">
-          The definitive open-source methodology for offline appliance intelligence. Featuring Acoustic Shields, 100% Visual Ground Truth, and Zero-Latency Hardware Integration.
+          The definitive Kitchen AI methodology for offline smart kitchen appliances. Offering zero-latency smart kitchen solutions through Edge Kitchen computing, Acoustic Shields, and embedded voice assistant technology.
         </p>
       </section>
 
@@ -48,7 +48,7 @@ export default function Home() {
       <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-2 md:mb-4 px-6">
         <div className="text-center lg:text-left">
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
-            Experience Live Edge AI
+            Experience Live Kitchen Edge AI
           </h2>
           <p className="text-zinc-300 text-base md:text-lg">
             Select a scenario below to preview the live B2C experience.
