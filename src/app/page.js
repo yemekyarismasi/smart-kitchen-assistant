@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <StickyNav />
-      <main className="flex min-h-screen flex-col items-center px-4 pt-20 md:px-24 md:pt-20 pb-4 md:pb-6 overflow-x-hidden bg-black text-white">
+      <main className="flex min-h-screen flex-col items-center px-4 pt-20 md:px-24 md:pt-20 pb-0 md:pb-6 overflow-x-hidden bg-black text-white">
       
       {/* ECOSYSTEM BANNER */}
       <div className="w-full max-w-7xl mx-auto px-4 mb-6">
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
 
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-6 md:mb-12 relative z-10 px-4">
+      <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-0 md:mb-12 relative z-10 px-4">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
         
         <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.8rem] lg:text-6xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
-      <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-4 md:mt-8 mb-2 md:mb-4 px-6">
+      <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-2 md:mt-8 mb-2 md:mb-4 px-6">
         <div className="text-center lg:text-left">
           <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap">
             Experience Live Kitchen Edge AI
@@ -515,7 +515,7 @@ graph TD
       <OpenSourceSection />
 
       {/* 5. B2B LICENSING & HARDWARE OS INTEGRATION */}
-      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-4 md:space-y-6 mb-2 md:mb-6 p-6 md:p-8 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
+      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-4 md:space-y-6 mb-0 md:mb-6 p-6 md:p-8 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
