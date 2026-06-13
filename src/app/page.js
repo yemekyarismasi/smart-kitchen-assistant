@@ -145,7 +145,8 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Zero-Cost Edge Inference</h3>
-                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed">Every AI operation runs on the client device — no GPU server, no API calls, no per-request billing. The marginal cost of serving 1M users is identical to serving 1: zero.</p>
+                <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed mb-2">Every AI operation runs on the client device — no GPU server, no API calls, no per-request billing. The marginal cost of serving 1M users is identical to serving 1: zero.</p>
+                <p className="text-zinc-400 text-[13px] leading-relaxed border-t border-zinc-800/80 pt-2 mt-2"><strong className="text-emerald-400">Zero BOM Increase:</strong> Hyper-optimized to run on low-cost $2 microcontrollers (e.g. ESP32-S3), ensuring local AI doesn't increase your hardware manufacturing costs.</p>
               </div>
             </div>
           </div>
@@ -479,16 +480,7 @@ graph TD
             </div>
           </details>
 
-          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
-            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Does running Edge AI increase hardware manufacturing costs?</h3>
-              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
-            </summary>
-            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4 space-y-3">
-              <p>No. A common misconception is that running local AI requires expensive, high-end chips. The FreeCuli architecture is hyper-optimized to run on extremely low-cost microcontrollers and standard Neural Processing Units (NPUs) like the ESP32-S3 or basic ARM Cortex chips.</p>
-              <p>While OEMs eliminate compounding cloud API and server costs entirely (<strong className="text-cyan-400">Zero-Cost Inference</strong>), the initial Bill of Materials (BOM) hardware cost increase per appliance is negligible—often just a few dollars. Over the 10-year lifespan of an appliance, the return on investment from stripping out cloud dependency is massive.</p>
-            </div>
-          </details>
+
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
