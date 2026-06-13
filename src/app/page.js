@@ -42,6 +42,15 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-zinc-300 w-full mx-auto font-light leading-relaxed px-4">
           The definitive Kitchen AI methodology for offline smart kitchen appliances. Offering zero-latency smart kitchen solutions through Edge Kitchen computing, Acoustic Shields, and embedded voice assistant technology.
         </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <a href="https://medium.com/@oytunciba/freeculi-the-new-global-standard-for-smart-kitchen-ai-17f0cfbea03d" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-zinc-100 text-black font-bold text-[15px] md:text-base hover:bg-white transition-all flex items-center gap-2.5 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.25)]">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42zm2.81 0c0 3.14-.54 5.68-1.21 5.68-.68 0-1.22-2.54-1.22-5.68s.54-5.68 1.22-5.68c.67 0 1.21 2.54 1.21 5.68z"/>
+            </svg>
+            Read the FreeCuli Manifesto
+          </a>
+        </div>
       </section>
 
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
