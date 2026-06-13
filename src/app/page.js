@@ -47,7 +47,7 @@ export default function Home() {
       {/* INTERACTIVE DEMO INJECTED RIGHT INTO THE MAIN PAGE */}
       <div id="demo" className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end mt-8 mb-2 md:mb-4 px-6">
         <div className="text-center lg:text-left">
-          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-4xl font-black mb-2 tracking-tight whitespace-nowrap">
+          <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap">
             Experience Live Kitchen Edge AI
           </h2>
           <p className="text-zinc-300 text-base md:text-lg">
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="w-full max-w-7xl mx-auto mb-20 px-4 pt-8">
         <div className="text-center mb-12">
           <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">Strategic Consulting</p>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at Smart Kitchen Appliances & IoT Kitchen AI</h2>
+          <h2 className="text-xl md:text-2xl font-black text-white tracking-tight mt-3 mb-4">Why Big Tech Fails at Smart Kitchen Appliances & IoT Kitchen AI</h2>
           <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Amazon, Google, and Samsung all launched cloud-first kitchen AI. They all hit the same structural wall. We help your engineering team understand exactly where they failed — and how to avoid the same traps.
           </p>
@@ -104,7 +104,7 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
             Verified & Open Source
           </span>
-          <h2 className="text-[1.8rem] md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Kitchen AI & Edge Computing for Smart Appliances</h2>
+          <h2 className="text-xl md:text-2xl font-black text-white tracking-tight mt-3 mb-4">Kitchen AI & Edge Computing for Smart Appliances</h2>
           <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Every embedded IoT capability below is <strong className="text-white">live in our open-source codebase</strong>. Inspect it, fork it, and test the offline voice control locally. This is our engineering credibility.
           </p>
@@ -275,7 +275,7 @@ export default function Home() {
       <section className="w-full max-w-7xl mx-auto mb-8 md:mb-12 px-4">
         <div className="text-center mb-12">
           <p className="text-amber-400 font-mono uppercase tracking-widest text-sm font-bold">R&D Consulting</p>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mt-3 mb-4">Where This Smart Appliance AI Architecture Can Take You</h2>
+          <h2 className="text-xl md:text-2xl font-black text-white tracking-tight mt-3 mb-4">Where This Smart Appliance AI Architecture Can Take You</h2>
           <p className="text-zinc-300 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             These are <strong className="text-white">natural extensions</strong> of the same proven patterns above — not features we have built, but engineering paths we can guide your team through. Each one uses the same architectural foundation.
           </p>
@@ -378,7 +378,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
           <div className="flex-1 space-y-6 md:space-y-8">
             <p className="text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">Vision Pipeline</p>
-            <h2 className="text-[1.2rem] min-[400px]:text-[1.4rem] sm:text-4xl md:text-5xl font-black tracking-tight whitespace-nowrap">Visual Ground Truth: Reverse-Engineering Kitchen AI</h2>
+            <h2 className="text-base min-[400px]:text-lg sm:text-xl md:text-2xl font-black tracking-tight">Visual Ground Truth: Reverse-Engineering Kitchen AI</h2>
             <p className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed">
               Standard AI hallucinates by generating text first, then trying to force an image to match. Yemek AI completely flips the generative hierarchy.
             </p>
@@ -439,7 +439,7 @@ graph TD
         <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-10 text-center">
           <span className="hidden sm:inline text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold whitespace-nowrap">FAQ</span>
           <div className="h-px w-8 sm:w-auto sm:flex-1 bg-zinc-800"></div>
-          <h2 className="text-xl min-[400px]:text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight px-1">Frequently Asked Questions</h2>
+          <h2 className="text-base min-[400px]:text-lg sm:text-xl md:text-2xl font-black text-white tracking-tight px-1">Frequently Asked Questions</h2>
           <div className="h-px w-8 sm:w-auto sm:flex-1 bg-zinc-800"></div>
         </div>
         <div className="space-y-4 w-full">
@@ -519,7 +519,7 @@ graph TD
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
-        <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-4xl md:text-5xl font-black relative z-10 whitespace-nowrap">Freeculi Commercial Framework & Dual-Licensing</h2>
+        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">Freeculi Commercial Framework &<br />Dual-Licensing</h2>
         <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>
