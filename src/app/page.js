@@ -477,6 +477,18 @@ graph TD
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is Freeculi?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4 space-y-3">
+              <p>Freeculi is the commercial <strong className="text-white">ingredient brand</strong> for the HFSCA methodology. While HFSCA represents the open-source architectural foundation, Freeculi serves as the trademarked seal of quality and "zero-cloud dependency" for hardware manufacturers.</p>
+              <p>For appliance OEMs, embedding Freeculi means integrating three core innovations out-of-the-box: <strong className="text-cyan-400">Acoustic Ignore Shield</strong> (noise/echo cancellation), <strong className="text-cyan-400">Hardware Session Persistence</strong> (offline state management), and <strong className="text-cyan-400">Zero-Cost Inference</strong>.</p>
+              <p>When consumers see the <em className="text-amber-400">"Freeculi Inside"</em> badge on a smart oven or refrigerator, they are guaranteed absolute data privacy, zero-latency responses, and 100% offline functionality.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">Is the source code publicly available?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>

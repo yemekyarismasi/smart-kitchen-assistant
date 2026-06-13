@@ -118,6 +118,14 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "Question",
+        "name": "What is Freeculi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Freeculi is the commercial ingredient brand for the HFSCA methodology. It serves as the trademarked seal of quality for appliance OEMs, representing three core embedded innovations: Acoustic Ignore Shield, Hardware Session Persistence, and Zero-Cost Inference. When embedded in smart appliances, it guarantees consumers absolute data privacy, zero-latency responses, and 100% offline functionality."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Is the source code publicly available?",
         "acceptedAnswer": {
           "@type": "Answer",
