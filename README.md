@@ -54,17 +54,17 @@ In the future **native app and hardware deployment**, voice recognition runs ent
 
 ---
 
-## 🏷️ The Freeculi Commercial Framework & Licensing
+## 🏷️ The FreeCuli Commercial Framework & Licensing
 
 To offer hardware manufacturers a viable path to proprietary integration, we employ a Dual-Licensing architecture coupled with a commercial ingredient brand:
 
 - **HFSCA** is the open-source architectural methodology.
-- **Freeculi** is the commercial "Ingredient Brand" (similar to *Intel Inside*) licensed to hardware OEMs who embed this technology into their appliances.
+- **FreeCuli** is the commercial "Ingredient Brand" (similar to *Intel Inside*) licensed to hardware OEMs who embed this technology into their appliances.
 
 | License Type | Terms |
 |---|---|
 | **Open Source (AGPL-3.0)** | Free to use. Any embedding in proprietary software requires open-sourcing the full stack under AGPL-3.0. |
-| **Commercial License** | Grants closed-source integration rights and a **Trademark License** to use the "Freeculi Inside™" seal on hardware, guaranteeing consumers absolute privacy and 100% offline functionality. |
+| **Commercial License** | Grants closed-source integration rights and a **Trademark License** to use the "FreeCuli Inside™" seal on hardware, guaranteeing consumers absolute privacy and 100% offline functionality. |
 
 📧 Contact: [info@yemekyarismasi.com](mailto:info@yemekyarismasi.com)
 

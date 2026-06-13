@@ -463,13 +463,13 @@ graph TD
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is Freeculi?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is FreeCuli?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4 space-y-3">
-              <p>Freeculi is the commercial <strong className="text-white">ingredient brand</strong> for the HFSCA methodology. While HFSCA represents the open-source architectural foundation, Freeculi serves as the trademarked seal of quality and "zero-cloud dependency" for hardware manufacturers.</p>
-              <p>For appliance OEMs, embedding Freeculi means integrating three core innovations out-of-the-box: <strong className="text-cyan-400">Acoustic Ignore Shield</strong> (noise/echo cancellation), <strong className="text-cyan-400">Hardware Session Persistence</strong> (offline state management), and <strong className="text-cyan-400">Zero-Cost Inference</strong>.</p>
-              <p>When consumers see the <em className="text-amber-400">"Freeculi Inside"</em> badge on a smart oven or refrigerator, they are guaranteed absolute data privacy, zero-latency responses, and 100% offline functionality.</p>
+              <p>FreeCuli is the commercial <strong className="text-white">ingredient brand</strong> for the HFSCA methodology. While HFSCA represents the open-source architectural foundation, FreeCuli serves as the trademarked seal of quality and "zero-cloud dependency" for hardware manufacturers.</p>
+              <p>For appliance OEMs, embedding FreeCuli means integrating three core innovations out-of-the-box: <strong className="text-cyan-400">Acoustic Ignore Shield</strong> (noise/echo cancellation), <strong className="text-cyan-400">Hardware Session Persistence</strong> (offline state management), and <strong className="text-cyan-400">Zero-Cost Inference</strong>.</p>
+              <p>When consumers see the <em className="text-amber-400">"FreeCuli Inside"</em> badge on a smart oven or refrigerator, they are guaranteed absolute data privacy, zero-latency responses, and 100% offline functionality.</p>
             </div>
           </details>
 
@@ -505,7 +505,7 @@ graph TD
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
-        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">Freeculi Commercial Framework & <br className="md:hidden" />Dual-Licensing</h2>
+        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">FreeCuli Commercial Framework & <br className="md:hidden" />Dual-Licensing</h2>
         <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>

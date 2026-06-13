@@ -18,7 +18,7 @@ export const metadata = {
   keywords: [
     "Smart Kitchen Assistant", "Edge AI", "Kitchen AI", "Smart Kitchen", "Smart kitchen solutions", 
     "smart kitchen appliances", "smart kitchen app", "ai kitchen", "kitchen edge", "edge kitchen", 
-    "freeculi", "Freeculi Inside", "Appliance Integration", "HFSCA", "Yemek AI", "Offline AI", 
+    "FreeCuli", "FreeCuli Inside", "Appliance Integration", "HFSCA", "Yemek AI", "Offline AI", 
     "Voice Cooking Assistant", "Privacy by Design", "IoT AI", "smart appliance AI", "IoT kitchen", 
     "connected appliances", "embedded voice assistant", "offline voice control", "edge AI for IoT", 
     "recipe hallucination", "visual ground truth"
@@ -125,10 +125,10 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "Question",
-        "name": "What is Freeculi?",
+        "name": "What is FreeCuli?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Freeculi is the commercial ingredient brand for the HFSCA methodology. It serves as the trademarked seal of quality for appliance OEMs, representing three core embedded innovations: Acoustic Ignore Shield, Hardware Session Persistence, and Zero-Cost Inference. When embedded in smart appliances, it guarantees consumers absolute data privacy, zero-latency responses, and 100% offline functionality."
+          "text": "FreeCuli is the commercial ingredient brand for the HFSCA methodology. It serves as the trademarked seal of quality for appliance OEMs, representing three core embedded innovations: Acoustic Ignore Shield, Hardware Session Persistence, and Zero-Cost Inference. When embedded in smart appliances, it guarantees consumers absolute data privacy, zero-latency responses, and 100% offline functionality."
         }
       },
       {
