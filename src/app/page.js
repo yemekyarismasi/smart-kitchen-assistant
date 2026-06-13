@@ -481,6 +481,17 @@ graph TD
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Does running Edge AI increase hardware manufacturing costs?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4 space-y-3">
+              <p>No. A common misconception is that running local AI requires expensive, high-end chips. The FreeCuli architecture is hyper-optimized to run on extremely low-cost microcontrollers and standard Neural Processing Units (NPUs) like the ESP32-S3 or basic ARM Cortex chips.</p>
+              <p>While OEMs eliminate compounding cloud API and server costs entirely (<strong className="text-cyan-400">Zero-Cost Inference</strong>), the initial Bill of Materials (BOM) hardware cost increase per appliance is negligible—often just a few dollars. Over the 10-year lifespan of an appliance, the return on investment from stripping out cloud dependency is massive.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
               <h3 className="text-white font-semibold text-base md:text-lg pr-4">Is the source code publicly available?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
