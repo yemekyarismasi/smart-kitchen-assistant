@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="240" height="240">
+  <!-- Arkaplan -->
+  <rect width="120" height="120" rx="28" fill="#0f172a"/>
+  
+  <!-- Şapka Bulutları -->
+  <circle cx="42" cy="40" r="18" fill="#ffffff"/>
+  <circle cx="60" cy="28" r="22" fill="#ffffff"/>
+  <circle cx="78" cy="40" r="18" fill="#ffffff"/>
+  
+  <!-- Şapka Alt Bandı -->
+  <rect x="34" y="45" width="52" height="14" rx="4" fill="#ffffff"/>
+  
+  <!-- Robot Kafa -->
+  <rect x="40" y="61" width="40" height="28" rx="8" fill="#334155"/>
+  
+  <!-- Dijital Göz / Vizör -->
+  <rect x="48" y="70" width="24" height="8" rx="4" fill="#3b82f6"/>
+  <rect x="50" y="72" width="12" height="4" rx="2" fill="#bfdbfe"/>
+</svg>

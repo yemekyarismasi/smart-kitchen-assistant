@@ -32,6 +32,14 @@ export default function Home() {
       <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-0 md:mb-12 relative z-10 px-4">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
         
+        {/* FREECULI BADGE */}
+        <div className="flex justify-center relative z-20">
+          <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/50 hover:bg-zinc-800/80 rounded-full pl-2 pr-5 py-1.5 transition-all duration-300 shadow-lg">
+            <img src="/freeculi-logo.png" alt="FreeCuli" className="w-8 h-8 rounded-full" />
+            <span className="text-zinc-300 text-[15px] font-medium group-hover:text-white transition-colors">Powered by <span className="text-blue-400 font-bold">FreeCuli</span></span>
+          </a>
+        </div>
+
         <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.4rem] lg:text-5xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
           <span>Smart Kitchen Assistant</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-500 whitespace-nowrap">
@@ -543,9 +551,9 @@ graph TD
             </p>
           </div>
 
-          {/* Col 2: Yemek AI Ecosystem */}
+          {/* Col 2: APSNY Ecosystem */}
           <div>
-            <h3 className="text-white font-bold mb-4">Yemek AI Ecosystem</h3>
+            <h3 className="text-white font-bold mb-4">APSNY Ecosystem</h3>
             <ul className="space-y-2">
               <li>
                 <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
@@ -558,7 +566,12 @@ graph TD
                 </a>
               </li>
               <li>
-                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-sm transition-colors flex items-center gap-2 font-bold">
+                  <span className="text-blue-500">❖</span> FreeCuli
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2 mt-4">
                   <span>✉️</span> info@yemekyarismasi.com
                 </a>
               </li>
