@@ -123,7 +123,7 @@ export default function DemoSection() {
   };
 
   return (
-    <div className="w-full relative pt-2 md:pt-4 pb-6 md:pb-16" id="interactive-demo">
+    <div className="w-full relative pt-2 md:pt-4 pb-6 md:pb-16 scroll-mt-32" id="interactive-demo">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start relative z-10 px-6">
@@ -131,7 +131,7 @@ export default function DemoSection() {
         {/* Left: Scenario Selection (Always Visible) */}
         <div className="space-y-6 text-center lg:text-left">
           
-          <div id="demo" className="mb-10 lg:mb-12">
+          <div id="demo" className="mb-10 lg:mb-12 scroll-mt-32">
             <h2 className="text-[1.3rem] min-[400px]:text-[1.5rem] sm:text-3xl md:text-3xl font-black mb-2 tracking-tight whitespace-nowrap text-white">
               Experience Live Kitchen Edge AI
             </h2>
