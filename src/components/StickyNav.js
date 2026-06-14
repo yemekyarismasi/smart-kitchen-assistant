@@ -16,6 +16,9 @@ export default function StickyNav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Set initial state in case of page load with hash/anchor
+    setScrolled(window.scrollY > 60);
+    
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
