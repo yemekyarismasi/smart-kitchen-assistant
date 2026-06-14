@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import KitchenMode from "@/components/KitchenMode";
 
 export default function DemoSection() {
@@ -115,6 +115,18 @@ export default function DemoSection() {
   const [recipe, setRecipe] = useState(SCENARIOS[0].recipe);
   const [image, setImage] = useState(SCENARIOS[0].image);
   const [showKitchenMode, setShowKitchenMode] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash === '#demo') {
+      setTimeout(() => {
+        const el = document.getElementById('demo');
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 500);
+    }
+  }, []);
 
   const handleScenarioClick = (scenario) => {
     setActiveScenario(scenario);
