@@ -14,15 +14,15 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm">
           <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Smart Kitchen Ecosystem:</span>
           <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
-            <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors font-medium">
-              <span className="text-base">🍽️</span>
-              <span>yemekyarismasi.com</span>
-            </a>
-            <span className="text-zinc-700 hidden sm:inline">·</span>
             <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">
               <span className="text-base">🤖</span>
               <span>YEMEK AI Assistant</span>
               <span className="text-[10px] font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 px-1.5 py-0.5 rounded-full">FLAGSHIP</span>
+            </a>
+            <span className="text-zinc-700 hidden sm:inline">·</span>
+            <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl pl-1.5 pr-4 py-1 transition-all duration-300 shadow-sm">
+              <img src="/freeculi-logo.png" alt="FreeCuli" className="w-6 h-6 rounded-md" />
+              <span className="text-zinc-600 text-sm font-medium group-hover:text-zinc-800 transition-colors">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
             </a>
           </div>
         </div>
