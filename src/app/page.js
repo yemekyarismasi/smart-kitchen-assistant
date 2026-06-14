@@ -557,14 +557,13 @@ graph TD
                   <span>🤖</span> YEMEK AI — Flagship Assistant
                 </a>
               </li>
+              <li>
+                <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl pl-2 pr-5 py-1.5 transition-all duration-300 shadow-sm">
+                  <img src="/freeculi-logo.png" alt="FreeCuli" className="w-8 h-8 rounded-lg" />
+                  <span className="text-zinc-600 text-[15px] font-medium group-hover:text-zinc-800 transition-colors">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
+                </a>
+              </li>
             </ul>
-
-            <div className="mt-5">
-              <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl pl-2 pr-5 py-1.5 transition-all duration-300 shadow-sm">
-                <img src="/freeculi-logo.png" alt="FreeCuli" className="w-8 h-8 rounded-lg" />
-                <span className="text-zinc-600 text-[15px] font-medium group-hover:text-zinc-800 transition-colors">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
-              </a>
-            </div>
           </div>
 
           {/* Col 3: Open Source & Research */}
