@@ -538,14 +538,9 @@ graph TD
           {/* Col 1: About */}
           <div>
             <h3 className="text-white font-bold mb-4">Smart Kitchen Assistant</h3>
-            <p className="text-zinc-500 text-[15px] md:text-sm leading-relaxed mb-6">
+            <p className="text-zinc-500 text-[15px] md:text-sm leading-relaxed">
               Open-source Edge AI methodology for smart appliance manufacturers. Built and maintained by the Yemek AI engineering team.
             </p>
-            {/* FREECULI BADGE */}
-            <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-full pl-2 pr-5 py-1.5 transition-all duration-300 shadow-sm">
-              <img src="/freeculi-logo.png" alt="FreeCuli" className="w-8 h-8 rounded-full" />
-              <span className="text-zinc-600 text-[15px] font-medium group-hover:text-zinc-800 transition-colors">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
-            </a>
           </div>
 
           {/* Col 2: APSNY Ecosystem */}
@@ -554,7 +549,7 @@ graph TD
             <ul className="space-y-2">
               <li>
                 <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
-                  <span>🍽️</span> yemekyarismasi.com
+                  <span>🍽️</span> Yemek Yarışması
                 </a>
               </li>
               <li>
@@ -562,12 +557,14 @@ graph TD
                   <span>🤖</span> YEMEK AI — Flagship Assistant
                 </a>
               </li>
-              <li>
-                <a href="mailto:info@yemekyarismasi.com" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2 mt-4">
-                  <span>✉️</span> info@yemekyarismasi.com
-                </a>
-              </li>
             </ul>
+
+            <div className="mt-5">
+              <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl pl-2 pr-5 py-1.5 transition-all duration-300 shadow-sm">
+                <img src="/freeculi-logo.png" alt="FreeCuli" className="w-8 h-8 rounded-lg" />
+                <span className="text-zinc-600 text-[15px] font-medium group-hover:text-zinc-800 transition-colors">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
+              </a>
+            </div>
           </div>
 
           {/* Col 3: Open Source & Research */}
