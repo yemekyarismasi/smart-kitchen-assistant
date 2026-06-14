@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* SECTION A: PROVEN ENGINEERING SOLUTIONS */}
-      <section id="features" className="w-full max-w-7xl mx-auto mb-12 px-4">
+      <section id="features" className="w-full max-w-7xl mx-auto mb-12 px-4 scroll-mt-20">
         <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
@@ -361,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* 3. MULTIMODAL REVERSE ENGINEERING */}
-      <section id="architecture" className="w-full max-w-7xl mb-20 px-4">
+      <section id="architecture" className="w-full max-w-7xl mb-20 px-4 scroll-mt-20">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
           <div className="flex-1 space-y-6 md:space-y-8">
             <p className="text-emerald-400 font-mono uppercase tracking-widest text-sm font-bold">Vision Pipeline</p>
@@ -422,7 +422,7 @@ graph TD
       </section>
 
       {/* FAQ SECTION */}
-      <section id="faq" className="w-full max-w-7xl mx-auto mb-20 px-4">
+      <section id="faq" className="w-full max-w-7xl mx-auto mb-20 px-4 scroll-mt-20">
         <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-10 text-center">
           <span className="hidden sm:inline text-cyan-400 font-mono uppercase tracking-widest text-sm font-bold whitespace-nowrap">FAQ</span>
           <div className="h-px w-8 sm:w-auto sm:flex-1 bg-zinc-800"></div>
@@ -510,7 +510,7 @@ graph TD
       <OpenSourceSection />
 
       {/* 5. B2B LICENSING & HARDWARE OS INTEGRATION */}
-      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-4 md:space-y-6 mb-0 md:mb-6 p-6 md:p-8 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden">
+      <section id="licensing" className="w-full max-w-7xl mx-auto text-center space-y-4 md:space-y-6 mb-0 md:mb-6 p-6 md:p-8 glass-panel rounded-3xl border border-zinc-800 relative overflow-hidden scroll-mt-20">
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
