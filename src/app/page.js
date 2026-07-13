@@ -21,7 +21,6 @@ export default function Home() {
               </span>
             </a>
             <a href="https://akillimutfakasistani.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-emerald-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
-              <span className="text-[1.1rem] leading-none">🧑‍🍳</span>
               <span className="text-sm transition-colors leading-none">
                 <span className="text-black font-black">Akıllı Mutfak</span> <span className="text-emerald-600 font-black">Asistanı</span>
               </span>
