@@ -20,6 +20,12 @@ export default function Home() {
                 <span className="text-black font-black">Yemek</span> <span className="text-cyan-600 font-black">AI</span>
               </span>
             </a>
+            <a href="https://akillimutfakasistani.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-emerald-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
+              <span className="text-[1.1rem] leading-none">🧑‍🍳</span>
+              <span className="text-sm transition-colors leading-none">
+                <span className="text-black font-black">Akıllı Mutfak</span> <span className="text-emerald-600 font-black">Asistanı</span>
+              </span>
+            </a>
             <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
               <img src="/freeculi-logo.png" alt="FreeCuli" className="w-5 h-5 rounded-md" />
               <span className="text-zinc-600 text-sm font-medium group-hover:text-zinc-800 transition-colors leading-none">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
