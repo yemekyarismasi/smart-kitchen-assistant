@@ -3,8 +3,8 @@ import React from 'react';
 export default function OpenSourceSection() {
   const githubRepos = [
     {
-      title: "HFSCA Reference Core",
-      desc: "The open-source reference implementation of the offline Edge AI architecture.",
+      title: "Smart Kitchen Offline Assistant",
+      desc: "The core open-source application demonstrating zero-cloud voice control and the HFSCA privacy architecture.",
       link: "https://github.com/FreeCuli/smart-kitchen-offline-assistant"
     },
     {
