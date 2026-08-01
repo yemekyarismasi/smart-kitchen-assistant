@@ -316,7 +316,7 @@ export default function Home() {
         <div className="mt-8 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 text-center">
           <p className="text-zinc-300 text-base">
             Each extension above is a <strong className="text-white">consulting and co-development engagement</strong> — not a pre-built product. We bring the proven architectural foundation; your engineering team builds the integration.
-            <a href="mailto:info@yemekyarismasi.com" className="text-cyan-400 hover:text-cyan-300 ml-2 underline underline-offset-4 transition-colors">Start a conversation →</a>
+            <a href="mailto:info@freeculi.com" className="text-cyan-400 hover:text-cyan-300 ml-2 underline underline-offset-4 transition-colors">Start a conversation →</a>
           </p>
         </div>
       </section>
@@ -494,7 +494,7 @@ graph TD
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
               <p>Yes. The full source code is on GitHub under <strong className="text-white">AGPL-3.0</strong>. You can inspect, fork, and test it right now. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation.</p>
-              <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">View on GitHub →</a>
+              <a href="https://github.com/FreeCuli/smart-kitchen-offline-assistant" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">View on GitHub →</a>
             </div>
           </details>
 
@@ -528,7 +528,7 @@ graph TD
           <p className="text-zinc-300 text-sm md:text-lg mb-5 md:mb-6 leading-relaxed">
             To bypass the AGPL-3.0 mandate and securely integrate the Smart Kitchen Assistant into closed-source IoT firmware (e.g., Oven MCU, Smart Fridge OS), tech manufacturers must acquire a B2B Commercial License.
           </p>
-          <a href="mailto:info@yemekyarismasi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
+          <a href="mailto:info@freeculi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
             Contact Yemek AI Engineering
           </a>
         </div>
@@ -576,19 +576,19 @@ graph TD
             <h3 className="text-white font-bold mb-4">Open Source & Research</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/FreeCuli/smart-kitchen-offline-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   smart-kitchen-assistant
                 </a>
               </li>
               <li>
-                <a href="https://github.com/yemekyarismasi/smart-kitchen-voice-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/FreeCuli/smart-kitchen-offline-assistant" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   smart-kitchen-voice-assistant
                 </a>
               </li>
               <li>
-                <a href="https://github.com/yemekyarismasi/yemek-ai-whitepaper" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
+                <a href="https://github.com/FreeCuli/standards" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   yemek-ai-whitepaper
                 </a>
@@ -618,7 +618,7 @@ graph TD
 
         <div className="border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-zinc-400 text-[15px] md:text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/yemekyarismasi/smart-kitchen-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-white underline transition-colors font-medium">AGPL-3.0</a>.
+            © {new Date().getFullYear()} Yemek AI. Smart Kitchen Assistant is open-source under <a href="https://github.com/FreeCuli/smart-kitchen-offline-assistant/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-white underline transition-colors font-medium">AGPL-3.0</a>.
           </p>
           <p className="text-zinc-400 text-[15px] md:text-sm text-center sm:text-right">
             Built by <a href="https://yemekyarismasi.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-white transition-colors font-medium">Yemek AI Engineering</a>

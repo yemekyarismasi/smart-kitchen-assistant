@@ -25,7 +25,7 @@ export default function StickyNav() {
   }, []);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/yemekyarismasi/smart-kitchen-assistant')
+    fetch('https://api.github.com/repos/FreeCuli/smart-kitchen-offline-assistant')
       .then(r => r.json())
       .then(d => { if (d.stargazers_count !== undefined) setStars(d.stargazers_count); })
       .catch(() => {});
@@ -77,7 +77,7 @@ export default function StickyNav() {
 
           {/* GitHub Stars Badge */}
           <a
-            href="https://github.com/yemekyarismasi/smart-kitchen-assistant"
+            href="https://github.com/FreeCuli/smart-kitchen-offline-assistant"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/60 hover:border-zinc-500 transition-all text-sm md:text-xs text-zinc-300 hover:text-white"
@@ -126,7 +126,7 @@ export default function StickyNav() {
             </a>
           ))}
           <a
-            href="https://github.com/yemekyarismasi/smart-kitchen-assistant"
+            href="https://github.com/FreeCuli/smart-kitchen-offline-assistant"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2.5 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/60 rounded-lg transition-all"

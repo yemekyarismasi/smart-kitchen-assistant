@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
       "name": "Yemek AI",
       "url": "https://yemekyarismasi.com"
     },
-    "codeRepository": "https://github.com/yemekyarismasi/smart-kitchen-assistant",
+    "codeRepository": "https://github.com/FreeCuli/smart-kitchen-offline-assistant",
     "license": "https://opensource.org/licenses/AGPL-3.0"
   };
 
@@ -83,12 +83,12 @@ export default function RootLayout({ children }) {
     "name": "Yemek AI",
     "url": "https://yemekyarismasi.com",
     "sameAs": [
-      "https://github.com/yemekyarismasi",
+      "https://github.com/FreeCuli",
       "https://medium.com/@oytunciba"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "info@yemekyarismasi.com",
+      "email": "info@freeculi.com",
       "contactType": "Business Inquiries"
     },
     "description": "Yemek AI is the engineering team behind the Smart Kitchen Assistant (HFSCA) open-source Edge AI methodology for smart appliance manufacturers.",
@@ -136,7 +136,7 @@ export default function RootLayout({ children }) {
         "name": "Is the source code publicly available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The full source code is published on GitHub under the AGPL-3.0 license at https://github.com/yemekyarismasi/smart-kitchen-assistant. You can inspect, fork, and test it immediately. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation."
+          "text": "Yes. The full source code is published on GitHub under the AGPL-3.0 license at https://github.com/FreeCuli/smart-kitchen-offline-assistant. You can inspect, fork, and test it immediately. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation."
         }
       },
       {
@@ -165,7 +165,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
-        <link rel="me" href="https://github.com/yemekyarismasi" />
+        <link rel="me" href="https://github.com/FreeCuli" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#050505] text-[#f5f5f7]`}>
         {children}

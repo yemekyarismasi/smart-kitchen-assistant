@@ -5,17 +5,17 @@ export default function OpenSourceSection() {
     {
       title: "Smart Kitchen Assistant",
       desc: "The core Edge AI web interface and offline simulation environment.",
-      link: "https://github.com/yemekyarismasi/smart-kitchen-assistant"
+      link: "https://github.com/FreeCuli/smart-kitchen-offline-assistant"
     },
     {
       title: "Smart Kitchen Voice Assistant",
       desc: "Acoustic shielding and offline voice recognition models.",
-      link: "https://github.com/yemekyarismasi/smart-kitchen-voice-assistant"
+      link: "https://github.com/FreeCuli/smart-kitchen-offline-assistant"
     },
     {
       title: "Yemek AI Whitepaper",
       desc: "The foundational research paper detailing the HFSCA architecture.",
-      link: "https://github.com/yemekyarismasi/yemek-ai-whitepaper"
+      link: "https://github.com/FreeCuli/standards"
     }
   ];
 
