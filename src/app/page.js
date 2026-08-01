@@ -474,6 +474,16 @@ graph TD
             </div>
           </details>
 
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How does the smart kitchen ecosystem ensure GDPR compliance and data privacy?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p>Traditional cloud-based smart assistants send your voice recordings to internet servers, creating massive GDPR and data privacy vulnerabilities. Yemek AI (FreeCuli) operates on the principle of "Privacy by Design." Because our Edge AI runs directly on the appliance's local chip, your voice data and kitchen habits are never uploaded to the internet. This guarantees 100% GDPR/CCPA compliance and absolute data privacy.</p>
+            </div>
+          </details>
+
         </div>
       </section>
 

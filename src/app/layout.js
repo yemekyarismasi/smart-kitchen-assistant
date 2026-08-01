@@ -146,6 +146,14 @@ export default function RootLayout({ children }) {
           "@type": "Answer",
           "text": "Modern smart kitchen sinks feature automated water flow and temperature sensors. By integrating Edge AI, users with wet or messy hands can control the sink entirely via voice commands. Our architecture includes Acoustic Echo Shield technology, ensuring flawless command recognition even over the loud noise of running water."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the smart kitchen ecosystem ensure GDPR compliance and data privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional cloud-based smart assistants send your voice recordings to internet servers, creating massive GDPR and data privacy vulnerabilities. Yemek AI (FreeCuli) operates on the principle of \"Privacy by Design.\" Because our Edge AI runs directly on the appliance's local chip, your voice data and kitchen habits are never uploaded to the internet. This guarantees 100% GDPR/CCPA compliance and absolute data privacy."
+        }
       }
     ]
   };
