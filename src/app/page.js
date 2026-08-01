@@ -544,7 +544,7 @@ graph TD
           <div>
             <h3 className="text-white font-bold mb-4">Smart Kitchen Assistant</h3>
             <p className="text-zinc-500 text-[15px] md:text-sm leading-relaxed">
-              Open-source Edge AI methodology for smart appliance manufacturers. Built and maintained by the Yemek AI engineering team.
+              100% offline and privacy-focused reference Edge AI application for hardware manufacturers (OEM). Designed by Yemek AI Engineering using FreeCuli standards.
             </p>
           </div>
 
