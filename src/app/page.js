@@ -500,9 +500,9 @@ graph TD
           Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
         </p>
         <div className="bg-black/50 p-6 md:p-8 rounded-2xl border border-zinc-800 inline-block text-left max-w-3xl relative z-10 w-full shadow-2xl">
-          <h3 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl font-bold text-white mb-3 md:mb-4 whitespace-nowrap">Enterprise / Commercial SDK</h3>
+          <h3 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl font-bold text-white mb-3 md:mb-4 whitespace-nowrap">Enterprise Certification & Trademark License</h3>
           <p className="text-zinc-300 text-sm md:text-lg mb-5 md:mb-6 leading-relaxed">
-            To bypass the AGPL-3.0 mandate and securely integrate the Smart Kitchen Assistant into closed-source IoT firmware (e.g., Oven MCU, Smart Fridge OS), tech manufacturers must acquire a B2B Commercial License.
+            For industrial manufacturers integrating the HFSCA architecture and complying with the FreeCuli standard within proprietary hardware, we offer a Commercial B2B Certification and Trademark Agreement. This grants the legal right to display the #FreeCULI certification badge on hardware and marketing materials.
           </p>
           <a href="mailto:info@freeculi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
             Contact for Commercial Licensing
