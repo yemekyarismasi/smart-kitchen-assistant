@@ -544,7 +544,7 @@ graph TD
           <div>
             <h3 className="text-white font-bold mb-4">Smart Kitchen Assistant</h3>
             <p className="text-zinc-500 text-[15px] md:text-sm leading-relaxed">
-              100% offline and privacy-focused reference Edge AI application for hardware manufacturers (OEM). Designed by Yemek AI Engineering using FreeCuli standards.
+              100% offline and privacy-focused reference Edge AI application for smart kitchen hardware manufacturers (OEM). Designed by Yemek AI Engineering using FreeCuli standards.
             </p>
           </div>
 
@@ -559,7 +559,7 @@ graph TD
               </li>
               <li>
                 <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors flex items-center gap-2 font-medium">
-                  <span>🤖</span> YEMEK AI — Flagship Assistant
+                  <span>🤖</span> YEMEK AI
                 </a>
               </li>
               <li>
