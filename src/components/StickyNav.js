@@ -71,7 +71,7 @@ export default function StickyNav() {
             title="Türkçe"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/60 hover:border-cyan-500 hover:text-cyan-400 transition-all text-sm md:text-xs text-zinc-300"
           >
-            <span className="text-base leading-none">🇹🇷</span>
+            <span className="text-base leading-none">🌐</span>
             <span className="hidden sm:inline font-bold">TR</span>
           </a>
 

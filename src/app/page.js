@@ -15,14 +15,9 @@ export default function Home() {
           <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Smart Kitchen Ecosystem:</span>
           <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center mt-1">
             <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-cyan-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
-              <span className="text-[1.1rem] leading-none">🤖</span>
+              <span className="text-[1.1rem] leading-none">🍳</span>
               <span className="text-sm transition-colors leading-none">
                 <span className="text-black font-black">Yemek</span> <span className="text-cyan-600 font-black">AI</span>
-              </span>
-            </a>
-            <a href="https://akillimutfakasistani.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-emerald-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
-              <span className="text-sm transition-colors leading-none">
-                <span className="text-black font-black">Akıllı Mutfak</span> <span className="text-emerald-600 font-black">Asistanı</span>
               </span>
             </a>
             <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
