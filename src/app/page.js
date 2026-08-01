@@ -34,17 +34,19 @@ export default function Home() {
       </div>
 
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-0 md:mb-12 relative z-10 px-4">
+      <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-0 md:mb-12 relative z-10 px-4 mx-auto">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
         
-        <h1 className="text-[1.8rem] min-[400px]:text-[2.2rem] sm:text-4xl md:text-[2.4rem] lg:text-5xl font-black tracking-tighter leading-[1.1] whitespace-nowrap flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
-          <span>Smart Kitchen Assistant</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-500 whitespace-nowrap">
-            Next-Gen Edge AI
+        <h1 className="flex flex-col items-center justify-center gap-4 md:gap-6 text-center">
+          <span className="text-[2rem] min-[400px]:text-[2.5rem] sm:text-5xl md:text-6xl font-black tracking-tighter leading-[1.1] whitespace-nowrap">
+            Smart Kitchen Assistant
+          </span>
+          <span className="text-xl md:text-3xl font-bold w-full mx-auto px-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-500 whitespace-normal">
+            Next-Gen Edge AI for Appliances
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-zinc-300 w-full mx-auto font-light leading-relaxed px-4">
+        <p className="text-lg md:text-xl text-zinc-400 w-full font-light leading-relaxed px-4">
           The definitive Kitchen AI methodology for offline smart kitchen appliances. Offering zero-latency smart kitchen solutions through Edge Kitchen computing, Acoustic Shields, and embedded voice assistant technology.
         </p>
       </section>
