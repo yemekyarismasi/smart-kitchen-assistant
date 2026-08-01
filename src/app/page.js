@@ -416,73 +416,61 @@ graph TD
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Does Smart Kitchen Assistant work offline?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Why should OEMs use Edge AI for smart kitchen appliances?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
-              <p><strong className="text-emerald-400">Partially — and we are honest about it.</strong> The UI, hands-free navigation buttons, and voice output (text-to-speech) work fully offline. In the web demo, voice input via the microphone requires an internet connection because web browsers must send audio to Google or Apple cloud servers for transcription.</p>
-              <p className="mt-3">In the future native hardware and mobile app deployment, voice recognition will run entirely on-device using embedded Edge AI — making the full system 100% offline.</p>
+              <p>Cloud-based appliances rely on internet connectivity and incur recurring API costs. Edge AI runs the AI models directly on the appliance's local chip, guaranteeing zero-latency responses, eliminating server costs, and delivering a flawless offline experience.</p>
             </div>
           </details>
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is Edge AI for kitchen appliances?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Can the smart kitchen assistant operate completely offline?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
-              <p>Edge AI means running AI models directly on the appliance itself — whether a smart oven, refrigerator, or embedded display — without sending any data to a cloud server. The results: zero-latency responses, zero per-request cloud cost, and complete data privacy since no user data ever leaves the device.</p>
+              <p>Partially, yes. The visual UI and text-to-speech work offline. Our ultimate deployment goal via the FreeCuli infrastructure is to run voice recognition natively on embedded hardware, creating a 100% offline ecosystem immune to cloud outages.</p>
             </div>
           </details>
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is HFSCA?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How does commercial licensing work for smart kitchen appliance manufacturers?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
-              <p><strong className="text-white">Hands-Free Semantic Culinary Assistant.</strong> It is the open-source Edge AI architecture developed by Yemek AI. Its core innovations are the Acoustic Ignore Shield (preventing echo loops without hardware interrupts), Hardware Session Persistence (maintaining state without cloud reconnection), and zero-cost on-device inference.</p>
+              <p>Our core architecture is open-source under AGPL-3.0. Hardware manufacturers (OEMs) who want to embed this AI into proprietary, closed-source smart kitchen appliances must acquire a Commercial License, which exempts them from open-source obligations.</p>
             </div>
           </details>
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is FreeCuli?</h3>
-              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
-            </summary>
-            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4 space-y-3">
-              <p>FreeCuli is the commercial <strong className="text-white">ingredient brand</strong> for the HFSCA methodology. While HFSCA represents the open-source architectural foundation, FreeCuli serves as the trademarked seal of quality and "zero-cloud dependency" for hardware manufacturers.</p>
-              <p>For appliance OEMs, embedding FreeCuli means integrating three core innovations out-of-the-box: <strong className="text-cyan-400">Acoustic Ignore Shield</strong> (noise/echo cancellation), <strong className="text-cyan-400">Hardware Session Persistence</strong> (offline state management), and <strong className="text-cyan-400">Zero-Cost Inference</strong>.</p>
-              <p>When consumers see the <em className="text-amber-400">"FreeCuli Inside"</em> badge on a smart oven or refrigerator, they are guaranteed absolute data privacy, zero-latency responses, and 100% offline functionality.</p>
-              <div className="pt-2">
-                <a href="https://medium.com/@oytunciba/freeculi-the-new-global-standard-for-smart-kitchen-ai-17f0cfbea03d" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
-                  <span>Read the full FreeCuli Manifesto on Medium</span>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </a>
-              </div>
-            </div>
-          </details>
-
-
-
-          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
-            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">Is the source code publicly available?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">What is a smart kitchen and how will it evolve?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
-              <p>Yes. The full source code is on GitHub under <strong className="text-white">AGPL-3.0</strong>. You can inspect, fork, and test it right now. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation.</p>
-              <a href="https://github.com/FreeCuli/smart-kitchen-offline-assistant" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">View on GitHub →</a>
+              <p>A smart kitchen is an integrated ecosystem where traditional appliances (ovens, refrigerators) are equipped with IoT and AI to interact with users. We build the "brain" of this ecosystem—the Edge AI software that allows these devices to understand offline voice commands.</p>
             </div>
           </details>
 
           <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How does Smart Kitchen Assistant prevent AI hallucinations?</h3>
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How is AI integrated into smart kitchen robot designs?</h3>
               <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
             </summary>
             <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
-              <p>Through <strong className="text-white">Visual Ground Truth</strong> methodology. Standard generative AI writes text first then forces an image to match — causing hallucinations. Yemek AI reverses this: the food image is generated or captured first as the absolute physical reality, and the recipe text is then derived strictly from what is visible. The text cannot contradict the image because the image came first.</p>
+              <p>Next-generation smart kitchen robots won't just perform pre-programmed mixing; through Edge AI architectures like FreeCuli, they will understand ambient sound and adjust speed based on real-time voice commands. We provide OEMs with the zero-latency voice recognition technology to power these robots.</p>
+            </div>
+          </details>
+
+          <details className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-800/60 transition-colors">
+            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 className="text-white font-semibold text-base md:text-lg pr-4">How can smart kitchen sink systems benefit from Voice AI?</h3>
+              <span className="text-cyan-400 shrink-0 transition-transform group-open:rotate-45 text-2xl font-light">+</span>
+            </summary>
+            <div className="px-6 pb-6 text-zinc-300 text-[15px] md:text-sm leading-relaxed border-t border-zinc-800 pt-4">
+              <p>Modern smart kitchen sinks feature automated water flow and temperature sensors. By integrating Edge AI, users with wet or messy hands can control the sink entirely via voice commands. Our architecture includes Acoustic Echo Shield technology, ensuring flawless command recognition even over the loud noise of running water.</p>
             </div>
           </details>
 

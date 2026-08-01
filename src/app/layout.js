@@ -101,50 +101,50 @@ export default function RootLayout({ children }) {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Does Smart Kitchen Assistant work offline?",
+        "name": "Why should OEMs use Edge AI for smart kitchen appliances?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Partially. The UI, hands-free navigation buttons, and voice output (text-to-speech) work fully offline. In the web demo, voice input (microphone) requires an internet connection because browsers use Google/Apple cloud servers for speech recognition. In the future native hardware and mobile app deployment, voice recognition will run entirely on-device using Edge AI — making it 100% offline."
+          "text": "Cloud-based appliances rely on internet connectivity and incur recurring API costs. Edge AI runs the AI models directly on the appliance's local chip, guaranteeing zero-latency responses, eliminating server costs, and delivering a flawless offline experience."
         }
       },
       {
         "@type": "Question",
-        "name": "What is Edge AI for kitchen appliances?",
+        "name": "Can the smart kitchen assistant operate completely offline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edge AI means running artificial intelligence models directly on the appliance itself — whether a smart oven, refrigerator, or embedded display — without sending any data to a cloud server. The result is zero-latency responses, zero per-request cloud cost, and complete data privacy since no user data ever leaves the device."
+          "text": "Partially, yes. The visual UI and text-to-speech work offline. Our ultimate deployment goal via the FreeCuli infrastructure is to run voice recognition natively on embedded hardware, creating a 100% offline ecosystem immune to cloud outages."
         }
       },
       {
         "@type": "Question",
-        "name": "What is HFSCA?",
+        "name": "How does commercial licensing work for smart kitchen appliance manufacturers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "HFSCA stands for Hands-Free Semantic Culinary Assistant. It is the open-source Edge AI architecture developed by Yemek AI that powers the Smart Kitchen Assistant. Its core innovations are the Acoustic Ignore Shield (preventing echo loops), Hardware Session Persistence (maintaining state without cloud reconnection), and zero-cost on-device inference."
+          "text": "Our core architecture is open-source under AGPL-3.0. Hardware manufacturers (OEMs) who want to embed this AI into proprietary, closed-source smart kitchen appliances must acquire a Commercial License, which exempts them from open-source obligations."
         }
       },
       {
         "@type": "Question",
-        "name": "What is FreeCuli?",
+        "name": "What is a smart kitchen and how will it evolve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "FreeCuli is the commercial ingredient brand for the HFSCA methodology. It serves as the trademarked seal of quality for appliance OEMs, representing three core embedded innovations: Acoustic Ignore Shield, Hardware Session Persistence, and Zero-Cost Inference. When embedded in smart appliances, it guarantees consumers absolute data privacy, zero-latency responses, and 100% offline functionality."
+          "text": "A smart kitchen is an integrated ecosystem where traditional appliances (ovens, refrigerators) are equipped with IoT and AI to interact with users. We build the 'brain' of this ecosystem—the Edge AI software that allows these devices to understand offline voice commands."
         }
       },
       {
         "@type": "Question",
-        "name": "Is the source code publicly available?",
+        "name": "How is AI integrated into smart kitchen robot designs?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The full source code is published on GitHub under the AGPL-3.0 license at https://github.com/FreeCuli/smart-kitchen-offline-assistant. You can inspect, fork, and test it immediately. Hardware manufacturers embedding the code in proprietary firmware must acquire a commercial license to avoid the AGPL-3.0 open-source obligation."
+          "text": "Next-generation smart kitchen robots won't just perform pre-programmed mixing; through Edge AI architectures like FreeCuli, they will understand ambient sound and adjust speed based on real-time voice commands. We provide OEMs with the zero-latency voice recognition technology to power these robots."
         }
       },
       {
         "@type": "Question",
-        "name": "How does Smart Kitchen Assistant prevent AI hallucinations?",
+        "name": "How can smart kitchen sink systems benefit from Voice AI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Through Visual Ground Truth methodology. Standard generative AI writes text first and tries to match an image to it — which causes hallucinations. Yemek AI reverses this: a high-fidelity food image is generated or captured first (the physical ground truth), and the recipe text — ingredients, steps, nutrition — is then derived strictly from what is visible in that image. The text cannot contradict the image because the image came first."
+          "text": "Modern smart kitchen sinks feature automated water flow and temperature sensors. By integrating Edge AI, users with wet or messy hands can control the sink entirely via voice commands. Our architecture includes Acoustic Echo Shield technology, ensuring flawless command recognition even over the loud noise of running water."
         }
       }
     ]
