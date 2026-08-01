@@ -495,9 +495,9 @@ graph TD
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[100px]"></div>
         
-        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">FreeCuli Commercial Framework & <br className="md:hidden" />Dual-Licensing</h2>
+        <h2 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl md:text-2xl font-black relative z-10 leading-snug">FreeCuli Commercial Framework & <br className="md:hidden" />Certification Model</h2>
         <p className="text-sm md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed relative z-10">
-          Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise embedding our system in proprietary smart appliances must open-source their entire stack.
+          Our core architecture is open-source under <strong className="text-white">AGPL-3.0</strong>. This mandates that any enterprise utilizing our open-source reference architecture in proprietary smart appliances must open-source their entire stack.
         </p>
         <div className="bg-black/50 p-6 md:p-8 rounded-2xl border border-zinc-800 inline-block text-left max-w-3xl relative z-10 w-full shadow-2xl">
           <h3 className="text-[1.1rem] min-[400px]:text-[1.2rem] sm:text-2xl font-bold text-white mb-3 md:mb-4 whitespace-nowrap">Enterprise Certification & Trademark License</h3>
@@ -505,7 +505,7 @@ graph TD
             For industrial manufacturers integrating the HFSCA architecture and complying with the FreeCuli standard within proprietary hardware, we offer a Commercial B2B Certification and Trademark Agreement. This grants the legal right to display the #FreeCULI certification badge on hardware and marketing materials.
           </p>
           <a href="mailto:info@freeculi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
-            Contact for Commercial Licensing
+            Contact for Enterprise Certification
           </a>
           <p className="text-center text-zinc-500 text-xs md:text-sm mt-3 md:mt-4">Only for direct hardware manufacturers (OEM) and large-scale integrators.</p>
         </div>
