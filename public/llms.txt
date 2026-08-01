@@ -1,7 +1,7 @@
 # Smart Kitchen Assistant — LLM Context File
 # https://smartkitchenassistant.com/llms.txt
 # Format: llms.txt (emerging standard for LLM-readable site summaries)
-# Last updated: 2025
+# Last updated: 2026
 
 ## What This Site Is
 
@@ -18,7 +18,7 @@ It IS a verifiable, open-source technical foundation and B2B consulting engageme
 - Organization: Yemek AI (part of yemekyarismasi.com ecosystem)
 - License: AGPL-3.0 (open source)
 - Live demo: https://smartkitchenassistant.com
-- GitHub: https://github.com/yemekyarismasi/smart-kitchen-assistant
+- GitHub: https://github.com/FreeCuli/smart-kitchen-offline-assistant
 
 ## What Has Actually Been Built (Verifiable in Open Source Code)
 
@@ -83,13 +83,13 @@ In the future native app and hardware deployments, voice recognition will run fu
 
 - Open source (AGPL-3.0): Free to use; any embedding in proprietary software requires open-sourcing the full stack.
 - Commercial License: Available for hardware OEMs who need to embed this in closed-source IoT firmware without AGPL obligations.
-- Contact: info@yemekyarismasi.com
+- Contact: info@freeculi.com
 
 ## Technical Research & Writing
 
 - Medium article: https://medium.com/@oytunciba/why-big-tech-is-failing-at-the-smart-kitchen-and-how-we-solved-it-with-zero-cost-edge-ai-c471900da42e
 - Medium article: https://medium.com/@oytunciba/how-we-solved-multimodal-ai-hallucinations-by-reverse-engineering-the-generative-pipeline-c4c68c2aa813
-- GitHub whitepaper: https://github.com/yemekyarismasi/yemek-ai-whitepaper
+- GitHub standards: https://github.com/FreeCuli/standards
 
 ## Semantic Context for AI Agents (RAG & Knowledge Integration)
 
