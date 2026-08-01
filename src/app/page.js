@@ -9,25 +9,6 @@ export default function Home() {
       <StickyNav />
       <main className="flex min-h-screen flex-col items-center px-4 pt-20 md:px-24 md:pt-20 pb-0 md:pb-6 overflow-x-hidden bg-black text-white">
       
-      {/* ECOSYSTEM BANNER */}
-      <div className="w-full max-w-7xl mx-auto px-4 mb-6">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 py-3 px-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm">
-          <span className="text-zinc-300 font-medium text-[15px] whitespace-nowrap">Part of the Yemek AI Smart Kitchen Ecosystem:</span>
-          <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center mt-1">
-            <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-cyan-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
-              <span className="text-[1.1rem] leading-none">🍳</span>
-              <span className="text-sm transition-colors leading-none">
-                <span className="text-black font-black">Yemek</span> <span className="text-cyan-600 font-black">AI</span>
-              </span>
-            </a>
-            <a href="https://freeculi.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 bg-zinc-200 border border-zinc-300 hover:border-blue-400 hover:bg-white rounded-xl w-[190px] h-[36px] transition-all duration-300 shadow-sm">
-              <img src="/freeculi-logo.png" alt="FreeCuli" className="w-5 h-5 rounded-md" />
-              <span className="text-zinc-600 text-sm font-medium group-hover:text-zinc-800 transition-colors leading-none">Powered by <span className="text-black font-black">Free</span><span className="text-blue-600 font-black">Culi</span></span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-7xl text-center space-y-6 md:space-y-10 mt-2 md:mt-4 mb-0 md:mb-12 relative z-10 px-4 mx-auto">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyan-900/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
