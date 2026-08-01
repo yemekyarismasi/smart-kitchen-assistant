@@ -529,7 +529,7 @@ graph TD
             To bypass the AGPL-3.0 mandate and securely integrate the Smart Kitchen Assistant into closed-source IoT firmware (e.g., Oven MCU, Smart Fridge OS), tech manufacturers must acquire a B2B Commercial License.
           </p>
           <a href="mailto:info@freeculi.com" className="block text-center w-full py-3.5 md:py-4 rounded-xl bg-white text-black font-extrabold text-lg md:text-xl hover:bg-gray-200 transition-colors">
-            Contact Yemek AI Engineering
+            Contact for Commercial Licensing
           </a>
           <p className="text-center text-zinc-500 text-xs md:text-sm mt-3 md:mt-4">Only for direct hardware manufacturers (OEM) and large-scale integrators.</p>
         </div>
