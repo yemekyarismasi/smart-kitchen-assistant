@@ -50,7 +50,7 @@ export default function OpenSourceSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white">Repositories</h3>
           </div>
           {githubRepos.map((repo, i) => (
-            <a key={i} href={repo.link} target="_blank" rel="noopener noreferrer" className="block p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-cyan-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm">
+            <a key={i} href={repo.link} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-cyan-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm min-h-[160px] md:min-h-[175px]">
               <h4 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 mb-2 flex items-center justify-between">
                 {repo.title}
                 <span className="text-zinc-700 group-hover:text-cyan-400 transition-colors">↗</span>
@@ -67,18 +67,20 @@ export default function OpenSourceSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white">Publications</h3>
           </div>
           {mediumArticles.map((article, i) => (
-            <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="flex flex-col p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm">
-              <div className="flex items-center gap-2 mb-3 flex-wrap">
-                <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Article</span>
-                <span className="text-[11px] text-zinc-300 font-medium">{article.author}</span>
-                <span className="text-[11px] text-zinc-600 hidden min-[400px]:inline">•</span>
-                <span className="text-[11px] text-zinc-500">{article.readTime}</span>
+            <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between p-5 md:p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group backdrop-blur-sm min-h-[160px] md:min-h-[175px]">
+              <div>
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Article</span>
+                  <span className="text-[11px] text-zinc-300 font-medium">{article.author}</span>
+                  <span className="text-[11px] text-zinc-600 hidden min-[400px]:inline">•</span>
+                  <span className="text-[11px] text-zinc-500">{article.readTime}</span>
+                </div>
+                <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 mb-2 flex items-center justify-between transition-colors">
+                  {article.title}
+                  <span className="text-zinc-700 group-hover:text-emerald-400 transition-colors">↗</span>
+                </h4>
               </div>
-              <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 mb-2 flex items-center justify-between transition-colors">
-                {article.title}
-                <span className="text-zinc-700 group-hover:text-emerald-400 transition-colors">↗</span>
-              </h4>
-              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed mb-1 flex-1">{article.desc}</p>
+              <p className="text-zinc-300 text-[15px] md:text-sm leading-relaxed mb-1 mt-2">{article.desc}</p>
             </a>
           ))}
         </div>
