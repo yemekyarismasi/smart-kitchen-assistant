@@ -558,8 +558,8 @@ graph TD
                 </a>
               </li>
               <li>
-                <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors flex items-center gap-2 font-medium">
-                  <span>🤖</span> YEMEK AI
+                <a href="https://yemekyarismasi.com/yemek-ai" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
+                  <span>🤖</span> Yemek AI
                 </a>
               </li>
               <li>
