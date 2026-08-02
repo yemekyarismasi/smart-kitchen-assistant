@@ -566,9 +566,9 @@ graph TD
                 </a>
               </li>
               <li>
-                <a href="https://medium.com/@oytunciba/the-worlds-first-zero-cloud-smart-kitchen-standard-freeculi-3fdacc0678cb" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-white text-sm transition-colors flex items-center gap-2 font-semibold">
+                <a href="https://medium.com/@oytunciba/the-worlds-first-zero-cloud-smart-kitchen-standard-freeculi-3fdacc0678cb" target="_blank" rel="noopener noreferrer" className="text-zinc-300 hover:text-white text-sm transition-colors flex items-center gap-2">
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-                  Medium — The World's First Zero-Cloud Kitchen Standard
+                  Medium — Smart Kitchen Certification
                 </a>
               </li>
               <li>
