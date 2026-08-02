@@ -8,9 +8,9 @@ export default function OpenSourceSection() {
       link: "https://github.com/FreeCuli/smart-kitchen-offline-assistant"
     },
     {
-      title: "FreeCuli Standards",
+      title: "Smart Kitchen Standards",
       desc: "Official compliance whitepapers and the Edge Smart Kitchen manifesto.",
-      link: "https://github.com/FreeCuli/standards"
+      link: "https://github.com/FreeCuli/smart-kitchen-standards"
     }
   ];
 
